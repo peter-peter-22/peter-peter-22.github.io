@@ -1,0 +1,49 @@
+.projects_chooser {
+    margin: 150px 0px;
+    padding: 50px var(--padding);
+    background-color: var(--box2);
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.582);
+}
+
+.projects_chooser .title {
+    font-size: var(--font-size);
+}
+
+.projects_chooser .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project_icon {
+    --offset: 20px;
+    position: relative;
+    display: inline-block;
+    --shadow: 10px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.438) 0px var(--shadow) var(--shadow));
+}
+
+.project_icon::before {
+    content: "";
+    width: calc(100% - var(--offset));
+    height: calc(100% - var(--offset));
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: red;
+    z-index: -1;
+    background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0.247));
+}
+
+.project_icon .project_title {
+    margin: 5px;
+}
+
+.project_icon .project_image {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: contain;
+    margin-left: var(--offset);
+}

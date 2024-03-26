@@ -1,0 +1,54 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ body{
+    background-color: var(--box2hlf);
+    overflow-x: hidden;
+    width: 100%;
+ }
+
+
+ :root {
+     --html: rgb(207, 0, 0);
+     --javascript: rgb(255, 215, 58);
+     --css: rgb(90, 115, 255);
+     --php: rgb(105, 78, 226);
+     --mysql: rgb(255, 153, 0);
+
+     --box1: rgb(77, 77, 77);
+     --box1hl: rgb(107, 107, 107);
+     --text1: rgb(255, 255, 255);
+     --box2: rgb(255, 255, 255);
+     --box2hl: rgb(202, 202, 202);
+     --box2hlf: rgb(233, 233, 233);
+     --text2: rgb(0, 0, 0);
+
+     --color: rgb(0, 221, 85);
+     --navbar_height: 50px;
+     --mobile:800px;
+
+     /*sideways padding or margin compared to the edge of the screen, used by multiple elements*/
+     --padding: 80px;
+     /*font size for titles*/
+     --font-size: 40px;
+/*paper piece size*/
+--effect: 8vw;
+}
+ @media screen and (max-width: 600px) {
+    :root {
+        --padding: 40px;
+    }
+}
+@media screen and (max-width: 500px) {
+    :root{
+        --font-size: 8vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    :root{
+        --effect: 12vw;
+    }
+}

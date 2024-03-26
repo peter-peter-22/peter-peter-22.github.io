@@ -1,0 +1,32 @@
+.paper_piece {
+  position: absolute;
+  background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0.247));
+  --shadow: calc(var(--effect) * 0.1);
+  filter: drop-shadow(rgba(0, 0, 0, 0.438) 0px var(--shadow) var(--shadow));
+}
+
+
+.paper_pieces.from_right {
+  width: 100%;
+  height: calc(var(--effect) * 4);
+  position: relative;
+  overflow: hidden;
+}
+
+.paper_pieces.from_right .paper_piece {
+  --type: 0;
+  --size: calc(var(--effect) * (3 - var(--type)));
+  z-index: calc(var(--type));
+  top: calc(var(--type) * var(--effect) * 0.8 + var(--effect) * 0.4);
+  right: calc(var(--type) * var(--effect) * 1.5);
+  transform: rotate(calc(var(--type) * 10deg + 10deg));
+  width: var(--size);
+  height: var(--size);
+  transition: all 0.5s ease-in-out;
+  transition-delay: calc(0.2s * var(--type));
+}
+
+.paper_pieces.from_right:not(.visible) .paper_piece {
+  right: calc(0px - var(--size) * 1.5);
+  transform: rotate(0deg);
+}

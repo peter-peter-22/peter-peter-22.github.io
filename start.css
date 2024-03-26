@@ -1,0 +1,182 @@
+
+/*general*/
+.my_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.my_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.code_background {
+    background-image: url("code_background.jpg");
+    background-size: cover;
+}
+
+.start_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    --margin_:20px;
+    margin: var(--margin_);
+    height: calc(100vh - var(--navbar_height) - var(--margin_)*2);
+    border-radius: 40px;
+    width: calc(100% - 40px);
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.705));
+}
+
+.profile {
+    width: 30vw;
+}
+.moving_text_prefix.colored_row
+{
+    font-size: 70%;
+  color: var(--color);
+  line-height:3em;
+}
+
+/*moving text*/
+.moving_text .row * {
+    display: table-cell;
+    font-size:inherit;
+    color: var(--text1);
+}
+.moving_text .icon {
+    display: table-cell;
+   height: 1em;
+}
+.moving_text_prefix {
+    font-weight: bold;
+    margin: 0.25em;
+    color: var(--text1);
+    white-space: nowrap;
+}
+
+
+/*the animation names are used by JS*/
+/*the animations are added and started by JS*/
+@keyframes letter_movement {
+    20% {
+        transform: translateY(50%);
+    }
+    80% {
+        transform: translateY(-30%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+.moving_text .row {
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    gap:0.1em;
+    display: none;
+}
+.moving_text .row.active
+{
+    display: inline-flex;
+}
+
+@keyframes row_start {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes row_end {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+.moving_text {
+    display: inline-flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    position: relative;
+    height: 1em;
+    transition: all 0.7s;
+}
+
+.moving_text_container
+{
+    font-size: 3vw;/*all elements inside the moving_text_container inherit this font-size*/
+    min-width: 18em;/*fixed width is necessary to prevent the changing text from resizing the div*/
+}
+
+/*button*/
+.nice_button
+{
+    margin: 10px;
+    background: none;
+color: var(--color);
+border: solid 2px var(--color);
+border-radius: 0.4em;
+font-size: 70%;
+position: relative;
+transition: background-size 0.5s;
+background: linear-gradient(var(--color) , var(--color)) transparent no-repeat 0 0;
+background-size: 0% 100%;
+box-sizing: border-box;
+}
+.nice_button .text
+{
+    background: linear-gradient(var(--text2) , var(--text2)) var(--color) no-repeat 0 0;
+background-clip:text;
+-webkit-background-clip: text;
+color: transparent;
+background-size: 0% 100%;
+transition: inherit;
+padding: 0.3em;
+text-wrap: nowrap;
+}
+ .nice_button:hover .text,  .nice_button:hover
+{
+    background-size: 100% 100%;
+}
+
+/*responsive*/
+@media screen and (max-width: 750px) {
+    .start_div
+    {
+        flex-direction: column-reverse;
+    }
+    .profile {
+        width: 50vw;
+    }
+    .moving_text_container {
+        font-size: 5vw;
+    }
+}
+@media screen and (max-width: 550px) {
+    .nice_button
+{
+    font-size: 100%;
+}
+}
+
+.nice_button.bigger
+{
+    font-size: 200%;
+}

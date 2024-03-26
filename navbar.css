@@ -1,0 +1,71 @@
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--box1);
+    top: 0px;
+    left: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0px 0px 10px 0px black;
+  height: var(--navbar_height);
+}
+.navbar_placeholder
+{
+   height:var(--navbar_height);
+}
+.navbar a.option
+{
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 10px;
+    color: var(--text1);
+    position: relative;
+transition: background-color 0.5s;
+box-sizing: border-box;
+background-color: var(--box1);
+/*the border color is inherited from here by the ::before element*/
+border-color: var(--color);
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+text-decoration: none;
+height: 100%;
+border-radius: 1rem;
+overflow: hidden;
+}
+.navbar a.option:hover {
+    background-color: var(--box1hl);
+}
+.navbar a.option::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom:0px;
+    left:0px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: inherit;
+    transition: transform 0.5s;
+    transform: scaleX(0%);
+}
+.navbar a.option:hover::before{
+    transform: scaleX(100%);
+    height: 100%;
+}
+.navbar .icon{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+   box-sizing: border-box;
+   margin: 0px 10px;
+}
+.navbar img{
+    height: 80%;
+    transition: all 0.5s;
+}
+.navbar .icon:hover img{
+    filter: brightness(1.2);
+    transform: scale(1.15);
+}
+
