@@ -36,6 +36,8 @@
      --font-size: 40px;
 /*paper piece size*/
 --effect: 8vw;
+/*paper piece another sizing*/
+--effect_cube: calc(min(100vw, 100vh));
 }
  @media screen and (max-width: 600px) {
     :root {

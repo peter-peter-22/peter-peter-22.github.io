@@ -14,15 +14,23 @@
     flex-direction: row;
     align-items: stretch;
     max-width: 600px;
+    --transition: 0.5s;
 }
 
 
 .vertical_line {
     --thickness: 2px;
     --margin: 10px;
+    --length: 100%;
     width: var(--thickness);
     margin: 0px var(--margin);
     background-color: var(--box1hl);
+    height: var(--length);
+    transition: all var(--transition);
+}
+
+.capability_entry:not(.visible) .vertical_line {
+    --length: 0%;
 }
 
 .capability .container {
@@ -30,19 +38,52 @@
     grid-template-columns: auto auto;
 }
 
+
+
 .capability_entry i {
     font-size: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    overflow: hidden;
     display: flex;
+    --float_in_from_x: 1;
+    --float_in_from_y: 0;
 }
 
-.capability_entry .content {
+.capability_entry i::before {
+    transition: all var(--transition);
+}
+
+.capability_entry:not(.visible) i::before {
+    transform: translate(calc(100% * var(--float_in_from_x)), calc(100% * var(--float_in_from_y)));
+}
+
+
+.capability_entry .content,
+.capability_entry .main_title {
     white-space: pre-line;
+    transition: all var(--transition);
+}
+
+.capability_entry .texts {
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.capability_entry .moving {
+    --float_in_from_x: -1;
+    --float_in_from_y: 0;
+    transition: all var(--transition);
+}
+
+.capability_entry:not(.visible) .moving {
+    transform: translate(calc(100% * var(--float_in_from_x)), calc(100% * var(--float_in_from_y)));
 }
 
 @media screen and (max-width: 500px) {
     .vertical_line {
         height: var(--thickness);
-        width: auto;
+        width: var(--length);
         margin: var(--margin) 0px;
     }
 
@@ -56,6 +97,16 @@
 
     .capability_entry .content {
         font-size: 0.8em;
+    }
+
+
+    .capability_entry i::before {
+        --float_in_from_x: 0;
+        --float_in_from_y: 1;
+    }
+    .capability_entry .moving {
+        --float_in_from_x: 0;
+        --float_in_from_y: -1;
     }
 }
 

@@ -157,7 +157,7 @@ text-wrap: nowrap;
 }
 
 /*responsive*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
     .start_div
     {
         flex-direction: column-reverse;

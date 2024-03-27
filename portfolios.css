@@ -13,14 +13,33 @@
 
     width: 100%;
     height: calc(100vh - 50px);
+    width: 100%;
 }
+
 
 
 .sticky .portfolio_menu{
-    background-color: red;
     height: var(--menu_height);
     transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom:0px;
+    width: 100%;
 }
+
+.sticky .portfolio_menu a{
+text-decoration: none;
+color: var(--box1);
+font-size: 30px;
+}
+.sticky .portfolio_menu a:hover{
+    color: var(--box1hl);
+    }
+
 .sticky:not([data-active="true"]) .portfolio_menu{
    opacity: 0;
 }

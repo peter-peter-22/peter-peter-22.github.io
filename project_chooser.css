@@ -3,25 +3,43 @@
     padding: 50px var(--padding);
     background-color: var(--box2);
     box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.582);
+    --size: calc(min(15vw, 200px));
 }
 
-.projects_chooser .title {
-    font-size: var(--font-size);
+.projects_chooser .project_title {
+    font-size: calc(var(--size) * 0.2);
+    color: var(--text1);
+}
+
+.projects_chooser .title{
+    margin-bottom: 30px;
 }
 
 .projects_chooser .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    gap: calc(var(--size) * 0.3);
+}
+
+@media screen and (max-width: 500px) {
+    .projects_chooser .container {
+        flex-direction: column;
+    }
+    .projects_chooser{
+        --size: 50vw;
+    }
 }
 
 .project_icon {
     --offset: 20px;
     position: relative;
     display: inline-block;
-    --shadow: 10px;
+    --shadow: calc(var(--size) * 0.03);
     filter: drop-shadow(rgba(0, 0, 0, 0.438) 0px var(--shadow) var(--shadow));
+    width: fit-content;
+    text-decoration: none;
 }
 
 .project_icon::before {
@@ -41,9 +59,73 @@
 }
 
 .project_icon .project_image {
-    width: 100px;
-    height: 100px;
+    width: var(--size);
+    height: var(--size);
     background-position: center;
     background-size: contain;
     margin-left: var(--offset);
+    border-radius: 7px;
+}
+
+@property --hovered {
+    syntax: '<number>'; /* <- defined as type number for the transition to work */
+    initial-value: 0;
+    inherits: false;
+  }
+
+.project_icon .hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scale(110%);
+    --hovered:0;
+    --scale:calc(var(--hovered) * 50%);
+    opacity: calc(var(--scale) * 100);
+    --transition:0.5s;
+    transition: --hovered var(--transition);
+}
+.project_icon .hover:hover{
+    --hovered:1;
+}
+
+.project_icon .hover::before,.project_icon .hover::after
+{
+    width: var(--scale);
+    height:  var(--scale);
+    position: absolute;
+    content: "";
+    border: solid 3px white;
+}
+.project_icon .hover::before
+{
+    bottom: 0px;
+    left: 0px;
+    border-top: none;
+    border-right: none;
+}
+.project_icon .hover::after
+{
+    top: 0px;
+    right: 0px;
+    border-bottom: none;
+    border-left: none;
+}
+
+
+
+.lines{
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.lines .line{
+display: block;
+height: 1px;
+background-color: var(--color);
+width: 0px;
+transition: all 0.5s;
+transition-delay: calc(var(--type) * 0.2s + 0.5s);
+}
+.visible .lines .line {
+    width: calc(100% - var(--type) * 33%);
 }

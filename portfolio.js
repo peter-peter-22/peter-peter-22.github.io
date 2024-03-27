@@ -54,8 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const sticky_divs = document.querySelectorAll(".portfolio .sticky");
 
     sticky_divs.forEach(sticky_div => {
+        //if pages is true, each child of the sticky div will be a page that gets a class when activated and the number of the steps is setted automatically
+        //otherwise the current step is added to the sticky div and the elements process it via CSS
+        const use_pages = sticky_div.dataset.pages == "true";
+        const children = sticky_div.querySelectorAll(".page");
+
         //getting the number of the animation keyframes from the custom data "animation_steps"
-        const my_steps = parseInt(sticky_div.dataset.animation_steps);
+        const my_steps = use_pages ? children.length : parseInt(sticky_div.dataset.animation_steps);
         sticky_div.parentElement.style.height = distance_per_step * my_steps + "vh";
 
         function update_animations() {
@@ -65,17 +70,26 @@ document.addEventListener("DOMContentLoaded", function () {
             const my_top = (parseFloat(sticky_div.offsetTop) - parseFloat(sticky_div.parentElement.offsetTop));
             const movement_interval = parseFloat(sticky_div.parentElement.clientHeight) - parseFloat(style.height);
             const my_progress = my_top / movement_interval;
+
             let my_step = Math.floor(my_progress * my_steps);
             if (my_step >= my_steps)
                 my_step = my_steps - 1;
             sticky_div.dataset.step = my_step;
-            //adding a dataset variable to each keyframe to make the css selectors simpler
-            //if my_step is 2, then step0, step1 and step2 custom data will be true, the others are false
-            for (n = 0; n < my_steps; n++)
-                sticky_div.setAttribute("data-step" + n, my_step >= n);
 
-            //the menu buttons are visible or not
-            sticky_div.setAttribute("data-active", my_progress > 0 && my_progress < 1);
+            if (use_pages) {
+                for (n = 0; n < my_steps; n++)
+                    children.item(n).setAttribute("data-active", my_step >= n);
+            }
+            else {
+                //adding a dataset variable to each keyframe to make the css selectors simpler
+                //if my_step is 2, then step0, step1 and step2 custom data will be true, the others are false
+                for (n = 0; n < my_steps; n++)
+                    sticky_div.setAttribute("data-step" + n, my_step >= n);
+            }
+
+            //adding the an attribute to the sticky div that shows if it is being animated currently or not
+            //this sets the visibility of the page menu at the bottom of the screen
+            sticky_div.setAttribute("data-active", my_progress > 0.01 && my_progress < 0.99);
         }
         window.addEventListener("scroll", update_animations);
         update_animations();

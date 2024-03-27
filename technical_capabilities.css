@@ -10,7 +10,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 0% 100%;
-    transition: background-size 2s;
+    transition: background-size 0.75s;
     display: inline-block;
     padding: 0px var(--padding);
     text-wrap: nowrap;
@@ -25,22 +25,25 @@
     background-size: 100% 100%;
 }
 
-.technical .main_title .line, .left_line {
+.technical .main_title .line,
+.left_line {
     content: "";
     display: block;
     height: 2px;
     background-color: var(--color);
     background: linear-gradient(90deg, var(--color), transparent);
-    transition: transform 1s;
-    transition-delay: 1.5s;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
     width: 90%;
     transform: translateX(-100vw);
 }
-.left_line{
+
+.left_line {
     transition-delay: 0s;
 }
 
-.technical .main_title.visible .line,.visible .left_line {
+.technical .main_title.visible .line,
+.visible .left_line {
     transform: translateX(0vw);
 }
 
