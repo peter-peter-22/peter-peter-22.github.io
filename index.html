@@ -95,23 +95,40 @@
 
                     </div>
 
-                    <div class="row" style="border-color: var(--mysql);">
+                    <div class="row" style="border-color: var(--nodejs);">
 
-                        <img class="icon" src="logos/mysql.png">
-                        <span>M</span>
-                        <span>Y</span>
+                        <img class="icon" src="logos/nodejs.png">
+                        <span>N</span>
+                        <span>O</span>
+                        <span>D</span>
+                        <span>E</span>
+                        <span>J</span>
+                        <span>S</span>
+
+                    </div>
+
+                    <div class="row" style="border-color: var(--postgresql);">
+
+                        <img class="icon" src="logos/postgresql.png">
+                        <span>P</span>
+                        <span>O</span>
+                        <span>S</span>
+                        <span>T</span>
+                        <span>G</span>
+                        <span>R</span>
+                        <span>E</span>
                         <span>S</span>
                         <span>Q</span>
                         <span>L</span>
 
                     </div>
 
-                    <div class="row" style="border-color: var(--php);">
+                    <div class="row" style="border-color: var(--git);">
 
-                        <img class="icon" src="logos/php.png">
-                        <span>P</span>
-                        <span>H</span>
-                        <span>P</span>
+                        <img class="icon" src="logos/git.png">
+                        <span>G</span>
+                        <span>I</span>
+                        <span>T</span>
 
                     </div>
 
@@ -119,12 +136,16 @@
             </div>
             <p class="moving_text_prefix colored_row">And I'm motivated to learn more.</p>
             <div class="my_row">
-                <button class="nice_button">
-                    <p class="text">Download CV</p>
-                </button>
-                <button class="nice_button">
-                    <p class="text">To Portfolios</p>
-                </button>
+                <a href="#projects_chooser" class="button_link">
+                    <button class="nice_button">
+                        <p class="text">Download CV</p>
+                    </button>
+                </a>
+                <a href="#projects_chooser" class="button_link">
+                    <button class="nice_button">
+                        <p class="text">To Portfolios</p>
+                    </button>
+                </a>
             </div>
         </div>
         <div class="my_column">
@@ -137,6 +158,11 @@
         <div class="paper_piece" style="--type:0;background-color: var(--html);"></div>
         <div class="paper_piece" style="--type:1;background-color: var(--javascript);"></div>
         <div class="paper_piece" style="--type:2;background-color: var(--css);"></div>
+    </div>
+    <div class="paper_pieces from_left scroll_animation">
+        <div class="paper_piece" style="--type:0;background-color: var(--git);"></div>
+        <div class="paper_piece" style="--type:1;background-color: var(--nodejs);"></div>
+        <div class="paper_piece" style="--type:2;background-color: var(--postgresql);"></div>
     </div>
 
     <!--what can I do?-->
@@ -165,8 +191,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Back-end</h1>
-                        <p class="content">I can create servers to communicate with the client, APIs and databases.
-                            I can use several APIs and packages to handle authentication, payments, sessions...</p>
+                        <pre class="content">I can create servers to communicate with the client, APIs and databases.
+                            I can use several APIs and packages to handle authentication, payments, sessions...</pre>
                     </div>
                 </div>
             </div>
@@ -177,8 +203,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Databases</h1>
-                        <p class="content">I use constraints and foreign keys to keep my databases organized.
-                            I use JSONs, arrays and relationship tables to connect multiple entries.</p>
+                        <pre class="content">I use constraints and foreign keys to keep my databases organized.
+                            I use JSONs, arrays and relationship tables to connect multiple entries.</pre>
                     </div>
                 </div>
             </div>
@@ -189,10 +215,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Debugging</h1>
-                        <p class="content">I can use breakpoints and logs both on client-side and server-side to find
-                            what I
-                            need.
-                            I can also search among the changes with the Git utilities of VSC.</p>
+                        <pre class="content">I can use breakpoints and logs both on client-side and server-side to find what I need. 
+                            I can also search among the changes with the Git utilities of VSC.</pre>
                     </div>
                 </div>
             </div>
@@ -203,10 +227,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Hosting</h1>
-                        <p class="content">I can host my servers from my computer locally via files, XAMPP and VSC,
-                            or
-                            globally with a doimain.
-                            I can also use third party hosters.</p>
+                        <pre class="content">I can host my servers from my computer locally via files, XAMPP and VSC, or globally with a doimain.
+                            I can also use third party hosters.</pre>
                     </div>
                 </div>
             </div>
@@ -217,9 +239,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Miscellaneous</h1>
-                        <p class="content">I use Git and Github to save and load my projects, download other
-                            projects and
-                            create pull requests.</p>
+                        <p class="content">I use Git and Github to save and load my projects, download other projects
+                            and create pull requests.</p>
                     </div>
                 </div>
             </div>
@@ -228,10 +249,13 @@
     </div>
 
     <!--effect-->
-    <div class="paper_pieces from_right scroll_animation">
-        <div class="paper_piece" style="--type:0;background-color: var(--html);"></div>
-        <div class="paper_piece" style="--type:1;background-color: var(--javascript);"></div>
-        <div class="paper_piece" style="--type:2;background-color: var(--css);"></div>
+    <div class="paper_pieces lines scroll_animation bottom">
+        <div class="paper_piece" style="--type:0;background-color: var(--postgresql);"></div>
+        <div class="paper_piece" style="--type:1;background-color: var(--nodejs);"></div>
+        <div class="paper_piece" style="--type:2;background-color: var(--javascript);"></div>
+        <div class="paper_piece" style="--type:3;background-color: var(--html);"></div>
+        <div class="paper_piece" style="--type:4;background-color: var(--git);"></div>
+        <div class="paper_piece" style="--type:5;background-color: var(--css);"></div>
     </div>
 
 
@@ -239,18 +263,21 @@
     <div class="about_me scroll_animation fade_up">
         <div class="box">
             <h2 class="title">About me</h2>
-            <p class="text">I am a self-educated web developer. I learned what I know at W3 schools and udemy. I never
-                worked in the IT
-                industry, but I tested my skills by creating pages those have similar functions as the real websites.
+            <p class="text">
+                I am a self-educated full stack web-developer from Hungary.
+                I learned the basics at W3 schools then continued at udemy.
             </p>
         </div>
     </div>
 
     <!--effect-->
-    <div class="paper_pieces from_right scroll_animation">
-        <div class="paper_piece" style="--type:0;background-color: var(--html);"></div>
-        <div class="paper_piece" style="--type:1;background-color: var(--javascript);"></div>
-        <div class="paper_piece" style="--type:2;background-color: var(--css);"></div>
+    <div class="paper_pieces flower scroll_animation bottom">
+        <div class="paper_piece" style="--type:0;background-color: var(--postgresql);"></div>
+        <div class="paper_piece" style="--type:1;background-color: var(--nodejs);"></div>
+        <div class="paper_piece" style="--type:2;background-color: var(--javascript);"></div>
+        <div class="paper_piece" style="--type:3;background-color: var(--html);"></div>
+        <div class="paper_piece" style="--type:4;background-color: var(--git);"></div>
+        <div class="paper_piece" style="--type:5;background-color: var(--css);"></div>
     </div>
 
 
@@ -261,41 +288,80 @@
             <div class="line"></div>
         </div>
         <div class="moving_sections">
+
             <div class="shadow">
                 <section class="scroll_animation" style="background-color: var(--html);">
                     <h2 class="title">HTML</h2>
-                    <p>I can form my pages with flexboxes, floating elements and other methods. All of my portfolio
-                        projects
-                        are
-                        responsive.</p>
-                    <p>This project demonstrates my skills in HTML: <a href="">page name</a></p>
+                    <p>In HTML I can use both the built-in and user-defined attributes,
+                        set the encryption type and other parameters of the forms correctly, and submit the from outside
+                        the element if necessary.</p>
                 </section>
             </div>
+
             <div class="shadow">
                 <section class="scroll_animation" style="background-color: var(--javascript);">
                     <h2 class="title">Javascript</h2>
-                    <p>I can use javascript to align images, create elements, verify forms and more. I also use
-                        jquery.
+                    <p>In the case of javascript and jquery I can create or alter elements procedurally, control visual
+                        effects, send HTTP requests, alter the contents of forms or validate them and many other things.
                     </p>
-                    <p>This project demonstrates my skills in Javascript: <a href="">page name</a></p>
                 </section>
             </div>
+
             <div class="shadow">
                 <section class="scroll_animation" style="background-color: var(--css);">
                     <h2 class="title">CSS</h2>
-                    <p>With CSS I can create animations, transitions and other design elements to my pages look nice
-                        and
-                        elegant.</p>
-                    <p>This project demonstrates my skills in CSS: <a href="">page name</a></p>
+                    <p>
+                        With CSS and bootstrap, I can use several parameters to shape my page icluding but not limited to:
+                        animations, transitions, filters, transformations, gradients, variables, calculations,
+                        pseudo-elements.
+                    </p>
                 </section>
             </div>
+
+            <div class="shadow">
+                <section class="scroll_animation" style="background-color: var(--postgresql);">
+                    <h2 class="title">PostgreSQL</h2>
+                    <p>
+                        When it comes to postgreSQL, I can combine the contents of tables in different ways,
+                        use jsons, casts, logical functions, cases, subqueries and alter the format the selected
+                        contents.
+                    </p>
+                </section>
+            </div>
+
+            <div class="shadow">
+                <section class="scroll_animation" style="background-color: var(--nodejs);">
+                    <h2 class="title">NodeJS</h2>
+                    <p>
+                        In nodeJS, I can handle or send different kinds of requests, manage files,
+                        compile SASS, handle authentications and use several NPM packages including:
+                        express, passport, bcrypt, session, env, stripe...
+                    </p>
+                </section>
+            </div>
+
+            <div class="shadow">
+                <section class="scroll_animation" style="background-color: var(--git);">
+                    <h2 class="title">Git</h2>
+                    <p>
+                        Via git, I can backup my projects, load them from any point, create, merge and delete branches,
+                        and link my repositiory to github.
+                        In github, I know how to clone repositories and send pull requests.
+                    </p>
+                </section>
+            </div>
+
         </div>
     </div>
 
-    <div class="paper_pieces from_right scroll_animation">
-        <div class="paper_piece" style="--type:0;background-color: var(--html);"></div>
-        <div class="paper_piece" style="--type:1;background-color: var(--javascript);"></div>
-        <div class="paper_piece" style="--type:2;background-color: var(--css);"></div>
+    <!--effect-->
+    <div class="paper_pieces cubes scroll_animation bottom">
+        <div class="paper_piece" style="--type:0;background-color: var(--postgresql);"></div>
+        <div class="paper_piece" style="--type:1;background-color: var(--nodejs);"></div>
+        <div class="paper_piece" style="--type:2;background-color: var(--javascript);"></div>
+        <div class="paper_piece" style="--type:3;background-color: var(--html);"></div>
+        <div class="paper_piece" style="--type:4;background-color: var(--git);"></div>
+        <div class="paper_piece" style="--type:5;background-color: var(--css);"></div>
     </div>
 
 
@@ -312,19 +378,19 @@
 
         <div class="container">
 
-            <a href="#" class="project_icon">
+            <a href="#project_0" class="project_icon" style="--color: var(--html);">
                 <div class="hover"></div>
-                <h5 class="project_title">title</h5>
+                <h5 class="project_title">Shop</h5>
+                <div class="project_image" style="background-image: url(portfolios/shop/index.jpg);"></div>
+            </a>
+
+            <a href="#project_1" class="project_icon" style="--color: var(--javascript);">
+                <div class="hover"></div>
+                <h5 class="project_title">Photo gallery</h5>
                 <div class="project_image" style="background-image: url(portfolios/photogallery/0p.jpg);"></div>
             </a>
 
-            <a href="#" class="project_icon">
-                <div class="hover"></div>
-                <h5 class="project_title">title</h5>
-                <div class="project_image" style="background-image: url(portfolios/photogallery/0p.jpg);"></div>
-            </a>
-
-            <a href="#" class="project_icon">
+            <a href="#project_3" class="project_icon" style="--color: var(--css);">
                 <div class="hover"></div>
                 <h5 class="project_title">title</h5>
                 <div class="project_image" style="background-image: url(portfolios/photogallery/0p.jpg);"></div>
@@ -348,7 +414,7 @@
             </div>
 
             <div class="wrapper">
-                <div class="sheets">
+                <a href="#" class="sheets invisible_link">
 
                     <div class="page">
                     </div>
@@ -358,43 +424,75 @@
                         <div class="text_container">
                             <h1 class="title">Starting page</h1>
                             <p class="text">The first page the user ecounters introduces the shop, shows a few products
-                                and
-                                discounts, then tells more informations about the page.</p>
+                                and lists the top discounts.</p>
                         </div>
                         <div class="img_container">
-                            <img class="keep_in_box" src="portfolios/photogallery/0p.jpg">
+                            <img src="portfolios/shop/top_discounts.jpg">
                         </div>
                     </div>
 
-                    <div class="page sheet" style="background-color:var(--html);
+                    <div class="page sheet" style="background-color:var(--javascript);
                     transform: rotate(-2deg);">
                         <div class="text_container">
-                            <h1 class="title">Starting page</h1>
-                            <p class="text">The first page the user ecounters introduces the shop, shows a few products
-                                and
-                                discounts, then tells more informations about the page.</p>
+                            <h1 class="title">Browsing</h1>
+                            <p class="text">In the browsing menu the displayed products can be filtered by category,
+                                properties and discounts.</p>
                         </div>
                         <div class="img_container">
-                            <img class="keep_in_box" src="portfolios/photogallery/0p.jpg">
+                            <img class="keep_in_box" src="portfolios/shop/filters.jpg">
                         </div>
                     </div>
 
-                    <div class="page sheet" style="background-color:var(--html);
+                    <div class="page sheet" style="background-color:var(--css);
                     transform: rotate(1deg);">
                         <div class="text_container">
-                            <h1 class="title">Starting page</h1>
-                            <p class="text">The first page the user ecounters introduces the shop, shows a few products
-                                and
-                                discounts, then tells more informations about the page.</p>
+                            <h1 class="title">Authentication</h1>
+                            <p class="text">The user can be authenticated with an email address or google auth. The
+                                session ends when the browser is closed unless the "remember me" option is checked.
+                                Sessions persist between server restarts. </p>
                         </div>
                         <div class="img_container">
-                            <img class="keep_in_box" src="portfolios/photogallery/0p.jpg">
+                            <img class="keep_in_box" src="portfolios/shop/login.jpg">
                         </div>
                     </div>
 
+                    <div class="page sheet" style="background-color:var(--git);
+                    transform: rotate(-1deg);">
+                        <div class="text_container">
+                            <h1 class="title">Reviews</h1>
+                            <p class="text">The users can rate a product and tell their opinions about it, or reply to a
+                                rating. The average rating is displayed at each product.</p>
+                        </div>
+                        <div class="img_container">
+                            <img class="keep_in_box" src="portfolios/shop/reviews.jpg">
+                        </div>
+                    </div>
 
+                    <div class="page sheet" style="background-color:var(--nodejs);
+                    transform: rotate(0deg);">
+                        <div class="text_container">
+                            <h1 class="title">Checkout</h1>
+                            <p class="text">The page uses stripe to handle the payments. The users are automatically
+                                registered to stripe and they can view their receipts in the user menu.</p>
+                        </div>
+                        <div class="img_container">
+                            <img class="keep_in_box" src="portfolios/shop/checkout.jpg">
+                        </div>
+                    </div>
 
-                </div>
+                    <div class="page sheet" style="background-color:var(--postgresql);
+                    transform: rotate(-3deg);">
+                        <div class="text_container">
+                            <h1 class="title">Editor UI</h1>
+                            <p class="text">The categories, filters, products and discounts can be edited on the page
+                                without coding.</p>
+                        </div>
+                        <div class="img_container">
+                            <img class="keep_in_box" src="portfolios/shop/admin.jpg">
+                        </div>
+                    </div>
+
+                </a>
             </div>
 
             <div class="portfolio_menu">
@@ -413,7 +511,7 @@
     <div class="portfolio" id="project_1">
         <div class="sticky project1" data-animation_steps="7">
 
-            <div class="container">
+            <a href="#" class="container">
                 <picture class="picture my_column">
                     <source media="(max-width: 800px)" srcset="portfolios/photogallery/0m.jpg">
                     <img class="root_image keep_in_box" src="portfolios/photogallery/0p.jpg">
@@ -477,22 +575,16 @@
                     <!--last page, gradient background and link-->
                     <div class="end" id="page4">
                         <p class="description">
-                            This page was made with HTML, Javascript, CSS, JQuery, PHP and MySQL.
-                            It's being hosted at a third-party server provider, Infinityfree.
-                            The images, the categories, the previews, the colors of the page, the settings, and the
-                            text
-                            fields are editable in the admin UI.
-                            All SQL queries are protected against SQL-injection.
-                            The page automatically creates the necessary SQL tables and other files if they don't
-                            exist.
+                           This page was made with nodeJS, jquery with postgresql. 
+                           In the administrator menu, the text fields on the main page, the images, the categories, 
+                           the logo, the profile, the password and the display mode of the previews can be altered.
+                           The images are stored on the server as files and their url is saved into the database.
+                           The page is protected from SQL injection, only the password hash is stored and all admin tools require authentication.
                         </p>
-                        <button class="nice_button bigger">
-                            <p class="text">Open Page</p>
-                        </button>
                     </div>
 
                 </div>
-            </div>
+            </a>
 
             <div class="portfolio_menu">
                 <a href="#project_0">

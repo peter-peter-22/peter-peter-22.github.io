@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
     //making the sections visible or invisible when they are above or below a certain part of the screen
 
     const visible_from = 70;//the sections become visible when their top is at "visible_from"vh distance from the top of the window
-    //const visible_from_delayed = 30;//shows up later if has the "delayed" class
-
+    const visible_from_bottom = 100;
+    
     const sections = document.querySelectorAll(".scroll_animation");  
 
     function change_visibility() {
         sections.forEach(section => {
-          //if(px_to_vh(section.getBoundingClientRect().top) < (section.classList.contains("delayed")? visible_from_delayed:visible_from))
-          if(px_to_vh(section.getBoundingClientRect().top) < visible_from)
+            const bottom = section.classList.contains("bottom");
+          if(!bottom&& px_to_vh(section.getBoundingClientRect().top) < visible_from || bottom && px_to_vh(section.getBoundingClientRect().bottom) < visible_from_bottom)
           section.classList.add("visible");
           else
           section.classList.remove("visible");
