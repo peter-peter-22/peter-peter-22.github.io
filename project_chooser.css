@@ -1,9 +1,5 @@
-.projects_chooser {
+.projects {
     margin: 150px 0px;
-    padding: 50px var(--padding);
-    background-color: var(--box2);
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.582);
-    --size: calc(min(15vw, 200px));
 }
 
 .projects_chooser .project_title {

@@ -2,7 +2,7 @@
     margin: 100px 0px;
 }
 
-.technical .main_title .text {
+ .section_title .text {
     font-weight: bold;
     font-size: var(--font-size);
     color: transparent;
@@ -16,16 +16,15 @@
     text-wrap: nowrap;
 }
 
-.technical .main_title {
+.section_title {
     width: 100%;
     margin-bottom: 100px;
 }
 
-.technical .main_title.visible .text {
+.section_title.visible .text {
     background-size: 100% 100%;
 }
-
-.technical .main_title .line,
+.section_title .line,
 .left_line {
     content: "";
     display: block;
@@ -42,7 +41,7 @@
     transition-delay: 0s;
 }
 
-.technical .main_title.visible .line,
+.section_title.visible .line,
 .visible .left_line {
     transform: translateX(0vw);
 }

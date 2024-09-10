@@ -8,7 +8,6 @@
   height: calc(100% - 100px);
   display: flex;
   align-items: center;
-
 }
 
 .project0 .wrapper {
@@ -38,7 +37,7 @@
   justify-content: stretch;
   gap: 20px;
   transition: all 0.75s;
-  right: 0px;
+  left: 0px;
 }
 
 
@@ -90,6 +89,7 @@ width: 400px;
   display: inline-block;
   font-size: var(--font-size);
   border-radius: 10px;
+  padding: 5px 10px;
   position: relative;
   margin: auto;
 }
@@ -135,6 +135,6 @@ width: 400px;
 
 
 .project0 .sheet:not([data-active="true"]) {
-  right: calc(max(130vw, 130vh));
+  left: calc(max(130vw, 130vh));
   transform: rotate(45deg) !important;
 }

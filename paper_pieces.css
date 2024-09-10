@@ -77,7 +77,7 @@
 /*flower*/
 .paper_pieces.flower {
   width: 100%;
-  height:  calc(var(--effect_cube)) ;
+  height:  calc(var(--effect_cube)*0.8) ;
   position: relative;
   overflow: hidden;
 }

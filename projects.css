@@ -1,0 +1,39 @@
+.bottom_nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--text_fade);
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+#swipe_area {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0
+}
+
+.project {
+    height: 100vh;
+    width: 100%;
+    --animation_time: 0.5s;
+    --menu_height: 50px;
+}
+
+.project .inner {
+    position: -webkit-sticky;
+    /*the navbar covers thetop of the screen*/
+    top: var(--navbar_height);
+
+    width: 100%;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+html, body{
+    overflow: hidden;
+}
