@@ -122,16 +122,18 @@
             </div>
             <p class="moving_text_prefix colored_row">And I'm motivated to learn more.</p>
             <div class="my_row">
-                <a href="#project_chooser" class="button_link">
-                    <button class="nice_button">
-                        <p class="text">Download CV</p>
-                    </button>
-                </a>
-                <a href="#project_chooser" class="button_link">
-                    <button class="nice_button">
-                        <p class="text">Projects</p>
-                    </button>
-                </a>
+                <div class="button_container">
+                    <a href="#project_chooser" class="button_link">
+                        <button class="nice_button">
+                            <p class="text">Download CV</p>
+                        </button>
+                    </a>
+                    <a href="#project_chooser" class="button_link">
+                        <button class="nice_button">
+                            <p class="text">Projects</p>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="my_column">
@@ -236,7 +238,7 @@
     </div>
 
     <!--effect-->
-    <div class="paper_pieces flower scroll_animation bottom">
+    <div class="paper_pieces flower scroll_animation bottom instant">
         <div class="paper_piece" style="--type:0;background-color: var(--postgresql);"></div>
         <div class="paper_piece" style="--type:1;background-color: var(--nodejs);"></div>
         <div class="paper_piece" style="--type:2;background-color: var(--javascript);"></div>
@@ -246,10 +248,38 @@
     </div>
 
     <!--about me-->
-    <div class="about_me">
+    <div class="about_me scroll_animation bottom">
         <div class="scroll_animation section_title">
             <h1 class="text">About me</h1>
             <div class="line"></div>
+        </div>
+
+        <div class="box">
+            <div class="background"></div>
+            <div class="contents">
+                <h2 class="title">Szalados Péter</h2>
+
+                <h3>Background</h3>
+                <div class="text_cell">
+                    <p>I was born on 2002 february 20 at Hungary.</p>
+                    <p>I am a self-educated full-stack web-developer.</p>
+                </div>
+
+                <h3>Education</h3>
+                <div class="text_cell">
+                    I learned what I know from udemy, several smaller tutorials and tech forums like stackoverflow.
+                </div>
+
+                <h3>Coming soon</h3>
+                <div class="text_cell">
+                    ghjudfjggjdf jjgf djjgfj
+                </div>
+
+                <div class="date">2024.09.10</div>
+            </div>
+            <div class="cover_shadow">
+                <div class="cover"></div>
+            </div>
         </div>
     </div>
 
@@ -274,7 +304,7 @@
         <div class="moving_sections">
 
             <div class="shadow">
-                <section class="scroll_animation" style="background-color: var(--html);">
+                <section class="scroll_animation bottom" style="background-color: var(--html);">
                     <h2 class="title">HTML</h2>
                     <p>In HTML I can use both the built-in and user-defined attributes,
                         set the encryption type and other parameters of the forms correctly, and submit the from outside
@@ -283,7 +313,7 @@
             </div>
 
             <div class="shadow">
-                <section class="scroll_animation" style="background-color: var(--javascript);">
+                <section class="scroll_animation bottom" style="background-color: var(--javascript);">
                     <h2 class="title">Javascript</h2>
                     <p>In the case of javascript and jquery I can create or alter elements procedurally, control visual
                         effects, send HTTP requests, alter the contents of forms or validate them and many other things.
@@ -292,7 +322,7 @@
             </div>
 
             <div class="shadow">
-                <section class="scroll_animation" style="background-color: var(--css);">
+                <section class="scroll_animation bottom" style="background-color: var(--css);">
                     <h2 class="title">CSS</h2>
                     <p>
                         With CSS and bootstrap, I can use several parameters to shape my page icluding but not limited
@@ -304,7 +334,7 @@
             </div>
 
             <div class="shadow">
-                <section class="scroll_animation" style="background-color: var(--postgresql);">
+                <section class="scroll_animation bottom" style="background-color: var(--postgresql);">
                     <h2 class="title">PostgreSQL</h2>
                     <p>
                         When it comes to postgreSQL, I can combine the contents of tables in different ways,
@@ -315,7 +345,7 @@
             </div>
 
             <div class="shadow">
-                <section class="scroll_animation" style="background-color: var(--nodejs);">
+                <section class="scroll_animation bottom" style="background-color: var(--nodejs);">
                     <h2 class="title">NodeJS</h2>
                     <p>
                         In nodeJS, I can handle or send different kinds of requests, manage files,
@@ -326,7 +356,7 @@
             </div>
 
             <div class="shadow">
-                <section class="scroll_animation" style="background-color: var(--git);">
+                <section class="scroll_animation bottom" style="background-color: var(--git);">
                     <h2 class="title">Git</h2>
                     <p>
                         Via git, I can backup my projects, load them from any point, create, merge and delete branches,
@@ -357,7 +387,111 @@
             <h1 class="text">Projects</h1>
             <div class="line"></div>
         </div>
-        projectts
+
+        <div class="container">
+            <div class="project_entry scroll_animation bottom instant">
+                <img src="projects/shop/admin.jpg">
+                <div class="separator"></div>
+                <div class="deltails">
+                    <div class="text_box">
+                        <h1 class="title">Y Community</h1>
+                        <p class="desc">
+                        <p>A social media site that mimincs the core functions of X.</p>
+                        <br>
+                        <p>Highlighted functions:</p>
+                        <p>Push, email and realtime in-app notifications.</p>
+                        <p>Working hashtags,follow and block.</p>
+                        <p>Optimized DB, loading, infinite lists and media.</p>
+                        </p>
+                    </div>
+                    <div class="buttons">
+                        <div class="button_container">
+                            <a href="#project_chooser" class="button_link">
+                                <button class="nice_button">
+                                    <p class="text">Link</p>
+                                </button>
+                            </a>
+                            <a href="#project_chooser" class="button_link">
+                                <button class="nice_button">
+                                    <p class="text">Slideshow</p>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project_entry scroll_animation bottom instant">
+                <img src="projects/shop/admin.jpg">
+                <div class="separator"></div>
+                <div class="deltails">
+                    <div class="text_box">
+                        <h1 class="title">Sample Shop</h1>
+                        <p class="desc">
+                        <p>A shopping site with real payment method.</p>
+                        <br>
+                        <p>Highlighted functions:</p>
+                        <p>Deltailed filters.</p>
+                        <p>The discounts have adjustable validity and repeating.</p>
+                        <p>The top discounts and products are displayed on the front page.</p>
+                    </div>
+                    <div class="buttons">
+                        <div class="button_container">
+                            <a href="#project_chooser" class="button_link">
+                                <button class="nice_button">
+                                    <p class="text">Link</p>
+                                </button>
+                            </a>
+                            <a href="#project_chooser" class="button_link">
+                                <button class="nice_button">
+                                    <p class="text">Slideshow</p>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project_entry scroll_animation bottom instant">
+                <img src="projects/shop/admin.jpg">
+                <div class="separator"></div>
+                <div class="deltails">
+                    <div class="text_box">
+                        <h1 class="title">Photo Gallery</h1>
+                        <p class="desc">
+                        <p>A simple site to display the photos of the owner.</p>
+                        <br>
+                        <p>Highlighted functions:</p>
+                        <p>The categories, profile, page color, logo and texts are adjustable from the admin UI.</p>
+                        <p>Handmade masonry grid.</p>
+                    </div>
+                    <div class="buttons">
+                        <div class="button_container">
+                            <a href="#project_chooser" class="button_link">
+                                <button class="nice_button">
+                                    <p class="text">Link</p>
+                                </button>
+                            </a>
+                            <a href="#project_chooser" class="button_link">
+                                <button class="nice_button">
+                                    <p class="text">Slideshow</p>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--contact-->
+
+    <div class="projects" id="project_chooser">
+        <div class="scroll_animation section_title">
+            <h1 class="text">Contact</h1>
+            <div class="line"></div>
+        </div>
     </div>
 
 </body>

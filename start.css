@@ -129,7 +129,6 @@
 .nice_button
 {
     display: block;
-    margin: 10px;
     background: none;
 color: var(--color);
 border: solid 2px var(--color);
@@ -156,6 +155,11 @@ text-wrap: nowrap;
  .nice_button:hover .text,  .nice_button:hover
 {
     background-size: 100% 100%;
+}
+
+.button_container{
+    display: flex;
+    gap: 10px;
 }
 
 /*link of button*/

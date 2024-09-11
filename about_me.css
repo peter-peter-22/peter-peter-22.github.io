@@ -1,4 +1,108 @@
 .about_me {
-    margin: 100px 0px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 300px;
 }
 
+.about_me .box {
+    width: 800px;
+    max-width: 80vw;
+    margin: auto;
+    height: 500px;
+    max-height: 80vh;
+    display: flex;
+    position: relative;
+    --shadow: calc(var(--effect) * 0.1);
+    filter: drop-shadow(rgba(0, 0, 0, 0.438) 0 var(--shadow) var(--shadow));
+}
+
+.about_me .background {
+    background-image: linear-gradient(-20deg, rgba(0, 0, 0, 0.116), rgba(255, 255, 255, 0.397));
+    background-color: var(--javascript);
+    clip-path: polygon(45% 12%, 100% 12%, 100% 100%, 0% 100%, 0 0, 34% 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.about_me .contents {
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px;
+    transform: rotate(1deg);
+    --shadow: calc(var(--effect) * 0.03);
+    filter: drop-shadow(rgba(0, 0, 0, 0.438) 0 var(--shadow) var(--shadow));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    --font_multiplier: 1;
+    transition: transform;
+    background-image: linear-gradient(-20deg, rgb(205, 219, 228), rgb(255, 255, 255));
+
+}
+
+@media screen and (max-width: 500px) {
+    .about_me .contents {
+        --font_multiplier: 0.8;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+.about_me .contents * {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about_me .text_cell {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.about_me .contents .title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: calc(var(--font_multiplier)*1.5em);
+}
+
+.about_me .contents h3 {
+    font-size: calc(var(--font_multiplier)*1.25em);
+}
+
+.about_me .contents .text_cell {
+    font-size: calc(var(--font_multiplier)*1em);
+}
+
+.about_me .contents .date
+{
+    font-size: calc(var(--font_multiplier)*0.8em);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    margin-left: auto;
+    margin-top:auto
+}
+
+.about_me .cover_shadow{
+    --shadow: calc(var(--effect) * 0.03);
+    filter: drop-shadow(rgba(0, 0, 0, 0.438) 0 var(--shadow) var(--shadow));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.about_me .cover {
+    --open:0;
+    background-image: linear-gradient(-20deg, rgba(0, 0, 0, 0.116), rgba(255, 255, 255, 0.397));
+    background-color: var(--javascript);
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 0% 100%, 0 12%, 58% 12%);
+    transform-origin: bottom center;
+    transform: perspective(1000px) rotateX(calc(var(--open) * -110deg));
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.about_me.visible .cover{
+    --open:1;
+}

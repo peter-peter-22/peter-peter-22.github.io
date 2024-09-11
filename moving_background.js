@@ -11,6 +11,6 @@ document.querySelectorAll(".moving_background").forEach(function(moving_backgrou
         moving_background.style.backgroundPositionY = (timeStamp / 1000.0  * scroll_speed)+"vh";
         window.requestAnimationFrame(move_this);
     }
-  // window.requestAnimationFrame(move_this);
+   window.requestAnimationFrame(move_this);
 });
 });

@@ -1,7 +1,10 @@
 /*universal*/
+.paper_panel, .paper_piece{
+  background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0.247));
+}
+
 .paper_piece {
   position: absolute;
-  background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0.247));
   --shadow: calc(var(--effect) * 0.1);
   filter: drop-shadow(rgba(0, 0, 0, 0.438) 0px var(--shadow) var(--shadow));
   transition: all 0.5s;
