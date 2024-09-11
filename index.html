@@ -30,6 +30,12 @@
 
     <link rel="stylesheet" href="project_chooser.css">
 
+    <link rel="stylesheet" href="contacts.css">
+
+    <link rel="stylesheet" href="footer.css">
+
+    <script type="text/javascript" src="download.js"></script>
+
     <!--bootstrap webfont-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--/bootstrap webfont-->
@@ -40,9 +46,10 @@
     <!--navbar-->
     <div class="navbar_placeholder">
         <div class="navbar">
-            <a class="icon" href=""><img src="logos/css.png"></a>
-            <a class="option" href="">Home</a>
-            <a class="option" href="">Contact</a>
+            <!--<a class="icon" href=""><img src="logos/css.png"></a>-->
+            <a class="option" href="#">Home</a>
+            <a class="option" href="#projects">Projects</a>
+            <a class="option" href="#contact">Contact</a>
         </div>
     </div>
 
@@ -123,12 +130,10 @@
             <p class="moving_text_prefix colored_row">And I'm motivated to learn more.</p>
             <div class="my_row">
                 <div class="button_container">
-                    <a href="#project_chooser" class="button_link">
-                        <button class="nice_button">
+                        <button class="nice_button" onclick="download('My CV', 'application/pdf', 'sample.pdf')">
                             <p class="text">Download CV</p>
                         </button>
-                    </a>
-                    <a href="#project_chooser" class="button_link">
+                    <a href="#projects" class="button_link">
                         <button class="nice_button">
                             <p class="text">Projects</p>
                         </button>
@@ -167,9 +172,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Front-end</h1>
-                        <p class="content">I design my pages to be beautiful and funtional.
-                            I know the universal rules of UI, like aligning the start of the lines, order of reading,
-                            typography, color palettes...</p>
+                        <p class="content">I design my websites to be beautiful, functional and responsive with CSS,
+                            Bootstrap, EJS, React and Material-UI.</p>
                     </div>
                 </div>
             </div>
@@ -180,8 +184,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Back-end</h1>
-                        <pre class="content">I can create servers to communicate with the client, APIs and databases.
-                            I can use several APIs and packages to handle authentication, payments, sessions...</pre>
+                        <p class="content">I create backends those can handle authentication, databases, payments, SSE,
+                            sessions and third party APIs.</p>
                     </div>
                 </div>
             </div>
@@ -191,9 +195,9 @@
                 <div class="vertical_line"></div>
                 <div class="texts">
                     <div class="moving">
-                        <h1 class="main_title">Databases</h1>
-                        <pre class="content">I use constraints and foreign keys to keep my databases organized.
-                            I use JSONs, arrays and relationship tables to connect multiple entries.</pre>
+                        <h1 class="main_title">Database</h1>
+                        <p class="content">I can configure various kinds of constraints, checks, indexes and triggers to
+                            optimize and automate my databases.</p>
                     </div>
                 </div>
             </div>
@@ -204,8 +208,9 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Debugging</h1>
-                        <pre class="content">I can use breakpoints and logs both on client-side and server-side to find what I need. 
-                            I can also search among the changes with the Git utilities of VSC.</pre>
+                        <p class="content">I debug and analyze and performance of my codes with the devtools, VSC
+                            breaks, postgre analyze, react devtools and profiler, lighthouse and logs.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -216,8 +221,9 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Hosting</h1>
-                        <pre class="content">I can host my servers from my computer locally via files, XAMPP and VSC, or globally with a doimain.
-                            I can also use third party hosters.</pre>
+                        <p class="content">I can host my projects on third party hosting sites and configure both the
+                            code and the server for production environment.
+                            I used Render and Vercel so far.</p>
                     </div>
                 </div>
             </div>
@@ -228,8 +234,8 @@
                 <div class="texts">
                     <div class="moving">
                         <h1 class="main_title">Miscellaneous</h1>
-                        <p class="content">I use Git and Github to save and load my projects, download other projects
-                            and create pull requests.</p>
+                        <p class="content">I use Git and Github for version control.
+                            I can use third party services like google auth and stripe.</p>
                     </div>
                 </div>
             </div>
@@ -304,58 +310,46 @@
         <div class="moving_sections">
 
             <div class="shadow">
-                <section class="scroll_animation bottom" style="background-color: var(--html);">
-                    <h2 class="title">HTML</h2>
-                    <p>In HTML I can use both the built-in and user-defined attributes,
-                        set the encryption type and other parameters of the forms correctly, and submit the from outside
-                        the element if necessary.</p>
+                <section class="scroll_animation bottom" style="background-color: var(--react);">
+                    <h2 class="title">React</h2>
+                    <p>I am familiar with the most of the the react hooks and I can use third libraries uncluding
+                        Material-UI, Draftjs, React-hook-form, Tanstack query and virtual.</p>
                 </section>
             </div>
 
             <div class="shadow">
                 <section class="scroll_animation bottom" style="background-color: var(--javascript);">
                     <h2 class="title">Javascript</h2>
-                    <p>In the case of javascript and jquery I can create or alter elements procedurally, control visual
-                        effects, send HTTP requests, alter the contents of forms or validate them and many other things.
-                    </p>
+                    <p>I know all Javscript syntaxes I have seen so far. Examples: template literals, for..in, returned
+                        functions, spread and various shortings.</p>
                 </section>
             </div>
 
             <div class="shadow">
                 <section class="scroll_animation bottom" style="background-color: var(--css);">
                     <h2 class="title">CSS</h2>
-                    <p>
-                        With CSS and bootstrap, I can use several parameters to shape my page icluding but not limited
-                        to:
-                        animations, transitions, filters, transformations, gradients, variables, calculations,
-                        pseudo-elements.
-                    </p>
-                </section>
-            </div>
-
-            <div class="shadow">
-                <section class="scroll_animation bottom" style="background-color: var(--postgresql);">
-                    <h2 class="title">PostgreSQL</h2>
-                    <p>
-                        When it comes to postgreSQL, I can combine the contents of tables in different ways,
-                        use jsons, casts, logical functions, cases, subqueries and alter the format the selected
-                        contents.
-                    </p>
+                    <p>I can style my projects with animations, transitions, gradients and more. I use variables and
+                        third party libraries to make my codes efficient.</p>
                 </section>
             </div>
 
             <div class="shadow">
                 <section class="scroll_animation bottom" style="background-color: var(--nodejs);">
                     <h2 class="title">NodeJS</h2>
-                    <p>
-                        In nodeJS, I can handle or send different kinds of requests, manage files,
-                        compile SASS, handle authentications and use several NPM packages including:
-                        express, passport, bcrypt, session, env, stripe...
-                    </p>
+                    <p>With NodeJS I can implement and manage authentications. I use password hashing, samesite cookies,
+                        request limit and https connection to make the backend secure.</p>
                 </section>
             </div>
 
             <div class="shadow">
+                <section class="scroll_animation bottom" style="background-color: var(--postgresql);">
+                    <h2 class="title">PostgreSQL</h2>
+                    <p>I can configure various kinds of constraints, checks, indexes and triggers to
+                        optimize and automate my databases. I understand the most operators and functions.</p>
+                </section>
+            </div>
+
+            <!--<div class="shadow">
                 <section class="scroll_animation bottom" style="background-color: var(--git);">
                     <h2 class="title">Git</h2>
                     <p>
@@ -364,7 +358,7 @@
                         In github, I know how to clone repositories and send pull requests.
                     </p>
                 </section>
-            </div>
+            </div>-->
 
         </div>
     </div>
@@ -382,7 +376,7 @@
 
     <!--projects-->
 
-    <div class="projects" id="project_chooser">
+    <div class="projects" id="projects">
         <div class="scroll_animation section_title">
             <h1 class="text">Projects</h1>
             <div class="line"></div>
@@ -396,7 +390,7 @@
                     <div class="text_box">
                         <h1 class="title">Y Community</h1>
                         <p class="desc">
-                        <p>A social media site that mimincs the core functions of X.</p>
+                        <p>A social media site that mimics the core functions of X.</p>
                         <br>
                         <p>Highlighted functions:</p>
                         <p>Push, email and realtime in-app notifications.</p>
@@ -442,7 +436,7 @@
                                     <p class="text">Link</p>
                                 </button>
                             </a>
-                            <a href="#project_chooser" class="button_link">
+                            <a href="papers.html?project=shop" class="button_link">
                                 <button class="nice_button">
                                     <p class="text">Slideshow</p>
                                 </button>
@@ -472,7 +466,7 @@
                                     <p class="text">Link</p>
                                 </button>
                             </a>
-                            <a href="#project_chooser" class="button_link">
+                            <a href="papers_shop.html" class="button_link">
                                 <button class="nice_button">
                                     <p class="text">Slideshow</p>
                                 </button>
@@ -487,12 +481,59 @@
 
     <!--contact-->
 
-    <div class="projects" id="project_chooser">
+    <div class="contacts" id="contact">
         <div class="scroll_animation section_title">
             <h1 class="text">Contact</h1>
             <div class="line"></div>
         </div>
+
+        <div class="paper_shadow">
+            <div class="contact_entry scroll_animation" style="background-color: var(--html);--random:1">
+                <div class="front paper_panel">
+                    <div class="key">
+                        Email:
+                    </div>
+                    <div class="value">
+                        value
+                    </div>
+                </div>
+                <div class="back paper_panel"></div>
+            </div>
+        </div>
+
+        <div class="paper_shadow">
+            <div class="contact_entry scroll_animation" style="background-color: var(--javascript);--random:2">
+                <div class="front paper_panel">
+                    <div class="key">
+                        Github:
+                    </div>
+                    <div class="value">
+                        value
+                    </div>
+                </div>
+                <div class="back paper_panel"></div>
+            </div>
+        </div>
+
+        <div class="paper_shadow">
+            <div class="contact_entry scroll_animation" style="background-color: var(--css);--random:0">
+                <div class="front paper_panel">
+                    <div class="key">
+                        Key:
+                    </div>
+                    <div class="value">
+                        value
+                    </div>
+                </div>
+                <div class="back paper_panel"></div>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        Made in 2024 by Peter
+    </footer>
 
 </body>
 

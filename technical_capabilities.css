@@ -2,7 +2,7 @@
     margin: 100px 0px;
 }
 
- .section_title .text {
+.section_title .text {
     font-weight: bold;
     font-size: var(--font-size);
     color: transparent;
@@ -24,6 +24,7 @@
 .section_title.visible .text {
     background-size: 100% 100%;
 }
+
 .section_title .line,
 .left_line {
     content: "";

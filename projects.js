@@ -9,25 +9,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //create the pages and set their data
+let project;
+let pageDoms;
 function generate() {
     const generator = document.querySelector("#generate_pages");
     const example = generator.querySelector(".page");
-    const project_name = generator.dataset.project;
-    const project = projects[project_name];
-    const pages = [example];
+
+    //get the name of the selected project from the url
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const project_name = urlParams.get('project')
+
+    //find the json of this project
+     project = projects[project_name];
+
+    //display the name of the project
+    const project_title = document.querySelector(".starting .rounded_box");
+    project_title.textContent = project ? project.name : "invalid project name";
+    if (!project)
+        throw("invalid project name");
 
     //clone the example page
-    for (n = 0; n < project.length - 1; n++) {
+    const pages = project.pages;
+    for (n = 0; n < pages.length - 1; n++) {
         const clone = example.cloneNode(true);
-        generator.appendChild(clone);
-        pages.push(clone);
+        example.after(clone);
     }
 
     //apply style and data to the pages
-    for (n = 0; n < pages.length; n++) {
-        const page = pages[n];
+     pageDoms = generator.querySelectorAll(".page");
+    for (n = 0; n < pageDoms.length; n++) {
+        const page = pageDoms[n];
         style_page(page, n);
-        apply_data(page, n, project);
+        apply_data(page, n, pages);
     }
 }
 
@@ -88,20 +102,22 @@ function control() {
 
 //animate the pages pased on the page count
 function render() {
-    const pages = document.querySelectorAll(".sheets .page");
     let page = 0;
 
     function set_page(offset) {
         //offset and clamp
         page += offset;
-        page = Math.min(page, pages.length);
 
-        //when swiping left at the first page, exit
+        //when swiping right at the first page, exit
         if (page < 0)
             window.location = "/";
 
-        for (n = 0; n < pages.length; n++)
-            pages[n].setAttribute("data-active", page > n);
+        //when swiping left at the last page, open the url
+        if (page > pageDoms.length)
+            window.location = project.url;
+
+        for (n = 0; n < pageDoms.length; n++)
+            pageDoms[n].setAttribute("data-active", page > n);
     }
 
     function next() {
@@ -122,38 +138,42 @@ function page(title, text, image) {
 }
 
 const projects = {
-    shop: [
-        new page(
-            "Starting page",
-            "The first page the user ecounters introduces the shop, shows a few products and lists the top discounts.",
-            "projects/shop/top_discounts.jpg"
-        ),
-        new page(
-            "Browsing",
-            "In the browsing menu the displayed products can be filtered by category, properties and discounts.",
-            "projects/shop/filters.jpg"
-        ),
-        new page(
-            "Authentication",
-            "The user can be authenticated with an email address or google auth. The session ends when the browser is closed unless the \"remember me\" option is checked. Sessions persist between server restarts.",
-            "projects/shop/login.jpg"
-        ),
-        new page(
-            "Reviews",
-            "The users can rate a product and tell their opinions about it, or reply to a rating. The average rating is displayed at each product.",
-            "projects/shop/reviews.jpg"
-        ),
-        new page(
-            "Checkout",
-            "The page uses stripe to handle the payments. The users are automatically registered to stripe and they can view their receipts in the user menu.",
-            "projects/shop/checkout.jpg"
-        ),
-        new page(
-            "Editor UI",
-            "The categories, filters, products and discounts can be edited on the page without coding.",
-            "projects/shop/admin.jpg"
-        )
-    ]
+    shop: {
+        name: "Sample Shop",
+        url:"https://google.com",
+        pages: [
+            new page(
+                "Starting page",
+                "The first page the user ecounters introduces the shop, shows a few products and lists the top discounts.",
+                "projects/shop/top_discounts.jpg"
+            ),
+            new page(
+                "Browsing",
+                "In the browsing menu the displayed products can be filtered by category, properties and discounts.",
+                "projects/shop/filters.jpg"
+            ),
+            new page(
+                "Authentication",
+                "The user can be authenticated with an email address or google auth. The session ends when the browser is closed unless the \"remember me\" option is checked. Sessions persist between server restarts.",
+                "projects/shop/login.jpg"
+            ),
+            new page(
+                "Reviews",
+                "The users can rate a product and tell their opinions about it, or reply to a rating. The average rating is displayed at each product.",
+                "projects/shop/reviews.jpg"
+            ),
+            new page(
+                "Checkout",
+                "The page uses stripe to handle the payments. The users are automatically registered to stripe and they can view their receipts in the user menu.",
+                "projects/shop/checkout.jpg"
+            ),
+            new page(
+                "Editor UI",
+                "The categories, filters, products and discounts can be edited on the page without coding.",
+                "projects/shop/admin.jpg"
+            )
+        ]
+    }
 };
 
 //set seemingly random color and transform on a page
@@ -167,7 +187,8 @@ function style_page(page, number) {
 
 function apply_data(page, number, project) {
     const my_data = project[number];
-    console.log(my_data)
+    if (!my_data)
+        return;
     page.querySelector(".title").textContent = my_data.title;
     page.querySelector(".text").textContent = my_data.text;
     page.querySelector("img").src = my_data.image;
@@ -192,5 +213,8 @@ const page_rotations = [
 const page_colors = [
     "--html",
     "--javascript",
-    "--css"
+    "--css",
+    "--nodejs",
+    "--git",
+    "--postgresql",
 ];

@@ -3,10 +3,13 @@
   background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0.247));
 }
 
-.paper_piece {
-  position: absolute;
+.paper_shadow, .paper_piece{
   --shadow: calc(var(--effect) * 0.1);
   filter: drop-shadow(rgba(0, 0, 0, 0.438) 0px var(--shadow) var(--shadow));
+}
+
+.paper_piece {
+  position: absolute;
   transition: all 0.5s;
   transition-delay: calc(0.2s * var(--type));
 }

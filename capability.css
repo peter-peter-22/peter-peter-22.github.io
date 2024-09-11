@@ -1,5 +1,5 @@
 .capability {
-    margin: 100px 0px;
+    margin-top:50px
 }
 
 .capability .title {
@@ -9,7 +9,7 @@
 
 
 .capability_entry {
-    margin: 50px var(--padding);
+    margin: 0px var(--padding);
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -36,6 +36,7 @@
 .capability .container {
     display: grid;
     grid-template-columns: auto auto;
+    gap:70px 0px;
 }
 
 
@@ -61,7 +62,6 @@
 
 .capability_entry .content,
 .capability_entry .main_title {
-    white-space: pre-line;
     transition: all var(--transition);
 }
 
