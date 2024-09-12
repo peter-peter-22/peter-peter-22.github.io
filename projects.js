@@ -21,13 +21,13 @@ function generate() {
     const project_name = urlParams.get('project')
 
     //find the json of this project
-     project = projects[project_name];
+    project = projects[project_name];
 
     //display the name of the project
     const project_title = document.querySelector(".starting .rounded_box");
     project_title.textContent = project ? project.name : "invalid project name";
     if (!project)
-        throw("invalid project name");
+        throw ("invalid project name");
 
     //clone the example page
     const pages = project.pages;
@@ -37,7 +37,7 @@ function generate() {
     }
 
     //apply style and data to the pages
-     pageDoms = generator.querySelectorAll(".page");
+    pageDoms = generator.querySelectorAll(".page");
     for (n = 0; n < pageDoms.length; n++) {
         const page = pageDoms[n];
         style_page(page, n);
@@ -140,7 +140,7 @@ function page(title, text, image) {
 const projects = {
     shop: {
         name: "Sample Shop",
-        url:"https://google.com",
+        url: "https://google.com",
         pages: [
             new page(
                 "Starting page",
@@ -171,6 +171,52 @@ const projects = {
                 "Editor UI",
                 "The categories, filters, products and discounts can be edited on the page without coding.",
                 "projects/shop/admin.jpg"
+            )
+        ]
+    },
+    y: {
+        name: "Y Community",
+        url: "https://y-community.vercel.app/",
+        pages: [
+            new page(
+                "Authentication",
+                "There are multiple ways to authenticate. The local email based authentication includes rechapta and email verification. Email is not required to join.",
+                "projects/y/login.jpg"
+            ),
+            new page(
+                "Posts",
+                "All core functions of the posts are implemented, including quote, bookmark delete and modify. The feed can be filtered. It saves the last seen location and it can effortlessly display more than 1000 posts.",
+                "projects/y/feed.jpg"
+            ),
+            new page(
+                "Notifications",
+                "The notification counter is updates in realtime. 3 kinds of notification can be sent: in-app, email, push. The types of the recieved notifications can be adjusted.",
+                "projects/y/login.jpg"
+            ),
+            new page(
+                "Hashtags",
+                "The tagged posts are counted and displayed in the trends panel. The posts of a trend can be found by clicking a trend or using the search field.",
+                "projects/y/hashtags.jpg"
+            ),
+            new page(
+                "Media",
+                "The meida files are stored at cloudinary. The resolution of the images is adjusted to their size on the page. The videos are loaded continuusly.",
+                "projects/y/media.jpg"
+            ),
+            new page(
+                "Profile",
+                "The profile page displays the activity and connections of any user. Following and blocking is accessible here and in the '...' button of each post.",
+                "projects/y/profile.jpg"
+            ),
+            new page(
+                "Search",
+                "The search field can search to posts, names and usernames. The recommendations are ordered by the popularity of the user or trend.",
+                "projects/y/search.jpg"
+            ),
+            new page(
+                "Changing password",
+                "The password can be changed by requesting a change email, passing the rechapta, and clicking the recieved link.",
+                "projects/y/password.jpg"
             )
         ]
     }
