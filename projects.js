@@ -140,7 +140,7 @@ function page(title, text, image) {
 const projects = {
     shop: {
         name: "Sample Shop",
-        url: "https://google.com",
+        url: "https://sample-shop-48hl.onrender.com/",
         pages: [
             new page(
                 "Starting page",
