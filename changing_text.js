@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const fade_in_time = 700;
     const stay_time = 1500;
     const fade_out_time = 500;
-    const fade_in_name = "row_start";//must be the same as CSS
-    const fade_out_name = "row_end";
-    const letter_anim = "letter_movement";//the letter animation has the same duration as the fade_in animation
+    const letter_anim_in = "letter_movement_in";
+    const letter_anim_out = "letter_movement_out";
     const delay_per_letter = 30;
     const active_row_class = "active";
 
@@ -19,27 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //adding values and events to the rows
         rows.forEach(row => {
-
             //adding the animation delay to each letter of the moving text rows
             const letters = row.querySelectorAll("*");
+            row.letters = letters;
             for (n = 0; n < letters.length; n++) {
                 const letter = letters[n];
-                letter.style.animation = letter_anim + " " + fade_in_time + "ms ease-in-out";
                 letter.style.animationDelay = n * delay_per_letter + "ms";
-                //the animation of the letters is added like this to set them the same duration as the fade-in animation
             }
-
-            //restarting the animation of each letter when the fade_in animation starts
-            row.addEventListener("animationstart", function (event) {
-                if (event.animationName == fade_in_name)
-                    letters.forEach(letter => {
-                        restart_animation(letter);
-                    });
-            });
-
         });
 
-
+        function set_letter_anim(row, anim,time) {
+            row.letters.forEach(letter => {
+                letter.style.animationName = anim;
+                letter.style.animationDuration  = time+"ms";
+            });
+        }
 
         //controlling the animations
         let current_step = 0;
@@ -56,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     moving_text.style.width = style.width;
                     moving_text.style.backgroundColor = style.borderColor;//the border color decides the background color of the div
                     //starting the animation
-                    selected_row.style.animation = fade_in_name + " " + fade_in_time + "ms ease-in-out";
+                    set_letter_anim(selected_row, letter_anim_in,fade_in_time);
                     //the end of the animation must be checked with timeout instead of the event because the event dont works when the window is hidden
                     setTimeout(function () {
                         next_step();
@@ -70,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
 
                 case 2://when the waiting is over, the selected row starts the fading out animation, and the next row starts appearing
-                    selected_row.style.animation = fade_out_name + " " + fade_out_time + "ms ease-in-out forwards";
+                    set_letter_anim(selected_row, letter_anim_out,fade_out_time);
                     //when the fade-out animation is over, make the row invisible
                     const selected_row_memorized = selected_row;
                     setTimeout(function () {
@@ -94,11 +87,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
-
-    function restart_animation(element) {
-        element.style.animationName = "";
-        void element.offsetWidth;
-        element.style.animationName = letter_anim;
-    }
-
 });

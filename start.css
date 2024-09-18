@@ -59,19 +59,31 @@
     color: var(--text1);
     white-space: nowrap;
 }
+.moving_text *{
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
 
-
-/*the animation names are used by JS*/
+/*the animation names are used by javascript*/
 /*the animations are added and started by JS*/
-@keyframes letter_movement {
-    20% {
-        transform: translateY(50%);
+@keyframes letter_movement_in {
+    0% {
+        transform: translateY(200%);
     }
-    80% {
+    70% {
         transform: translateY(-30%);
     }
     100% {
         transform: translateY(0%);
+    }
+}
+
+@keyframes letter_movement_out {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-200%);
     }
 }
 
@@ -86,24 +98,6 @@
 .moving_text .row.active
 {
     display: inline-flex;
-}
-
-@keyframes row_start {
-    0% {
-        transform: translateY(200%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-@keyframes row_end {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(-200%);
-    }
 }
 
 .moving_text {
