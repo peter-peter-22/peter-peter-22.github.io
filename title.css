@@ -1,6 +1,6 @@
 .section_title .text {
     font-weight: bold;
-    font-size: var(--font-size);
+    font-size: var(--section-title);
     color: transparent;
     background: linear-gradient(var(--text1), var(--text1)) transparent no-repeat 0 0;
     background-clip: text;
@@ -14,7 +14,7 @@
 
 .section_title {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .section_title.visible .text {
@@ -29,7 +29,7 @@
     background-color: var(--color);
     transition: transform 0.75s;
     transition-delay: 0.25s;
-    width: 90%;
+    width: calc(100% - var(--padding));
     transform: translateX(-100vw);
 }
 

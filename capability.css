@@ -1,7 +1,3 @@
-.capability .title {
-    margin: 0px var(--padding);
-    font-size: var(--font-size);
-}
 
 
 .capability_entry {
@@ -23,6 +19,7 @@
     background-color: var(--divider);
     height: var(--length);
     transition: all var(--transition);
+    flex-shrink: 0;
 }
 
 .capability_entry:not(.visible) .vertical_line {
@@ -34,7 +31,6 @@
     grid-template-columns: auto auto;
     gap: 70px 0px;
 }
-
 
 
 .capability_entry i {
@@ -86,15 +82,6 @@
     .capability_entry {
         flex-direction: column;
     }
-
-    .capability_entry .main_title {
-        font-size: 1.2em;
-    }
-
-    .capability_entry .content {
-        font-size: 0.8em;
-    }
-
 
     .capability_entry i::before {
         --float_in_from_x: 0;

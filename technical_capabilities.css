@@ -1,7 +1,3 @@
-.technical {
-    margin: 100px 0px;
-}
-
 .moving_sections section {
     padding: var(--padding);
     --slope: 30px;

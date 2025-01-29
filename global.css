@@ -1,13 +1,13 @@
  * {
      margin: 0px;
      padding: 0px;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
 
  body {
      background-color: var(--box2hlf);
      overflow-x: hidden;
      width: 100%;
+     font-family: var(--font);
  }
 
  html {
@@ -36,7 +36,8 @@
      --text2: rgb(0, 0, 0);
      --text_fade: rgb(80, 80, 80);
 
-     --container: rgb(58, 58, 58);
+     --container: rgb(48, 48, 48);
+     --container_inner: rgb(73, 73, 73);
      --container_text: rgb(255, 255, 255);
 
      --color: rgb(0, 221, 85);
@@ -45,15 +46,20 @@
 
      /*sideways padding or margin compared to the edge of the screen, used by multiple elements*/
      --padding: 80px;
-     /*font size for titles*/
-     --font-size: 40px;
      /*paper piece size*/
      --effect: calc(min(8vw, 70px));
      /*paper piece another sizing*/
      --effect_cube: calc(min(100vw, 100vh, 400px));
 
-     --margin_:20px;
-     --border-radius:20px;
+     --margin_: 20px;
+     --border-radius: 20px;
+
+     --section-title: 40px;
+     --title: 1.5rem;
+     --body: 1rem;
+
+     --button-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
 
  @media screen and (max-width: 600px) {
@@ -62,13 +68,16 @@
      }
  }
 
- @media screen and (max-width: 500px) {
-     :root {
-         --font-size: 8vw;
-     }
- }
 
  .invisible_link {
      text-decoration: none;
      color: inherit;
+ }
+
+ h2 {
+     font-size: var(--section-title);
+ }
+
+ h3 {
+     font-size: var(--title);
  }

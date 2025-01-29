@@ -2,7 +2,7 @@
     border-radius: var(--border-radius);
     margin-top: 50px;
     background-color: var(--container);
-    color:var(--container_text);
+    color: var(--container_text);
     overflow: hidden;
     padding: 50px 0px;
 }
@@ -14,6 +14,22 @@
     margin: auto;
 }
 
-.container-shadow, .main-container{
+.container-shadow,
+.main-container {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.main-container-wrapper.small{
+    max-width: 800px;
+}
+
+.container-inner {
+    background-color: var(--container_inner);
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin: 10px;
+}
+
+.container-inner.padding {
+    margin: 10px var(--padding);
 }
