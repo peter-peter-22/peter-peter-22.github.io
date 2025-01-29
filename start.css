@@ -29,7 +29,6 @@
     height: calc(100dvh - var(--navbar_height) - var(--margin_)*2);
     border-radius: var(--border-radius);
     width: calc(100% - 40px);
-    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.705));
 }
 
 .profile {
