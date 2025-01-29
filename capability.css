@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: stretch;
     max-width: 600px;
-    --transition: 0.5s;
+    --transition: 0.4s;
 }
 
 

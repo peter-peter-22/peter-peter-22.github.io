@@ -20,7 +20,7 @@
     max-width: 80vw;
     margin: auto;
     overflow: hidden;
-    --time: 0.5s;
+    --time: 0.4s;
     box-sizing: border-box;
 }
 
