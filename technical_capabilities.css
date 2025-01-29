@@ -2,53 +2,6 @@
     margin: 100px 0px;
 }
 
-.section_title .text {
-    font-weight: bold;
-    font-size: var(--font-size);
-    color: transparent;
-    background: linear-gradient(var(--text2), var(--text2)) transparent no-repeat 0 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 0% 100%;
-    transition: background-size 0.5s;
-    display: inline-block;
-    padding: 0px var(--padding);
-    text-wrap: nowrap;
-}
-
-.section_title {
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-.section_title.visible .text {
-    background-size: 100% 100%;
-}
-
-.section_title .line,
-.left_line {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: var(--color);
-    background: linear-gradient(90deg, var(--color), transparent);
-    transition: transform 0.4s;
-    transition-delay: 0.2s;
-    width: 90%;
-    transform: translateX(-100vw);
-}
-
-.left_line {
-    transition-delay: 0s;
-}
-
-.section_title.visible .line,
-.visible .left_line {
-    transform: translateX(0vw);
-}
-
-
-
 .moving_sections section {
     padding: var(--padding);
     --slope: 30px;

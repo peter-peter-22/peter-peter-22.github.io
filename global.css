@@ -29,11 +29,15 @@
      --box1: rgb(77, 77, 77);
      --box1hl: rgb(107, 107, 107);
      --text1: rgb(255, 255, 255);
+     --divider: rgb(168, 168, 168);
      --box2: rgb(255, 255, 255);
      --box2hl: rgb(202, 202, 202);
      --box2hlf: rgb(233, 233, 233);
      --text2: rgb(0, 0, 0);
      --text_fade: rgb(80, 80, 80);
+
+     --container: rgb(58, 58, 58);
+     --container_text: rgb(255, 255, 255);
 
      --color: rgb(0, 221, 85);
      --navbar_height: 50px;
@@ -47,6 +51,9 @@
      --effect: calc(min(8vw, 70px));
      /*paper piece another sizing*/
      --effect_cube: calc(min(100vw, 100vh, 400px));
+
+     --margin_:20px;
+     --border-radius:20px;
  }
 
  @media screen and (max-width: 600px) {

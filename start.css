@@ -25,10 +25,9 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    --margin_:20px;
     margin: var(--margin_);
     height: calc(100dvh - var(--navbar_height) - var(--margin_)*2);
-    border-radius: 40px;
+    border-radius: var(--border-radius);
     width: calc(100% - 40px);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.705));
 }

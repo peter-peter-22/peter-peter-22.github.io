@@ -1,7 +1,3 @@
-.capability {
-    margin-top:50px
-}
-
 .capability .title {
     margin: 0px var(--padding);
     font-size: var(--font-size);
@@ -14,7 +10,7 @@
     flex-direction: row;
     align-items: stretch;
     max-width: 600px;
-    --transition: 0.4s;
+    --transition: 0.5s;
 }
 
 
@@ -24,7 +20,7 @@
     --length: 100%;
     width: var(--thickness);
     margin: 0px var(--margin);
-    background-color: var(--box1hl);
+    background-color: var(--divider);
     height: var(--length);
     transition: all var(--transition);
 }
@@ -33,10 +29,10 @@
     --length: 0%;
 }
 
-.capability .container {
+.capability {
     display: grid;
     grid-template-columns: auto auto;
-    gap:70px 0px;
+    gap: 70px 0px;
 }
 
 
@@ -56,7 +52,7 @@
 }
 
 .capability_entry:not(.visible) i::before {
-    transform: translate(calc(100% * var(--float_in_from_x)), calc(100% * var(--float_in_from_y)));
+    transform: translate(calc(102% * var(--float_in_from_x)), calc(102% * var(--float_in_from_y)));
 }
 
 
@@ -104,6 +100,7 @@
         --float_in_from_x: 0;
         --float_in_from_y: 1;
     }
+
     .capability_entry .moving {
         --float_in_from_x: 0;
         --float_in_from_y: -1;
@@ -111,7 +108,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .capability .container {
+    .capability {
         grid-template-columns: auto;
     }
 }
