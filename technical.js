@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         sections.forEach(section => {
             if (px_to_vh(section.getBoundingClientRect().bottom) < visible_from_bottom)
                 section.classList.add("visible");
-            else
-                section.classList.remove("visible");
+            //else
+            //    section.classList.remove("visible");
         });
     }
 
