@@ -17,9 +17,9 @@
 
  :root {
      --html: rgb(207, 0, 0);
-     --javascript: rgb(255, 215, 58);
+     --javascript: rgb(228, 193, 54);
      --css: rgb(90, 115, 255);
-     --nodejs: rgb(78, 226, 85);
+     --nodejs: rgb(57, 182, 64);
      --postgresql: rgb(47, 125, 226);
      --git: rgb(255, 94, 0);
      --react: rgb(0, 151, 211);
@@ -51,7 +51,7 @@
      /*paper piece another sizing*/
      --effect_cube: calc(min(100vw, 100vh, 400px));
 
-     --margin_: 20px;
+     --margin: 20px;
      --border-radius: 20px;
 
      --section-title: 40px;

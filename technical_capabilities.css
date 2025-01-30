@@ -1,26 +1,29 @@
 .moving_sections section {
-    padding: var(--padding);
-    --slope: 30px;
-    margin: calc(0px - var(--slope)) 0px;
-    clip-path: polygon(0% 0%, 100% var(--slope), 100% calc(100% - var(--slope)), 0% 100%);
-    background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0.247));
-    color: var(--text1);
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
-    font-size: 1.5rem;
-    min-height: 200px;
+    transition: transform 0.5s ease-in-out;
+    --offset: 1;
+    transform: translateX(calc(var(--offset) * (100% + var(--padding))));
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+.moving_sections section::before {
+    background-color: var(--my-color);
+    width: 10px;
+    position: absolute;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    left: 0;
 }
 
 .moving_sections {
     margin: 50px 0px;
 }
 
-.moving_sections :nth-child(2n) section {
-    clip-path: polygon(0% var(--slope), 100% 0%, 100% 100%, 0% calc(100% - var(--slope)));
-    transform: translateX(100%);
+.moving_sections :nth-child(2n) {
+    --offset: -1;
 }
 
 .moving_sections section.visible {
@@ -31,10 +34,4 @@
     overflow-x: clip;
     filter: drop-shadow(rgba(0, 0, 0, 0.438) 0px 10px 10px);
     position: relative;
-}
-
-@media screen and (max-width: 600px) {
-    .moving_sections section {
-        font-size: 1rem;
-    }
 }

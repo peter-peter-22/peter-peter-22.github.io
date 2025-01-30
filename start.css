@@ -24,8 +24,8 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    margin: var(--margin_);
-    height: calc(100dvh - var(--navbar_height) - var(--margin_)*2);
+    margin: var(--margin);
+    height: calc(100dvh - var(--navbar_height) - var(--margin)*2);
     border-radius: var(--border-radius);
     width: calc(100% - 40px);
 }
