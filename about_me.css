@@ -6,7 +6,6 @@
     margin: var(--margin) 0px;
     background-color: var(--divider);
     width: var(--length);
-    transition: all var(--transition);
 }
 
 .about_me .container-inner:not(.visible){

@@ -1,6 +1,5 @@
 .contacts {
-    font-size: 25px;
-    margin-bottom: 200px;
+    font-size: var(--title);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -14,33 +13,39 @@
     --flip: 0;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotate(calc(var(--random) * 1deg)) rotateX(calc(var(--flip) * 180deg));
-    transition: transform 0.5s ease-in-out;
 }
 
-.contact_entry .front,
-.contact_entry .back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: visible;
+
+.contact_entry:not(.visible) .key {
+    transform: translateX(calc(100% + var(--margin)));
 }
 
-.contact_entry .front {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
+.contact_entry:not(.visible) .value {
+    transform: translateX(calc(-100% - var(--margin)));
 }
-.contact_entry .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    transform: rotateX(180deg);
+
+.contact_entry:not(.visible) .line {
+    --length: 0;
 }
 
 .contact_entry:not(.visible) {
-    --flip: 1;
+    background-color: transparent;
+
+}
+
+.contact_entry *,
+.contact_entry {
+    transition: all 0.5s ease-in-out;
 }
 
 .contact_entry .key {
     font-weight: bold;
+}
+
+.contact_entry .line {
+    margin: auto;
+}
+
+.contact_entry .value {
+    text-align: end;
 }
