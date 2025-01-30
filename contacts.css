@@ -7,21 +7,15 @@
 
 .contact_entry {
     color: var(--text1);
-    width: 500px;
-    max-width: 80vw;
-    margin: auto;
-    --flip: 0;
-    transform-style: preserve-3d;
-    transform: perspective(1000px) rotate(calc(var(--random) * 1deg)) rotateX(calc(var(--flip) * 180deg));
 }
 
 
 .contact_entry:not(.visible) .key {
-    transform: translateX(calc(100% + var(--margin)));
+    transform: translateX(calc(101% + var(--margin)));
 }
 
 .contact_entry:not(.visible) .value {
-    transform: translateX(calc(-100% - var(--margin)));
+    transform: translateX(calc(-101% - var(--margin)));
 }
 
 .contact_entry:not(.visible) .line {
