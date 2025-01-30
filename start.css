@@ -51,6 +51,7 @@
 .moving_text .icon {
     display: table-cell;
     height: 1em;
+    opacity: 0.75;
 }
 
 .moving_text_prefix {
