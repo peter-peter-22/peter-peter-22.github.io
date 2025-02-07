@@ -13,11 +13,7 @@ export function SecondaryFab({ sx, children, ...props }) {
                 borderStyle: "solid",
                 "&:hover": {
                     borderColor: theme.palette.secondary.light,
-                    transform: "translateY(-5px)"
                 },
-                transition: theme.transitions.create("all", {
-                    duration: theme.transitions.duration.standard,
-                }),
                 ...sx
             }}
             {...props}

@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
-export const theme = responsiveFontSizes(createTheme({
+const theme = responsiveFontSizes(createTheme({
 
     //palette
 
@@ -60,3 +60,38 @@ export const theme = responsiveFontSizes(createTheme({
 
     shadows: ["none"],
 }))
+
+theme.components = {
+    MuiIconButton: {
+        styleOverrides: {
+            root: {
+                transition: theme.transitions.create("all", {
+                    duration: theme.transitions.duration.standard,
+                }),
+            },
+        },
+    },
+    MuiFab: {
+        styleOverrides: {
+            root: {
+                transition: theme.transitions.create("all", {
+                    duration: theme.transitions.duration.standard,
+                }),
+            },
+        },
+    },
+    MuiButtonBase: {
+        styleOverrides: {
+            root: {
+                boxShadow: `transparent 0 0 0 0`,
+                "&:hover": {
+                    boxShadow: `${theme.palette.text.primary} 0 0 0 3px`,
+                    transform: "translateY(-5px)"
+                },
+            },
+        },
+    },
+
+}
+
+export { theme };
