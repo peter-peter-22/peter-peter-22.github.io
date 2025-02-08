@@ -1,7 +1,7 @@
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from './assets/theme.js'
-import { Layout } from './components/routes/layout/Layout.jsx'
-import { Home } from './components/routes/routes/Home.jsx'
+import { Layout } from './components/layout/Layout.jsx'
+import { Home } from './routes/routes/Home.jsx'
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';

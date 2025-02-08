@@ -12,18 +12,6 @@ const theme = responsiveFontSizes(createTheme({
         secondary: {
             main: "#555555"
         },
-        analogous1: {
-            main: "#cb30fd",
-        },
-        analogous2: {
-            main: "#00adff",
-        },
-        triadic1: {
-            main: "#c600ff",
-        },
-        triadic2: {
-            main: "#00ff95",
-        }
     },
 
     //typography
@@ -59,7 +47,15 @@ const theme = responsiveFontSizes(createTheme({
     //shadows
 
     shadows: ["none"],
+
+    //shape
+
+    shape: {
+        borderRadius: 15
+    }
 }))
+
+//components
 
 theme.components = {
     MuiIconButton: {
@@ -91,7 +87,31 @@ theme.components = {
             },
         },
     },
+    MuiPaper: {
+        defaultProps: {
+            elevation: 0,
+        },
+        styleOverrides: {
+            root: {
+                borderWidth: 2
+            }
+        }
+    },
+    MuiContainer: {
+        defaultProps: {
+            maxWidth: "md"
+        }
+    }
+}
 
+//custom colors
+
+theme.palette = {
+    ...theme.palette,
+    analogous1: theme.palette.augmentColor({ color: { main: "#cb30fd" } }),
+    analogous2: theme.palette.augmentColor({ color: { main: "#00adff" } }),
+    triadic1: theme.palette.augmentColor({ color: { main: "#c600ff" } }),
+    triadic2: theme.palette.augmentColor({ color: { main: "#00ff95" } }),
 }
 
 export { theme };
