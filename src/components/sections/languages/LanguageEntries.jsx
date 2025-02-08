@@ -1,25 +1,15 @@
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import CardContent from "@mui/material/CardContent";
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import { LanguageEntry, LanguageEntryChips } from "./LanguageEntry";
-import { Logo } from "../../decorations/Logo";
-import { BigLogo } from "../../decorations/BigLogo";
 import Grid from '@mui/material/Grid2';
+import { BigLogo } from "../../decorations/BigLogo";
+import { LanguageEntry, LanguageEntryChips } from "./LanguageEntry";
 
-import NextIcon from "/src/assets/logos/nextjs.svg?react";
-import ReactIcon from "/src/assets/logos/react.svg?react";
-import MuiIcon from "/src/assets/logos/mui.svg?react";
-import NodeIcon from "/src/assets/logos/nodejs.svg?react";
-import PostgresqlIcon from "/src/assets/logos/postgresql.svg?react";
 import CssIcon from "/src/assets/logos/css.svg?react";
 import HtmlIcon from "/src/assets/logos/html.svg?react";
-import BootstrapIcon from "/src/assets/logos/bootstrap.svg?react";
-import CloudinaryIcon from "/src/assets/logos/cloudinary.svg?react";
 import JsIcon from "/src/assets/logos/js.svg?react";
 import MongoIcon from "/src/assets/logos/mongodb.svg?react";
+import NextIcon from "/src/assets/logos/nextjs.svg?react";
+import NodeIcon from "/src/assets/logos/nodejs.svg?react";
+import PostgresqlIcon from "/src/assets/logos/postgresql.svg?react";
+import ReactIcon from "/src/assets/logos/react.svg?react";
 
 export function LanguageEntries() {
     return (

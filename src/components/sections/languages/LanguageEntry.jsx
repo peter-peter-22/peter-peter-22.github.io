@@ -1,12 +1,8 @@
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import CardContent from "@mui/material/CardContent";
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import { FixedGradientPaper } from "../../decorations/blocks/FixedGradientBlock";
 import Chip from "@mui/material/Chip";
 import Grid from '@mui/material/Grid2';
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import { FixedGradientPaper } from "../../decorations/blocks/FixedGradientBlock";
 
 export function LanguageEntry({ icon, title, body, bottom }) {
     return (

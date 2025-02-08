@@ -1,9 +1,6 @@
-import Container from "@mui/material/Container";
-import { LightsCard, LightsPaper } from "../../decorations/blocks/LightsBlock";
-import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
+import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import CodeIcon from '@mui/icons-material/Code';
 import { LanguageEntries } from "./LanguageEntries";
 
 export function Languages() {
