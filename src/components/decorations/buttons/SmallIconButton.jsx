@@ -1,10 +1,10 @@
 import IconButton from "@mui/material/IconButton";
-import { SmallIcon } from "../SmallIcon";
+import { SmallLogo } from "../SmallLogo";
 
-export function SmallIconButton(props) {
+export function SmallLogoButton(props) {
     return (
         <IconButton sx={{ padding: "12px" }}>
-            <SmallIcon  {...props} />
+            <SmallLogo  {...props} />
         </IconButton>
     )
 }

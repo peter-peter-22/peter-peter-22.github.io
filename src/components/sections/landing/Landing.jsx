@@ -6,7 +6,7 @@ import { Logos } from "./Logos";
 
 export function Landing() {
     return (
-        <Container maxWidth="md" sx={{ height: "100vh", display: "flex", alignItems: "center" }}>
+        <Container sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
             <Stack spacing={5}>
                 <Title />
                 <Description />

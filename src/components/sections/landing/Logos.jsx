@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack";
-import { SmallIcon } from "../../decorations/SmallIcon";
-import { SmallIconButton } from "../../decorations/buttons/SmallIconButton";
+import { SmallLogo } from "../../decorations/SmallLogo";
+import { SmallLogoButton } from "../../decorations/buttons/SmallIconButton";
 
 import CssIcon from "/src/assets/logos/css.svg?react";
 import HtmlIcon from "/src/assets/logos/html.svg?react";
@@ -17,17 +17,17 @@ import MongoIcon from "/src/assets/logos/mongodb.svg?react";
 export function Logos() {
     return (
         <Stack direction={"row"} spacing={0.5}>
-            <SmallIconButton component={NextIcon} sx={{ filter: "invert(1)" }} />
-            <SmallIconButton component={MuiIcon} />
-            <SmallIconButton component={NodeIcon} />
-            <SmallIconButton component={PostgresqlIcon} />
-            <SmallIconButton component={ReactIcon} />
-            <SmallIconButton component={CloudinaryIcon} />
-            <SmallIconButton component={MongoIcon} />
-            <SmallIconButton component={BootstrapIcon} />
-            <SmallIconButton component={HtmlIcon} />
-            <SmallIconButton component={CssIcon} />
-            <SmallIconButton component={JsIcon} />
+            <SmallLogoButton component={NextIcon} sx={{ filter: "invert(1)" }} />
+            <SmallLogoButton component={MuiIcon} />
+            <SmallLogoButton component={NodeIcon} />
+            <SmallLogoButton component={PostgresqlIcon} />
+            <SmallLogoButton component={ReactIcon} />
+            <SmallLogoButton component={CloudinaryIcon} />
+            <SmallLogoButton component={MongoIcon} />
+            <SmallLogoButton component={BootstrapIcon} />
+            <SmallLogoButton component={HtmlIcon} />
+            <SmallLogoButton component={CssIcon} />
+            <SmallLogoButton component={JsIcon} />
         </Stack>
     )
 }
