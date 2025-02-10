@@ -1,3 +1,4 @@
+import { alpha } from "@mui/material";
 import Fab from "@mui/material/Fab";
 import { useTheme } from '@mui/material/styles';
 
@@ -7,7 +8,7 @@ export function SecondaryFab({ sx, children, ...props }) {
         <Fab
             color="secondary"
             sx={{
-                backgroundColor: "transparent",
+                backgroundColor: alpha(theme.palette.secondary.main,0.2),
                 borderColor: theme.palette.secondary.main,
                 borderWidth: 3,
                 borderStyle: "solid",

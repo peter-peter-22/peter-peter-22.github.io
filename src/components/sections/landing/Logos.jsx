@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack";
 import { SmallLogo } from "../../decorations/SmallLogo";
-import { SmallLogoButton } from "../../decorations/buttons/SmallIconButton";
+import IconButton from "@mui/material/IconButton";
 
 import CssIcon from "/src/assets/logos/css.svg?react";
 import HtmlIcon from "/src/assets/logos/html.svg?react";
@@ -16,18 +16,40 @@ import MongoIcon from "/src/assets/logos/mongodb.svg?react";
 
 export function Logos() {
     return (
-        <Stack direction={"row"} spacing={0.5}>
-            <SmallLogoButton component={NextIcon} sx={{ filter: "invert(1)" }} />
-            <SmallLogoButton component={MuiIcon} />
-            <SmallLogoButton component={NodeIcon} />
-            <SmallLogoButton component={PostgresqlIcon} />
-            <SmallLogoButton component={ReactIcon} />
-            <SmallLogoButton component={CloudinaryIcon} />
-            <SmallLogoButton component={MongoIcon} />
-            <SmallLogoButton component={BootstrapIcon} />
-            <SmallLogoButton component={HtmlIcon} />
-            <SmallLogoButton component={CssIcon} />
-            <SmallLogoButton component={JsIcon} />
+        <Stack direction={"row"} gap={0.5}>
+            <IconButton edge="start">
+                <SmallLogo component={NextIcon} sx={{ filter: "invert(1)" }} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={MuiIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={NodeIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={PostgresqlIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={ReactIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={CloudinaryIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={MongoIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={BootstrapIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={HtmlIcon} />
+            </IconButton>
+            <IconButton>
+                <SmallLogo component={CssIcon} />
+            </IconButton>
+            <IconButton edge="end">
+                <SmallLogo component={JsIcon} />
+            </IconButton>
         </Stack>
     )
 }

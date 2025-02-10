@@ -12,6 +12,9 @@ const theme = responsiveFontSizes(createTheme({
         secondary: {
             main: "#555555"
         },
+        background: {
+            foreground: "#222222"
+        }
     },
 
     //typography

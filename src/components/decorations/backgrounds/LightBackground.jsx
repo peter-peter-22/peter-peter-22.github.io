@@ -4,28 +4,31 @@ import Box from "@mui/material/Box";
 const BlurImage = styled("img")({
     width: "100%",
     height: "100%",
-    pointerEvents:"none",
+    pointerEvents: "none",
     userSelect: "none"
 })
 
-export function LightBackground({ background:{blur,url} }) {
+export function LightBackground({ background: { blur, url } }) {
     return (
-        <BlurContainer>
+        <BlurContainer >
             <BlurOverlay blur={blur} />
-            <BlurImage src={url} draggable={false}/>
+            <BlurImage src={url} draggable={false} />
         </BlurContainer>
     )
 }
 
 function BlurContainer({ children }) {
     return (
-        <Box sx={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: 0,
-            left: 0
-        }}>
+        <Box
+            sx={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                top: 0,
+                left: 0,
+                zIndex: -1
+            }}
+        >
             {children}
         </Box>
     )
@@ -45,5 +48,6 @@ function BlurOverlay({ blur = "40px" }) {
 }
 
 export const lightBackgrounds = {
-    medium: { url: "/backgrounds/lights-background.webp", blur: "30px" }
+    medium: { url: "/backgrounds/lights-background.webp", blur: "30px" },
+    landing: { url: "/backgrounds/lights-background-landing.webp", blur: "30px" }
 }
