@@ -1,7 +1,7 @@
 import SvgIcon from "@mui/material/SvgIcon";
 
-export function Logo({ component, sx, ...props }) {
+export function Logo({ component,  ...props }) {
     return (
-        <SvgIcon component={component} inheritViewBox sx={{ fill: "revert-layer", ...sx }} {...props} />
+        <SvgIcon component={component} inheritViewBox {...props} />
     )
 }

@@ -5,6 +5,7 @@ import { Title } from "../../components/sections/landing/Title";
 import { Landing } from "../../components/sections/landing/Landing";
 import { Languages } from "../../components/sections/languages/Languages";
 import { AboutMe } from "../../components/sections/about me/AboutMe";
+import { WhatCanIDo } from "../../components/sections/what can I do/WhatCanIDo";
 
 export function Home() {
     return (
@@ -12,6 +13,7 @@ export function Home() {
             <Landing />
             <AboutMe />
             <Languages />
+            <WhatCanIDo />
         </>
     )
 }

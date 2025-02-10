@@ -1,12 +1,11 @@
-import { LightCard, LightPaper } from "../../decorations/blocks/LightsBlock";
-import Card from "@mui/material/Card";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Paper from "@mui/material/Paper";
-import CardContent from "@mui/material/CardContent";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import CircleIcon from '@mui/icons-material/Circle';
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import { LightPaper } from "../../decorations/blocks/LightsBlock";
 
 export function AboutMe() {
     return (

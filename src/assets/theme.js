@@ -54,7 +54,7 @@ const theme = responsiveFontSizes(createTheme({
     //shape
 
     shape: {
-        borderRadius: 15
+        borderRadius: 12
     }
 }))
 
@@ -64,6 +64,11 @@ theme.components = {
     MuiIconButton: {
         styleOverrides: {
             root: {
+                boxShadow: `transparent 0 0 0 0`,
+                "&:hover": {
+                    boxShadow: `${theme.palette.text.primary} 0 0 0 3px`,
+                    transform: "translateY(-5px)"
+                },
                 transition: theme.transitions.create("all", {
                     duration: theme.transitions.duration.standard,
                 }),
@@ -73,20 +78,26 @@ theme.components = {
     MuiFab: {
         styleOverrides: {
             root: {
+                boxShadow: `transparent 0 0 0 0`,
+                "&:hover": {
+                    boxShadow: `${theme.palette.text.primary} 0 0 0 3px`,
+                    transform: "translateY(-5px)"
+                },
                 transition: theme.transitions.create("all", {
                     duration: theme.transitions.duration.standard,
                 }),
             },
         },
     },
-    MuiButtonBase: {
+    MuiLink: {
+        defaultProps: {
+            underline: "hover",
+        }
+    },
+    MuiListItemIcon: {
         styleOverrides: {
             root: {
-                boxShadow: `transparent 0 0 0 0`,
-                "&:hover": {
-                    boxShadow: `${theme.palette.text.primary} 0 0 0 3px`,
-                    transform: "translateY(-5px)"
-                },
+                minWidth: 40
             },
         },
     },
