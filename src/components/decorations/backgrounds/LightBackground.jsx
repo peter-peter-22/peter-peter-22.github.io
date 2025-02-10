@@ -8,16 +8,16 @@ const BlurImage = styled("img")({
     userSelect: "none"
 })
 
-export function LightBackground({ background: { blur, url } }) {
+export function LightBackground({ background: { blur, url }, fadeEdges }) {
     return (
-        <BlurContainer >
+        <BlurContainer>
             <BlurOverlay blur={blur} />
-            <BlurImage src={url} draggable={false} />
+            <BlurImage src={url} draggable={false} sx={fadeEdges && { py: `calc(${blur} * 3)` }} />
         </BlurContainer>
     )
 }
 
-function BlurContainer({ children }) {
+function BlurContainer({ children, ...props }) {
     return (
         <Box
             sx={{
@@ -28,6 +28,7 @@ function BlurContainer({ children }) {
                 left: 0,
                 zIndex: -1
             }}
+            {...props}
         >
             {children}
         </Box>

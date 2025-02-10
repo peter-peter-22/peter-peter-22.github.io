@@ -16,7 +16,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 export function WhatCanIDo() {
     return (
         <Box sx={{ position: "relative" }}>
-            <LightBackground background={lightBackgrounds.middle} />
+            <LightBackground background={lightBackgrounds.middle} fadeEdges={true}/>
             <Container maxWidth="lg" >
                 <Typography variant="h2" textAlign={"center"} sx={{ mb: 5 }}>What can I do?</Typography>
                 <Grid container spacing={5} columns={{ xs: 1, sm: 2, md: 3 }}>

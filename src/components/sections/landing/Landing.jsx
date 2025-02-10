@@ -18,3 +18,7 @@ export function Landing() {
         </Container>
     )
 }
+
+function useLandingFadeOut(){
+    
+}
