@@ -5,16 +5,18 @@ import { WhatCanIDo } from "../../components/sections/what can I do/WhatCanIDo";
 import Stack from "@mui/material/Stack";
 import { lightBackgrounds, LightBackground } from "../../components/decorations/backgrounds/LightBackground";
 import Box from "@mui/material/Box";
+import { Projects } from "../../components/sections/projects/Projects";
 
 export function Home() {
     return (
         <>
             <Background />
             <Landing />
-            <Stack gap={{ xs: 10, sm: 15, md: 20 }} sx={{position:"relative",zIndex:1}}>
+            <Stack gap={{ xs: 10, sm: 15, md: 20 }} sx={{ position: "relative", zIndex: 1 }}>
                 <AboutMe />
                 <Languages />
                 <WhatCanIDo />
+                <Projects />
             </Stack>
         </>
     )
