@@ -17,7 +17,6 @@ import PostgresqlIcon from "/src/assets/logos/postgresql.svg?react";
 import ReactIcon from "/src/assets/logos/react.svg?react";
 import { MarqueFadeEdges } from "../../decorations/animations/FadeoutMarque";
 
-
 export function Logos() {
     const theme = useTheme();
     const isMarquee = useMediaQuery(theme.breakpoints.down("md"));

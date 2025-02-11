@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
-const theme = responsiveFontSizes(createTheme({
+let theme = createTheme({
 
     //palette
 
@@ -55,8 +55,25 @@ const theme = responsiveFontSizes(createTheme({
 
     shape: {
         borderRadius: 12
-    }
-}),{factor:5})
+    },
+
+    //breakpoints
+
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 500,
+            md: 900,
+            lg: 1200,
+            xl: 1536,
+        },
+    },
+
+})
+
+//responsive font sizes
+
+theme = responsiveFontSizes(theme, { factor: 5 });
 
 //components
 

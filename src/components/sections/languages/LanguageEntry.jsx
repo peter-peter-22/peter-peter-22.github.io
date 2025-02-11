@@ -8,7 +8,17 @@ import Paper from "@mui/material/Paper";
 export function LanguageEntry({ icon, title, body, bottom }) {
     return (
         <Grid size={1} sx={{ "&:nth-of-type(even) > .MuiStack-root": { flexDirection: "row-reverse" } }}>
-            <Stack direction="row" sx={{ gap: 2, alignItems: "center", height: "100%" }}>
+            <Stack
+                direction="row"
+                sx={theme => ({
+                    gap: 2,
+                    alignItems: "center",
+                    height: "100%",
+                    [theme.breakpoints.down("sm")]: {
+                        flexDirection: "column !important"
+                    }
+                })}
+            >
                 {icon}
                 <FixedGradientPaper sx={{ flexGrow: 1, minHeight: 200, height: "100%" }}>
                     <Paper sx={{
