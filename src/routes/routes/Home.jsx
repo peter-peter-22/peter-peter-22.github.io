@@ -8,7 +8,7 @@ export function Home() {
     return (
         <>
             <Landing />
-            <Stack gap={20}>
+            <Stack gap={{xs:10,sm:15,md:20}}>
                 <AboutMe />
                 <Languages />
                 <WhatCanIDo />

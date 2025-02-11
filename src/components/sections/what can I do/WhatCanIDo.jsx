@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid2';
 import Icon from '@mui/material/Icon';
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import { LightBackground, lightBackgrounds } from "../../decorations/backgrounds/LightBackground";
 
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import CloudIcon from '@mui/icons-material/Cloud';
