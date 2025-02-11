@@ -46,11 +46,14 @@ export function AboutMe() {
     )
 }
 
-function Entry({ title, body, dotColor="inherit" }) {
+function Entry({ title, body, dotColor = "inherit" }) {
     return (
-        <Box sx={{ ml: 0.5 }}>
+        <Box sx={{ ml: 1 }}>
             <Typography variant="h5" component="h3" sx={{ position: "relative" }}>
-                <CircleIcon color={dotColor} sx={{ position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", fontSize: "0.75em" }} />
+                <CircleIcon
+                    color={dotColor}
+                    sx={{ position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", fontSize: "0.75em",mr:0.5 }}
+                />
                 {title}
             </Typography>
             <Typography>
