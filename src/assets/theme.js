@@ -56,7 +56,7 @@ const theme = responsiveFontSizes(createTheme({
     shape: {
         borderRadius: 12
     }
-}))
+}),{factor:5})
 
 //components
 
