@@ -1,6 +1,8 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { Project, ProjectListItem } from "./Project";
+import { ProjectButtons } from "./ProjectButtons";
+import DialogContentText from '@mui/material/DialogContentText';
 
 export function Projects() {
     return (
@@ -29,8 +31,12 @@ export function Projects() {
                 }
                 environments={["NextJS", "PostgreSQL"]}
                 images={["/projects/blog/1.webp", "/projects/blog/2.webp", "/projects/blog/3.webp"]}
-                url={"https://textmine.the-projects-of-peter.fyi/"}
-                articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/textmine-technical-highlights"}
+                buttons={
+                    <ProjectButtons
+                        url={"https://textmine.the-projects-of-peter.fyi/"}
+                        articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/textmine-technical-highlights"}
+                    />
+                }
             />
             <Project
                 title={"My Chat"}
@@ -46,15 +52,22 @@ export function Projects() {
                         <ProjectListItem >
                             Direct file uploading and optimized cloud.
                         </ProjectListItem>
-                        <ProjectListItem color={"error.light"}>
-                            This site is hosted locally and not always online.
+                        <ProjectListItem >
+                            Multiple rooms and in-app notifications.
                         </ProjectListItem>
                     </>
                 }
                 environments={["React", "NodeJS", "Cloudinary", "MongoDB", "Docker"]}
                 images={["/projects/chat/1.webp", "/projects/chat/2.webp", "/projects/chat/3.webp"]}
-                url={"https://awake-rapid-tortoise.ngrok-free.app/"}
-                articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/my-chat-technical-highlights"}
+                buttons={
+                    <ProjectButtons
+                        url={"https://awake-rapid-tortoise.ngrok-free.app/"}
+                        articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/my-chat-technical-highlights"}
+                        dialogBody={<DialogContentText color="warning">
+                            This site is hosted locally and it's normally not online.
+                        </DialogContentText>}
+                    />
+                }
             />
             <Project
                 title={"Y Community"}
@@ -77,8 +90,12 @@ export function Projects() {
                 }
                 environments={["React", "NodeJS", "PostgreSQL", "Cloudinary"]}
                 images={["/projects/y/1.webp", "/projects/y/2.webp", "/projects/y/3.webp"]}
-                url={"https://y-community.vercel.app/"}
-                articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/y-community-technical-highlights"}
+                buttons={
+                    <ProjectButtons
+                        url={"https://y-community.vercel.app/"}
+                        articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/y-community-technical-highlights"}
+                    />
+                }
             />
             <Project
                 title={"Sample Shop"}
@@ -94,15 +111,22 @@ export function Projects() {
                         <ProjectListItem >
                             The discounts have adjustable validity and repeating.
                         </ProjectListItem>
-                        <ProjectListItem color={"error.light"}>
-                            The server sometimes needs a minute to start.
+                        <ProjectListItem >
+                            Admin UI for managing products, discounts and comments.
                         </ProjectListItem>
                     </>
                 }
                 environments={["EJS", "NodeJS", "PostgreSQL", "Stripe"]}
                 images={["/projects/shop/1.webp", "/projects/shop/2.webp", "/projects/shop/3.webp"]}
-                url={"https://sample-shop-48hl.onrender.com/"}
-                articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/sample-shop-technical-highlights"}
+                buttons={
+                    <ProjectButtons
+                        url={"https://sample-shop-48hl.onrender.com/"}
+                        articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/sample-shop-technical-highlights"}
+                        dialogBody={<DialogContentText color="warning">
+                            This free server needs up to 50 seconds to start after inactivity.
+                        </DialogContentText>}
+                    />
+                }
             />
         </Stack>
     )

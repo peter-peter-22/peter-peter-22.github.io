@@ -48,7 +48,7 @@ let theme = createTheme({
 
     //shadows
 
-    shadows: ["none"],
+    shadows: Array(25).fill('none'),
 
     //shape
 
@@ -131,7 +131,7 @@ theme.components = {
         defaultProps: {
             maxWidth: "md"
         }
-    }
+    },
 }
 
 //custom colors

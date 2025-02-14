@@ -30,7 +30,7 @@ export function LanguageEntry({ icon, title, body, bottom }) {
                 }}>
                     <Stack spacing={1} justifyContent={"space-between"} >
                         <Typography component="h3" variant="h5">{title}</Typography>
-                        <Typography textAlign={"justify"}>{body}</Typography>
+                        <Typography textAlign={"justify"} color="textSecondary">{body}</Typography>
                         {bottom}
                     </Stack>
                 </FixedGradientPaperOutline>
@@ -42,7 +42,7 @@ export function LanguageEntry({ icon, title, body, bottom }) {
 export function LanguageEntryChips({ title, chips }) {
     return (
         <div>
-            <Typography variant="body2" sx={{ mb: 0.5 }}>
+            <Typography variant="body2" fontWeight={"lighter"} color="textSecondary" sx={{ mb: 0.5 }}>
                 {title}
             </Typography>
             <Stack direction="row" gap={1} flexWrap={"wrap"}>

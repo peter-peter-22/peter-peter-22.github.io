@@ -56,7 +56,7 @@ function Entry({ title, body, dotColor = "inherit" }) {
                 />
                 {title}
             </Typography>
-            <Typography>
+            <Typography color="textSecondary">
                 {body}
             </Typography>
         </Box>

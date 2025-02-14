@@ -10,8 +10,9 @@ import { BulletedListItem } from "../../decorations/BulletedListItem";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Container from "@mui/material/Container";
+import { ProjectButtons } from "./ProjectButtons";
 
-export function Project({ title, summary, description, environments, images, url, articleUrl }) {
+export function Project({ title, summary, description, environments, images, buttons }) {
     const theme = useTheme()
     const vertical = useMediaQuery(theme.breakpoints.down("md"))
 
@@ -35,22 +36,7 @@ export function Project({ title, summary, description, environments, images, url
                             {description}
                         </List>
                         <Tags title="Environments" tags={environments} />
-                        <Stack direction="row" gap={1}>
-                            <GradientFab
-                                variant="extended"
-                                size={"medium"}
-                                href={articleUrl}
-                            >
-                                Article
-                            </GradientFab>
-                            <SecondaryFab
-                                variant="extended"
-                                size={"medium"}
-                                href={url}
-                            >
-                                Visit
-                            </SecondaryFab>
-                        </Stack>
+                        {buttons}
                     </Stack>
                 </Box>
                 {!vertical &&
@@ -64,7 +50,7 @@ export function Project({ title, summary, description, environments, images, url
 function Tags({ title, tags = [] }) {
     return (
         <Box>
-            <Typography variant="body2" color="textSecondary" sx={{ mb: 0.5 }}>
+            <Typography variant="body2" color="textSecondary" fontWeight={"lighter"} sx={{ mb: 0.5 }}>
                 {title}
             </Typography>
             <Stack direction="row" gap={1} flexWrap={"wrap"}>
