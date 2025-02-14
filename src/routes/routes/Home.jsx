@@ -1,13 +1,16 @@
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import { LightBackground, lightBackgrounds } from "../../components/decorations/backgrounds/LightBackground";
+import { BlackBackground } from "../../components/decorations/blocks/BlackBackground";
 import { AboutMe } from "../../components/sections/about me/AboutMe";
 import { Landing } from "../../components/sections/landing/Landing";
 import { Languages } from "../../components/sections/languages/Languages";
-import { WhatCanIDo } from "../../components/sections/what can I do/WhatCanIDo";
-import Stack from "@mui/material/Stack";
-import { lightBackgrounds, LightBackground } from "../../components/decorations/backgrounds/LightBackground";
-import Box from "@mui/material/Box";
 import { Projects } from "../../components/sections/projects/Projects";
+import { WhatCanIDo } from "../../components/sections/what can I do/WhatCanIDo";
+import { useTheme } from '@mui/material/styles';
 
 export function Home() {
+    const theme = useTheme();
     return (
         <>
             <Background />
@@ -16,7 +19,7 @@ export function Home() {
                 <AboutMe />
                 <Languages />
                 <WhatCanIDo />
-                <Projects />
+                    <Projects />
             </Stack>
         </>
     )
