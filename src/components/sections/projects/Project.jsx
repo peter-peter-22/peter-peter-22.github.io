@@ -1,16 +1,13 @@
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
+import Container from "@mui/material/Container";
 import List from "@mui/material/List";
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-import { GradientFab } from "../../decorations/buttons/GradientFab";
-import { SecondaryFab } from "../../decorations/buttons/SecondaryFab";
-import { ProjectCarousel } from "./ProjectCarousel";
-import { BulletedListItem } from "../../decorations/BulletedListItem";
 import { useTheme } from '@mui/material/styles';
+import Typography from "@mui/material/Typography";
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Container from "@mui/material/Container";
-import { ProjectButtons } from "./ProjectButtons";
+import { BulletedListItem } from "../../decorations/BulletedListItem";
+import { ProjectCarousel } from "./ProjectCarousel";
 
 export function Project({ title, summary, description, environments, images, buttons }) {
     const theme = useTheme()

@@ -4,17 +4,17 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { SmallLogo } from "../../decorations/SmallLogo";
 
-import BootstrapIcon from "/src/assets/logos/bootstrap.svg?react";
-import CloudinaryIcon from "/src/assets/logos/cloudinary.svg?react";
-import CssIcon from "/src/assets/logos/css.svg?react";
-import HtmlIcon from "/src/assets/logos/html.svg?react";
-import JsIcon from "/src/assets/logos/js.svg?react";
-import MongoIcon from "/src/assets/logos/mongodb.svg?react";
-import MuiIcon from "/src/assets/logos/mui.svg?react";
-import NextIcon from "/src/assets/logos/nextjs.svg?react";
-import NodeIcon from "/src/assets/logos/nodejs.svg?react";
-import PostgresqlIcon from "/src/assets/logos/postgresql.svg?react";
-import ReactIcon from "/src/assets/logos/react.svg?react";
+import BootstrapIcon from "/src/assets/svgs/logos/bootstrap.svg?react";
+import CloudinaryIcon from "/src/assets/svgs/logos/cloudinary.svg?react";
+import CssIcon from "/src/assets/svgs/logos/css.svg?react";
+import HtmlIcon from "/src/assets/svgs/logos/html.svg?react";
+import JsIcon from "/src/assets/svgs/logos/js.svg?react";
+import MongoIcon from "/src/assets/svgs/logos/mongodb.svg?react";
+import MuiIcon from "/src/assets/svgs/logos/mui.svg?react";
+import NextIcon from "/src/assets/svgs/logos/nextjs.svg?react";
+import NodeIcon from "/src/assets/svgs/logos/nodejs.svg?react";
+import PostgresqlIcon from "/src/assets/svgs/logos/postgresql.svg?react";
+import ReactIcon from "/src/assets/svgs/logos/react.svg?react";
 import { MarqueFadeEdges } from "../../decorations/animations/FadeoutMarque";
 
 export function Logos() {

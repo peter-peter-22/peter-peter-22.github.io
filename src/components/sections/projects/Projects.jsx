@@ -1,14 +1,28 @@
+import DialogContentText from '@mui/material/DialogContentText';
 import Stack from "@mui/material/Stack";
+import Container from "@mui/material/Stack";
+import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
 import { Project, ProjectListItem } from "./Project";
 import { ProjectButtons } from "./ProjectButtons";
-import DialogContentText from '@mui/material/DialogContentText';
+import UnderlineSvg from "/src/assets/svgs/underline.svg?react";
 
 export function Projects() {
     return (
         <Stack gap={{ xs: 10, sm: 15, md: 20 }}>
-            <Typography variant="h2" textAlign={"center"}>
+            <Typography variant="h2" textAlign={"center"} sx={{ position: "relative" }}>
                 Projects
+                <SvgIcon component={UnderlineSvg} inheritViewBox sx={theme => ({
+                    fontSize: { xs: 200, sm: 300 },
+                    position: "absolute",
+                    left: "50%",
+                    bottom: 0,
+                    transform: "translate(-50%, 50%) scaleY(-1)",
+                    zIndex: -1,
+                    "--start": theme.palette.analogous1.main,
+                    "--middle": theme.palette.primary.main,
+                    "--end": theme.palette.analogous2.main
+                })} />
             </Typography>
             <Project
                 title={"Textmine"}

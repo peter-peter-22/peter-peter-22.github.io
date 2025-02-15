@@ -2,14 +2,14 @@ import Grid from '@mui/material/Grid2';
 import { BigLogo } from "../../decorations/BigLogo";
 import { LanguageEntry, LanguageEntryChips } from "./LanguageEntry";
 
-import CssIcon from "/src/assets/logos/css.svg?react";
-import HtmlIcon from "/src/assets/logos/html.svg?react";
-import JsIcon from "/src/assets/logos/js.svg?react";
-import MongoIcon from "/src/assets/logos/mongodb.svg?react";
-import NextIcon from "/src/assets/logos/nextjs.svg?react";
-import NodeIcon from "/src/assets/logos/nodejs.svg?react";
-import PostgresqlIcon from "/src/assets/logos/postgresql.svg?react";
-import ReactIcon from "/src/assets/logos/react.svg?react";
+import CssIcon from "/src/assets/svgs/logos/css.svg?react";
+import HtmlIcon from "/src/assets/svgs/logos/html.svg?react";
+import JsIcon from "/src/assets/svgs/logos/js.svg?react";
+import MongoIcon from "/src/assets/svgs/logos/mongodb.svg?react";
+import NextIcon from "/src/assets/svgs/logos/nextjs.svg?react";
+import NodeIcon from "/src/assets/svgs/logos/nodejs.svg?react";
+import PostgresqlIcon from "/src/assets/svgs/logos/postgresql.svg?react";
+import ReactIcon from "/src/assets/svgs/logos/react.svg?react";
 
 export function LanguageEntries() {
     return (

@@ -140,8 +140,6 @@ theme.palette = {
     ...theme.palette,
     analogous1: theme.palette.augmentColor({ color: { main: "#cb30fd" } }),
     analogous2: theme.palette.augmentColor({ color: { main: "#00adff" } }),
-    triadic1: theme.palette.augmentColor({ color: { main: "#c600ff" } }),
-    triadic2: theme.palette.augmentColor({ color: { main: "#00ff95" } }),
 }
 
 export { theme };

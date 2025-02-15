@@ -3,7 +3,7 @@ import { LightBackground, lightBackgrounds } from "../backgrounds/LightBackgroun
 
 export function LightPaper({ sx, children }) {
     return (
-        <Paper sx={{ position: "relative", overflow: "hidden", ...sx }}>
+        <Paper sx={{ position: "relative", overflow: "hidden", backgroundColor: "unset", ...sx }}>
             <LightBackground background={lightBackgrounds.medium} />
             {children}
         </Paper>
@@ -12,7 +12,7 @@ export function LightPaper({ sx, children }) {
 
 export function LightCard({ sx, children }) {
     return (
-        <Paper sx={{ position: "relative", overflow: "hidden", ...sx }}>
+        <Paper sx={{ position: "relative", overflow: "hidden", backgroundColor: "unset", ...sx }}>
             <LightBackground background={lightBackgrounds.medium} />
             {children}
         </Paper>
