@@ -26,13 +26,13 @@ export function Footer() {
                             Created by Peter in 2025
                         </Typography>
                         <Stack direction={"row"} gap={1}>
-                            <IconButton size="small" href="#">
+                            <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
                                 <GitHub />
                             </IconButton>
-                            <IconButton size="small" href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=SUBJECT&body=BODY&bcc=someone.else@example.com">
+                            <IconButton target="_blank" size="small" href="https://mail.google.com/mail/?view=cm&fs=1&to=peternew2222@gmail.com&su=SUBJECT&body=BODY">
                                 <EmailIcon />
                             </IconButton>
-                            <IconButton size="small">
+                            <IconButton target="_blank" size="small" href="https://x.com/PeterNew2222">
                                 <XIcon />
                             </IconButton>
                         </Stack>
@@ -67,7 +67,7 @@ export function Footer() {
 
 function FooterLink({ children, ...props }) {
     return (
-        <Link color="textSecondary" variant="body2" fontWeight={"lighter"} {...props}>
+        <Link color="textSecondary" variant="body2" fontWeight={"lighter"} target="_blank" {...props}>
             {children}
         </Link>
     )
