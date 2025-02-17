@@ -8,11 +8,11 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 export function TitleButtons() {
     return (
         <Stack direction="row" spacing={2} >
-            <GradientFab variant="extended">
+            <GradientFab variant="extended" href="#projects">
                 <PermMediaIcon sx={{ mr: 1 }} />
                 Projects
             </GradientFab>
-            <SecondaryFab variant="extended">
+            <SecondaryFab variant="extended" href="#contact">
                 <AlternateEmailIcon sx={{ mr: 1 }} />
                 Contact
             </SecondaryFab>

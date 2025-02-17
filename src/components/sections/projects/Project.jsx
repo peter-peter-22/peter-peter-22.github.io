@@ -14,7 +14,7 @@ export function Project({ title, summary, description, environments, images, but
     const vertical = useMediaQuery(theme.breakpoints.down("md"))
 
     return (
-        <Container maxWidth={"lg"}>
+        <Container maxWidth={"lg"} id="projects">
             <Stack direction={"row"} justifyContent={"space-between"} gap={5}>
                 <Box mx={{ xs: "auto", md: "0" }}>
                     <Stack gap={2} sx={theme => ({ [theme.breakpoints.down("md")]: { width: "min-content" } })}>
