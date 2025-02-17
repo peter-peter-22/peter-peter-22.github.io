@@ -28,21 +28,21 @@ export function Logos() {
             autoFill
             pauseOnHover
             style={{
-                marginTop: 20,
-                paddingTop: 20
+                margin: "-20px 0",
+                padding: "20px 0"
             }}
         >
-            {logos.map((logo, i) => (
-                <IconButton key={i} sx={{ mr: 0.5 }}>
-                    {logo}
+            {logos.map(({ element, url }, i) => (
+                <IconButton href={url} key={i} sx={{ mr: 0.5 }}>
+                    {element}
                 </IconButton>
             ))}
         </MarqueFadeEdges>
     ) : (
         <Stack direction="row" gap={1}>
-            {logos.map((logo, i, arr) => (
-                <IconButton key={i} edge={i == 0 ? "start" : i == arr.length - 1 ? "end" : undefined}>
-                    {logo}
+            {logos.map(({ element, url }, i, arr) => (
+                <IconButton href={url} key={i} edge={i == 0 ? "start" : i == arr.length - 1 ? "end" : undefined}>
+                    {element}
                 </IconButton>
             ))}
         </Stack>
@@ -51,15 +51,15 @@ export function Logos() {
 
 
 const logos = [
-    <SmallLogo component={NextIcon} sx={{ filter: "invert(1)" }} />,
-    <SmallLogo component={MuiIcon} />,
-    <SmallLogo component={NodeIcon} />,
-    <SmallLogo component={PostgresqlIcon} />,
-    <SmallLogo component={ReactIcon} />,
-    <SmallLogo component={CloudinaryIcon} />,
-    <SmallLogo component={MongoIcon} />,
-    <SmallLogo component={BootstrapIcon} />,
-    <SmallLogo component={HtmlIcon} />,
-    <SmallLogo component={CssIcon} />,
-    <SmallLogo component={JsIcon} />,
+    { url: "#languages-next", element: (<SmallLogo component={NextIcon} sx={{ filter: "invert(1)" }} />) },
+    { url: "#languages-react", element: (<SmallLogo component={MuiIcon} />) },
+    { url: "#languages-node", element: (<SmallLogo component={NodeIcon} />) },
+    { url: "#languages-postgres", element: (<SmallLogo component={PostgresqlIcon} />) },
+    { url: "#languages-react", element: (<SmallLogo component={ReactIcon} />) },
+    { url: "#languages-react", element: (<SmallLogo component={CloudinaryIcon} />) },
+    { url: "#languages-mongo", element: (<SmallLogo component={MongoIcon} />) },
+    { url: "#languages-css", element: (<SmallLogo component={BootstrapIcon} />) },
+    { url: "#languages-html", element: (<SmallLogo component={HtmlIcon} />) },
+    { url: "#languages-css", element: (<SmallLogo component={CssIcon} />) },
+    { url: "#languages-js", element: (<SmallLogo component={JsIcon} />) },
 ]

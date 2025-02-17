@@ -26,7 +26,7 @@ export function Projects() {
                                 Likes, comments, follows and notifications.
                             </ProjectListItem>
                             <ProjectListItem color={"primary.light"}>
-                                Clean and reusable code.
+                                Dark and light mode.
                             </ProjectListItem>
                         </>
                     }

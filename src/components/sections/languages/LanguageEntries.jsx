@@ -15,6 +15,7 @@ export function LanguageEntries() {
     return (
         <Grid container spacing={5} columns={{ xs: 1, md: 2 }}>
             <LanguageEntry
+                id="languages-next"
                 icon={<BigLogo component={NextIcon} sx={{ filter: "invert(1)" }} />}
                 title="Next"
                 body={
@@ -35,6 +36,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-react"}
                 icon={<BigLogo component={ReactIcon} />}
                 title="React"
                 body={
@@ -55,6 +57,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-node"}
                 icon={<BigLogo component={NodeIcon} />}
                 title="Node"
                 body={
@@ -76,6 +79,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-postgres"}
                 icon={<BigLogo component={PostgresqlIcon} />}
                 title="PostgreSQL"
                 body={
@@ -91,6 +95,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-mongo"}
                 icon={<BigLogo component={MongoIcon} />}
                 title="MongoDB"
                 body={
@@ -109,6 +114,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-html"}
                 icon={<BigLogo component={HtmlIcon} />}
                 title="HTML"
                 body={
@@ -127,6 +133,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-css"}
                 icon={<BigLogo component={CssIcon} />}
                 title="CSS"
                 body={
@@ -147,6 +154,7 @@ export function LanguageEntries() {
                 }
             />
             <LanguageEntry
+                id={"languages-js"}
                 icon={<BigLogo component={JsIcon} />}
                 title="Javascript"
                 body={

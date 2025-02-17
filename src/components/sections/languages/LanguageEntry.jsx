@@ -4,9 +4,9 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { FixedGradientPaperOutline } from "../../decorations/blocks/FixedGradientBlock";
 
-export function LanguageEntry({ icon, title, body, bottom }) {
+export function LanguageEntry({ icon, title, body, bottom,...props }) {
     return (
-        <Grid size={1} sx={{ "&:nth-of-type(even) > .MuiStack-root": { flexDirection: "row-reverse" } }}>
+        <Grid size={1} sx={{ "&:nth-of-type(even) > .MuiStack-root": { flexDirection: "row-reverse" } }} {...props}>
             <Stack
                 direction="row"
                 sx={theme => ({

@@ -1,17 +1,12 @@
-import Box from "@mui/material/Box";
-import Chip from "@mui/material/Chip";
-import Container from "@mui/material/Container";
-import List from "@mui/material/List";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-import { Title } from "../../decorations/texts/Title";
-import { LightCard } from "../../decorations/blocks/LightsBlock";
-import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
-import TextField from '@mui/material/TextField';
-import Paper from "@mui/material/Paper";
 import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Container from "@mui/material/Container";
 import Fab from "@mui/material/Fab";
+import TextField from '@mui/material/TextField';
+import Typography from "@mui/material/Typography";
+import { LightCard } from "../../decorations/blocks/LightsBlock";
+import { Title } from "../../decorations/texts/Title";
 import { createEmailUrl } from "../../functional/emailLinkGenerator";
 
 export function Contact() {
