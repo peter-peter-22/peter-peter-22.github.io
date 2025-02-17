@@ -1,14 +1,16 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { useTheme } from '@mui/material/styles';
-import { LightBackground, lightBackgrounds } from "../../components/decorations/backgrounds/LightBackground";
-import { AboutMe } from "../../components/sections/about me/AboutMe";
-import { Landing } from "../../components/sections/landing/Landing";
-import { Languages } from "../../components/sections/languages/Languages";
-import { Projects } from "../../components/sections/projects/Projects";
-import { WhatCanIDo } from "../../components/sections/what can I do/WhatCanIDo";
-import { Footer } from "../../components/sections/footer/Footer";
-import { BlackBackground } from "../../components/decorations/blocks/BlackBackground";
+import { LightBackground, lightBackgrounds } from "../components/decorations/backgrounds/LightBackground";
+import { AboutMe } from "../components/sections/about me/AboutMe";
+import { Landing } from "../components/sections/landing/Landing";
+import { Languages } from "../components/sections/languages/Languages";
+import { Projects } from "../components/sections/projects/Projects";
+import { WhatCanIDo } from "../components/sections/what can I do/WhatCanIDo";
+import { Footer } from "../components/sections/footer/Footer";
+import { BlackBackground } from "../components/decorations/blocks/BlackBackground";
+import { Contact } from "../components/sections/contact/Contact";
+
 
 export function Home() {
     const theme = useTheme();
@@ -22,6 +24,7 @@ export function Home() {
                     <Languages />
                     <WhatCanIDo />
                     <Projects />
+                    <Contact />
                     <Footer />
                 </Stack>
             </BlackBackground>

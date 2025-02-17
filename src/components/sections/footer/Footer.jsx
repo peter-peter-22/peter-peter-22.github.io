@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import GitHub from "@mui/icons-material/GitHub";
 import EmailIcon from '@mui/icons-material/Email';
 import XIcon from '@mui/icons-material/X';
+import { createEmailUrl } from "../../functional/emailLinkGenerator";
 
 export function Footer() {
     const theme = useTheme()
@@ -29,7 +30,7 @@ export function Footer() {
                             <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
                                 <GitHub />
                             </IconButton>
-                            <IconButton target="_blank" size="small" href="https://mail.google.com/mail/?view=cm&fs=1&to=peternew2222@gmail.com&su=SUBJECT&body=BODY">
+                            <IconButton target="_blank" size="small" href={createEmailUrl({ title:"Response to your portfolio" })}>
                                 <EmailIcon />
                             </IconButton>
                             <IconButton target="_blank" size="small" href="https://x.com/PeterNew2222">

@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 import { useCallback, useEffect, useRef } from "react";
 import { TitleButtons } from "./Buttons";
 import { Logos } from "./Logos";
-import { Description, Title } from "./Title";
+import { Description, LandingTitle } from "./Title";
 
 export function Landing() {
     const containerRef = useLandingFadeOut({ area: 200 });
@@ -12,7 +12,7 @@ export function Landing() {
         <Box sx={{ position: "sticky", top: 0 }}>
             <Container ref={containerRef} sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
                 <Stack gap={5} sx={{ maxWidth: "100%", width: "100%" }}>
-                    <Title />
+                    <LandingTitle />
                     <Description />
                     <Logos />
                     <TitleButtons />

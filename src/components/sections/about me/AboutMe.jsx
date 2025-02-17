@@ -13,7 +13,7 @@ export function AboutMe() {
             <Box sx={{ position: "relative" }}>
                 <Background />
                 <CardContent>
-                    <Typography variant="h2" textAlign={"center"}>
+                    <Typography variant="h2" textAlign={"center"} gutterBottom>
                         About me
                     </Typography>
                     <EntryContainer>

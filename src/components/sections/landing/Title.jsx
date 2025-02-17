@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from '@mui/material/styles';
 import { GradientText } from "../../decorations/texts/GradientText";
 
-export function Title() {
+export function LandingTitle() {
     const theme = useTheme();
     return (
         <Typography variant="h1">
