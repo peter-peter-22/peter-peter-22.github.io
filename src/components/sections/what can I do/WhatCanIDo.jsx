@@ -17,7 +17,7 @@ export function WhatCanIDo() {
     return (
         <Box sx={{ position: "relative" }}>
             <Container maxWidth="lg" >
-                <Typography variant="h2" textAlign={"center"} sx={{ mb: 5, position: "relative" }}>
+                <Typography variant="h2" textAlign={"center"} sx={{ mb: 10, position: "relative" }}>
                     What can I do?
                     <GradientUnderline />
                 </Typography>

@@ -16,14 +16,16 @@ export function Project({ title, summary, description, environments, images, but
     return (
         <Container maxWidth={"lg"}>
             <Stack direction={"row"} justifyContent={"space-between"} gap={5}>
-                <Box>
-                    <Typography variant="h3" component="h3">
-                        {title}
-                    </Typography>
-                    <Stack gap={2}>
-                        <Typography color="textSecondary" component="h4">
-                            {summary}
-                        </Typography>
+                <Box mx={{ xs: "auto", md: "0" }}>
+                    <Stack gap={2} sx={theme => ({ [theme.breakpoints.down("md")]: { width: "min-content" } })}>
+                        <div >
+                            <Typography variant="h3" component="h3">
+                                {title}
+                            </Typography>
+                            <Typography color="textSecondary" component="h4">
+                                {summary}
+                            </Typography>
+                        </div>
                         {vertical &&
                             <ProjectCarousel
                                 urls={images}
@@ -36,33 +38,34 @@ export function Project({ title, summary, description, environments, images, but
                         {buttons}
                     </Stack>
                 </Box>
-                {!vertical &&
+                {
+                    !vertical &&
                     <ProjectCarousel urls={images} />
                 }
-            </Stack>
-        </Container>
+            </Stack >
+        </Container >
     )
 }
 
 function Tags({ title, tags = [] }) {
     return (
-        <Box>
+        <div>
             <Typography variant="body2" color="textSecondary" fontWeight={"lighter"} sx={{ mb: 0.5 }}>
                 {title}
             </Typography>
-            <Stack direction="row" gap={1} flexWrap={"wrap"}>
+            <Stack direction="row" gap={1} flexWrap={"wrap"} >
                 {tags.map((text, i) => (
                     <Chip size="small" label={text} key={i} />
                 ))}
             </Stack>
-        </Box>
+        </div>
     )
 }
 
-export function ProjectListItem({ color = "primary.light", children, ...props }) {
+export function ProjectListItem({ children, ...props }) {
     return (
         <Typography variant="h5" component="div" fontWeight={"normal"}>
-            <BulletedListItem color={color} {...props}>
+            <BulletedListItem color={"primary.light"} {...props}>
                 {children}
             </BulletedListItem>
         </Typography>

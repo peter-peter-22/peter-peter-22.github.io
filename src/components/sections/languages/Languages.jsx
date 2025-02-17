@@ -6,7 +6,7 @@ import { GradientUnderline } from "../../decorations/GradientUnderline";
 export function Languages() {
     return (
         <Container sx={theme => ({ maxWidth: { xs: theme.breakpoints.values.sm, md: theme.breakpoints.values.lg } })}>
-            <Typography variant="h2" textAlign={"center"} sx={{ mb: 5,position:"relative" }}>
+            <Typography variant="h2" textAlign={"center"} sx={{ mb: 10, position: "relative" }}>
                 Environments
                 <GradientUnderline />
             </Typography>
