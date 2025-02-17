@@ -1,8 +1,8 @@
-import DialogContentText from '@mui/material/DialogContentText';
+import DialogContentText from "@mui/material/DialogContentText";
 import Stack from "@mui/material/Stack";
 import { Project, ProjectListItem } from "./Project";
 import { ProjectButtons } from "./ProjectButtons";
-import { Title } from '../../decorations/texts/Title';
+import { Title } from "../../decorations/texts/Title";
 import Box from "@mui/material/Box";
 
 export function Projects() {

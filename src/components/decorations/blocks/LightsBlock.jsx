@@ -1,5 +1,6 @@
 import Paper from "@mui/material/Paper";
-import { LightBackground, lightBackgrounds } from "../backgrounds/LightBackground";
+import { LightBackground } from "../backgrounds/LightBackground";
+import { lightBackgrounds } from "../backgrounds/lightBackgrounds";
 
 export function LightPaper({ sx, children }) {
     return (

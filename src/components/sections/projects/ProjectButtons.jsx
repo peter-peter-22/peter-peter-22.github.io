@@ -2,7 +2,6 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from "@mui/material/DialogActions";
 import Fab from "@mui/material/Fab";
 import Stack from "@mui/material/Stack";
-import * as React from 'react';
 import { useCallback, useState } from "react";
 import { GradientFab } from "../../decorations/buttons/GradientFab";
 import { SecondaryFab } from "../../decorations/buttons/SecondaryFab";

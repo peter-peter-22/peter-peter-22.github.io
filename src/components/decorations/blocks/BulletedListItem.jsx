@@ -4,7 +4,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 
-export function BulletedListItem({ color, children, variant, ...props }) {
+export function BulletedListItem({ color, children, ...props }) {
     return (
         <ListItem disablePadding alignItems="flex-start" {...props}>
             <ListItemIcon sx={{ minWidth: { xs: 30, md: 40 } }}>

@@ -32,7 +32,7 @@ function useLandingFadeOut({ area }) {
         let opacity = (area - scrollY) / area
         opacity = Math.max(Math.min(opacity, 1), 0)
         containerRef.current.style.opacity = opacity;
-    }, [containerRef])
+    }, [containerRef,area])
 
     useEffect(() => {
         window.addEventListener("scroll", () => {

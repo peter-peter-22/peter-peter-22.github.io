@@ -12,7 +12,7 @@ export function LightBackground({ background: { blur, url } }) {
     return (
         <BlurContainer>
             <BlurOverlay blur={blur} />
-            <BlurImage src={url} draggable={false}  />
+            <BlurImage src={url} draggable={false} />
         </BlurContainer>
     )
 }
@@ -46,10 +46,4 @@ function BlurOverlay({ blur = "40px" }) {
             left: 0
         }} />
     )
-}
-
-export const lightBackgrounds = {
-    medium: { url: "/backgrounds/lights-background.webp", blur: "30px" },
-    landing: { url: "/backgrounds/lights-background-landing.webp", blur: "30px" },
-    middle: { url: "/backgrounds/lights-background-middle.webp", blur: "30px" }
 }
