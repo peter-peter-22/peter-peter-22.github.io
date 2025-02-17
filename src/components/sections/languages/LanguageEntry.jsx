@@ -26,6 +26,7 @@ export function LanguageEntry({ icon, title, body, bottom }) {
                     "& .MuiPaper-root": {
                         p: 1,
                         display: "flex",
+                        bgcolor:"background.foreground"
                     }
                 }}>
                     <Stack spacing={1} justifyContent={"space-between"} >

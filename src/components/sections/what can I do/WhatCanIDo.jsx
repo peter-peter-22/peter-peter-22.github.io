@@ -11,12 +11,16 @@ import CodeIcon from '@mui/icons-material/Code';
 import PublicIcon from '@mui/icons-material/Public';
 import StorageIcon from '@mui/icons-material/Storage';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import { GradientUnderline } from "../../decorations/GradientUnderline";
 
 export function WhatCanIDo() {
     return (
         <Box sx={{ position: "relative" }}>
             <Container maxWidth="lg" >
-                <Typography variant="h2" textAlign={"center"} sx={{ mb: 5 }}>What can I do?</Typography>
+                <Typography variant="h2" textAlign={"center"} sx={{ mb: 5, position: "relative" }}>
+                    What can I do?
+                    <GradientUnderline />
+                </Typography>
                 <Grid container spacing={5} columns={{ xs: 1, sm: 2, md: 3 }}>
                     <Entry title="Front-end" body="I can design comfortable and optimized frontends with hotkeys, darkmode, translation and interactive forms." icon={VisibilityIcon} />
                     <Entry title="Back-end" body="My servers can handle authentication, databases, realtime updates, caching, cloud services and payment processors." icon={CodeIcon} />

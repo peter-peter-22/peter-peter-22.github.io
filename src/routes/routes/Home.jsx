@@ -8,6 +8,7 @@ import { Languages } from "../../components/sections/languages/Languages";
 import { Projects } from "../../components/sections/projects/Projects";
 import { WhatCanIDo } from "../../components/sections/what can I do/WhatCanIDo";
 import { Footer } from "../../components/sections/footer/Footer";
+import { BlackBackground } from "../../components/decorations/blocks/BlackBackground";
 
 export function Home() {
     const theme = useTheme();
@@ -15,13 +16,15 @@ export function Home() {
         <>
             <Background />
             <Landing />
-            <Stack gap={{ xs: 10, sm: 15, md: 20 }} sx={{ position: "relative", zIndex: 1 }}>
-                <AboutMe />
-                <Languages />
-                <WhatCanIDo />
-                <Projects />
-                <Footer />
-            </Stack>
+            <BlackBackground start transition={100} color={theme.palette.background.default}>
+                <Stack gap={{ xs: 10, sm: 15, md: 20 }} sx={{ position: "relative", zIndex: 1 }}>
+                    <AboutMe />
+                    <Languages />
+                    <WhatCanIDo />
+                    <Projects />
+                    <Footer />
+                </Stack>
+            </BlackBackground>
         </>
     )
 }

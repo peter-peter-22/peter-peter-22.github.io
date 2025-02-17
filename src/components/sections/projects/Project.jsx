@@ -14,7 +14,7 @@ export function Project({ title, summary, description, environments, images, but
     const vertical = useMediaQuery(theme.breakpoints.down("md"))
 
     return (
-        <Container maxWidth={vertical ? "sm" : "lg"}>
+        <Container maxWidth={"lg"}>
             <Stack direction={"row"} justifyContent={"space-between"} gap={5}>
                 <Box>
                     <Typography variant="h3" component="h3">

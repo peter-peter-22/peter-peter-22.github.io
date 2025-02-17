@@ -17,7 +17,7 @@ export function Footer() {
         <BlackBackground
             start={true}
             transition={100}
-            color={theme.palette.background.default}
+            color={theme.palette.common.black}
         >
             <Container >
                 <Stack gap={2} py={5}>
@@ -56,6 +56,9 @@ export function Footer() {
                             </FooterLink>
                             <FooterLink href="https://swiperjs.com/">
                                 Swiper
+                            </FooterLink>
+                            <FooterLink href="https://www.freepik.com/vectors">
+                                Freepik
                             </FooterLink>
                         </Stack>
                     </Stack>
