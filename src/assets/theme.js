@@ -83,7 +83,6 @@ theme.components = {
                 boxShadow: `transparent 0 0 0 0`,
                 "&:hover": {
                     boxShadow: `${theme.palette.text.primary} 0 0 0 3px`,
-                    transform: "translateY(-5px)"
                 },
                 transition: theme.transitions.create("all", {
                     duration: theme.transitions.duration.standard,
@@ -97,7 +96,6 @@ theme.components = {
                 boxShadow: `transparent 0 0 0 0`,
                 "&:hover": {
                     boxShadow: `${theme.palette.text.primary} 0 0 0 3px`,
-                    transform: "translateY(-5px)"
                 },
                 transition: theme.transitions.create("all", {
                     duration: theme.transitions.duration.standard,
