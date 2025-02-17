@@ -10,7 +10,7 @@ export function Landing() {
     const containerRef = useLandingFadeOut({ area: 200 });
     return (
         <Box sx={{ position: "sticky", top: 0 }}>
-            <Container ref={containerRef} sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
+            <Container ref={containerRef} sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }} component="section">
                 <Stack gap={5} sx={{ maxWidth: "100%", width: "100%" }}>
                     <LandingTitle />
                     <Description />

@@ -9,7 +9,7 @@ import { LightPaper } from "../../decorations/blocks/LightsBlock";
 
 export function AboutMe() {
     return (
-        <Container>
+        <Container component="section">
             <Box sx={{ position: "relative" }}>
                 <Background />
                 <CardContent>

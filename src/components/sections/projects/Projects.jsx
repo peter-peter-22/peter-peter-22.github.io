@@ -3,10 +3,11 @@ import Stack from "@mui/material/Stack";
 import { Project, ProjectListItem } from "./Project";
 import { ProjectButtons } from "./ProjectButtons";
 import { Title } from '../../decorations/texts/Title';
+import Box from "@mui/material/Box";
 
 export function Projects() {
     return (
-        <div>
+        <Box component="section">
             <Title>
                 Projects
             </Title>
@@ -130,6 +131,6 @@ export function Projects() {
                     }
                 />
             </Stack>
-        </div>
+        </Box>
     )
 }

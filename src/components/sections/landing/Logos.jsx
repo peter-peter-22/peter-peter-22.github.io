@@ -32,16 +32,16 @@ export function Logos() {
                 padding: "20px 0"
             }}
         >
-            {logos.map(({ element, url }, i) => (
-                <IconButton href={url} key={i} sx={{ mr: 0.5 }}>
+            {logos.map(({ element, url, name }, i) => (
+                <IconButton href={url} key={i} aria-label={name} sx={{ mr: 0.5 }}>
                     {element}
                 </IconButton>
             ))}
         </MarqueFadeEdges>
     ) : (
         <Stack direction="row" gap={1}>
-            {logos.map(({ element, url }, i, arr) => (
-                <IconButton href={url} key={i} edge={i == 0 ? "start" : i == arr.length - 1 ? "end" : undefined}>
+            {logos.map(({ element, url, name }, i, arr) => (
+                <IconButton href={url} key={i} aria-label={name} edge={i == 0 ? "start" : i == arr.length - 1 ? "end" : undefined}>
                     {element}
                 </IconButton>
             ))}
@@ -51,15 +51,15 @@ export function Logos() {
 
 
 const logos = [
-    { url: "#languages-next", element: (<SmallLogo component={NextIcon} sx={{ filter: "invert(1)" }} />) },
-    { url: "#languages-react", element: (<SmallLogo component={MuiIcon} />) },
-    { url: "#languages-node", element: (<SmallLogo component={NodeIcon} />) },
-    { url: "#languages-postgres", element: (<SmallLogo component={PostgresqlIcon} />) },
-    { url: "#languages-react", element: (<SmallLogo component={ReactIcon} />) },
-    { url: "#languages-react", element: (<SmallLogo component={CloudinaryIcon} />) },
-    { url: "#languages-mongo", element: (<SmallLogo component={MongoIcon} />) },
-    { url: "#languages-css", element: (<SmallLogo component={BootstrapIcon} />) },
-    { url: "#languages-html", element: (<SmallLogo component={HtmlIcon} />) },
-    { url: "#languages-css", element: (<SmallLogo component={CssIcon} />) },
-    { url: "#languages-js", element: (<SmallLogo component={JsIcon} />) },
+    { url: "#languages-next", element: (<SmallLogo component={NextIcon} sx={{ filter: "invert(1)" }} />), name: "NextJS" },
+    { url: "#languages-react", element: (<SmallLogo component={MuiIcon} />), name: "Material UI" },
+    { url: "#languages-node", element: (<SmallLogo component={NodeIcon} />), name: "NodeJS" },
+    { url: "#languages-postgres", element: (<SmallLogo component={PostgresqlIcon} />), name: "PostgreSQL" },
+    { url: "#languages-react", element: (<SmallLogo component={ReactIcon} />), name: "React" },
+    { url: "#languages-react", element: (<SmallLogo component={CloudinaryIcon} />), name: "Cloudinary" },
+    { url: "#languages-mongo", element: (<SmallLogo component={MongoIcon} />), name: "MongoDB" },
+    { url: "#languages-css", element: (<SmallLogo component={BootstrapIcon} />), name: "Bootstrap" },
+    { url: "#languages-html", element: (<SmallLogo component={HtmlIcon} />), name: "HTML" },
+    { url: "#languages-css", element: (<SmallLogo component={CssIcon} />), name: "CSS" },
+    { url: "#languages-js", element: (<SmallLogo component={JsIcon} />), name: "Javascript" },
 ]

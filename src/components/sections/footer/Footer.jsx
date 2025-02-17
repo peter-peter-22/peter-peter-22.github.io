@@ -1,14 +1,13 @@
-import { BlackBackground } from "../../decorations/blocks/BlackBackground";
-import { useTheme } from '@mui/material/styles';
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
+import { useTheme } from '@mui/material/styles';
 import Typography from "@mui/material/Typography";
+import { BlackBackground } from "../../decorations/blocks/BlackBackground";
 
-import GitHub from "@mui/icons-material/GitHub";
 import EmailIcon from '@mui/icons-material/Email';
+import GitHub from "@mui/icons-material/GitHub";
 import XIcon from '@mui/icons-material/X';
 import { createEmailUrl } from "../../functional/emailLinkGenerator";
 
@@ -20,7 +19,7 @@ export function Footer() {
             transition={100}
             color={theme.palette.common.black}
         >
-            <Container >
+            <Container component="footer">
                 <Stack gap={2} py={5}>
                     <Stack direction={{ xs: "column", sm: "row" }} justifyContent={"space-between"} alignItems={"center"} gap={1}>
                         <Typography >

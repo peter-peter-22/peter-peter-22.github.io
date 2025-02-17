@@ -4,7 +4,7 @@ import { LanguageEntries } from "./LanguageEntries";
 
 export function Languages() {
     return (
-        <Container sx={theme => ({ maxWidth: { xs: theme.breakpoints.values.sm, md: theme.breakpoints.values.lg } })}>
+        <Container sx={theme => ({ maxWidth: { xs: theme.breakpoints.values.sm, md: theme.breakpoints.values.lg } })} component="section">
             <Title>
                 Environments
             </Title>
