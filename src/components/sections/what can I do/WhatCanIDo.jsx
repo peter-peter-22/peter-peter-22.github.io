@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid2';
 import Icon from '@mui/material/Icon';
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import { Title } from "../../decorations/texts/Title";
 
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import CloudIcon from '@mui/icons-material/Cloud';
@@ -11,16 +12,14 @@ import CodeIcon from '@mui/icons-material/Code';
 import PublicIcon from '@mui/icons-material/Public';
 import StorageIcon from '@mui/icons-material/Storage';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { GradientUnderline } from "../../decorations/GradientUnderline";
 
 export function WhatCanIDo() {
     return (
         <Box sx={{ position: "relative" }}>
             <Container maxWidth="lg" >
-                <Typography variant="h2" textAlign={"center"} sx={{ mb: 10, position: "relative" }}>
+                <Title>
                     What can I do?
-                    <GradientUnderline />
-                </Typography>
+                </Title>
                 <Grid container spacing={5} columns={{ xs: 1, sm: 2, md: 3 }}>
                     <Entry title="Front-end" body="I can design comfortable and optimized frontends with hotkeys, darkmode, translation and interactive forms." icon={VisibilityIcon} />
                     <Entry title="Back-end" body="My servers can handle authentication, databases, realtime updates, caching, cloud services and payment processors." icon={CodeIcon} />

@@ -6,7 +6,7 @@ import Stack from "@mui/material/Stack";
 import { useTheme } from '@mui/material/styles';
 import Typography from "@mui/material/Typography";
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { BulletedListItem } from "../../decorations/BulletedListItem";
+import { BulletedListItem } from "../../decorations/blocks/BulletedListItem";
 import { ProjectCarousel } from "./ProjectCarousel";
 
 export function Project({ title, summary, description, environments, images, buttons }) {
