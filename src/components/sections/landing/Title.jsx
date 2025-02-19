@@ -1,30 +1,33 @@
 import Typography from "@mui/material/Typography";
 import { useTheme } from '@mui/material/styles';
 import { GradientText } from "../../decorations/texts/GradientText";
+import { useTranslation } from 'react-i18next';
 
 export function LandingTitle() {
+    const { t } = useTranslation();
     const theme = useTheme();
     return (
-            <Typography variant="h1">
-                Hello, my name is Peter.
-                <div>
-                    I am a <GradientText
-                        direction={"45deg"}
-                        startColor={theme.palette.analogous1.main}
-                        middleColor={theme.palette.primary.main}
-                        endColor={theme.palette.analogous2.main}
-                    >
-                        Full-stack
-                    </GradientText> web-developer.
-                </div>
-            </Typography>
+        <Typography variant="h1">
+            {t("landing.hello")}
+            <div>
+                {t("landing.before")} <GradientText
+                    direction={"45deg"}
+                    startColor={theme.palette.analogous1.main}
+                    middleColor={theme.palette.primary.main}
+                    endColor={theme.palette.analogous2.main}
+                >
+                    {t("landing.fullstack")}
+                </GradientText> {t("landing.after")}
+            </div>
+        </Typography>
     )
 }
 
 export function Description() {
+    const { t } = useTranslation();
     return (
-            <Typography variant="h4" component="h2" fontWeight={"light"} color="textSecondary">
-                I create interactive, stylized, optimized and scalable websites for various purposes.
-            </Typography>
+        <Typography variant="h4" component="h2" fontWeight={"light"} color="textSecondary">
+            {t("landing.desc")}
+        </Typography>
     )
 }

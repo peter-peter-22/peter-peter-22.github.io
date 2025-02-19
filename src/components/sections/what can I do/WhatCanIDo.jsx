@@ -12,21 +12,23 @@ import CodeIcon from '@mui/icons-material/Code';
 import PublicIcon from '@mui/icons-material/Public';
 import StorageIcon from '@mui/icons-material/Storage';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useTranslation } from "react-i18next";
 
 export function WhatCanIDo() {
+    const { t } = useTranslation()
     return (
         <Box sx={{ position: "relative" }}>
             <Container maxWidth="lg" >
                 <Title>
-                    What can I do?
+                    {t("what.title")}
                 </Title>
                 <Grid container spacing={5} columns={{ xs: 1, sm: 2, md: 3 }}>
-                    <Entry title="Front-end" body="I can design comfortable and optimized frontends with hotkeys, darkmode, translation and interactive forms." icon={VisibilityIcon} />
-                    <Entry title="Back-end" body="My servers can handle authentication, databases, realtime updates, caching, cloud services and payment processors." icon={CodeIcon} />
-                    <Entry title="Database" body="I can use complex queries, constraints, checks, indexes, triggers and ORMs to manage my databases." icon={StorageIcon} />
-                    <Entry title="Analytics" body="I debug and analyze and the performance of my codes with the devtools, VSC breaks, postgres analyze, react devtools and profiler, lighthouse and logs." icon={AnalyticsIcon} />
-                    <Entry title="Hosting" body="I can configure my projects for production environments and host them on third party hosting sites like Vercel and Render." icon={PublicIcon} />
-                    <Entry title="Miscellaneous" body="I use Git and Github for version control. I can use Google and Github authentication, Google rechapta, Google search console, Cloudinary and Stripe." icon={CloudIcon} />
+                    <Entry title={t("what.frontend.title")} body={t("what.frontend.body")} icon={VisibilityIcon} />
+                    <Entry title={t("what.backend.title")} body={t("what.backend.body")} icon={CodeIcon} />
+                    <Entry title={t("what.database.title")} body={t("what.database.body")} icon={StorageIcon} />
+                    <Entry title={t("what.analytics.title")} body={t("what.analytics.body")} icon={AnalyticsIcon} />
+                    <Entry title={t("what.hosting.title")} body={t("what.hosting.body")} icon={PublicIcon} />
+                    <Entry title={t("what.misc.title")} body={t("what.misc.body")} icon={CloudIcon} />
                 </Grid>
             </Container>
         </Box>

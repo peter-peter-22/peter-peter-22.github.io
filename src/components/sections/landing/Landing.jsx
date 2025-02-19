@@ -20,7 +20,7 @@ export function Landing() {
                         <Description />
                     </FloatIn>
                     <Logos delay={1.5} />
-                    <FloatIn delay={2}>
+                    <FloatIn delay={2.5}>
                         <TitleButtons />
                     </FloatIn>
                 </Stack>

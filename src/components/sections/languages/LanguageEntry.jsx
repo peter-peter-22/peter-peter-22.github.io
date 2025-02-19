@@ -44,7 +44,7 @@ export function LanguageEntryChips({ title, chips }) {
     return (
         <div>
             <Typography variant="body2" fontWeight={"lighter"} color="textSecondary" sx={{ mb: 0.5 }}>
-                {title}
+                {title}:
             </Typography>
             <Stack direction="row" gap={1} flexWrap={"wrap"}>
                 {chips.map((text, i) => (

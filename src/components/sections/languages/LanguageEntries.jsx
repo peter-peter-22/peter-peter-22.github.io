@@ -10,24 +10,20 @@ import NextIcon from "/src/assets/svgs/logos/nextjs.svg?react";
 import NodeIcon from "/src/assets/svgs/logos/nodejs.svg?react";
 import PostgresqlIcon from "/src/assets/svgs/logos/postgresql.svg?react";
 import ReactIcon from "/src/assets/svgs/logos/react.svg?react";
+import { useTranslation } from 'react-i18next';
 
 export function LanguageEntries() {
+    const { t } = useTranslation();
     return (
         <Grid container spacing={5} columns={{ xs: 1, md: 2 }}>
             <LanguageEntry
                 id="languages-next"
                 icon={<BigLogo component={NextIcon} sx={{ filter: "invert(1)" }} />}
-                title="Next"
-                body={
-                    <>
-                        I can use several kinds of caching and optimizations, including: ISR, query caching and
-                        dynamic
-                        SSG. I use Next Auth for authentication.
-                    </>
-                }
+                title={t("languages.next.title")}
+                body={t("languages.next.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="Highlighted libraries:"
+                        title={t("languages.next.list")}
                         chips={[
                             "Next-auth",
                             "Zod",
@@ -38,16 +34,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-react"}
                 icon={<BigLogo component={ReactIcon} />}
-                title="React"
-                body={
-                    <>
-                        I can create interactive, responsive and optimized frontends with react. I know how to use forms, dialogs, translators, infinite lists, text prediction, rich text
-                        editors and marquees
-                    </>
-                }
+                title={t("languages.react.title")}
+                body={t("languages.react.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="Highlighted libraries:"
+                        title={t("languages.react.list")}
                         chips={[
                             "Material UI",
                             "Plate",
@@ -59,17 +50,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-node"}
                 icon={<BigLogo component={NodeIcon} />}
-                title="Node"
-                body={
-                    <>
-                        I can create Express and SocketIO servers with authentication, database, cloud, rechapta,
-                        email
-                        verification and other functions.
-                    </>
-                }
+                title={t("languages.node.title")}
+                body={t("languages.node.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="Highlighted libraries:"
+                        title={t("languages.node.list")}
                         chips={[
                             "Zod",
                             "Passport",
@@ -81,13 +66,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-postgres"}
                 icon={<BigLogo component={PostgresqlIcon} />}
-                title="PostgreSQL"
-                body={
-                    <>I can use indexes, functions, triggers, constraints, text search vectors and jsons.</>
-                }
+                title={t("languages.psql.title")}
+                body={t("languages.psql.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="ORMs:"
+                        title={t("languages.psql.list")}
                         chips={[
                             "Prisma"
                         ]}
@@ -97,16 +80,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-mongo"}
                 icon={<BigLogo component={MongoIcon} />}
-                title="MongoDB"
-                body={
-                    <>
-                        I can use composite indexes, complex aggregations, mongoose constraints and general
-                        functions.
-                    </>
-                }
+                title={t("languages.mongo.title")}
+                body={t("languages.mongo.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="ODMs:"
+                        title={t("languages.mongo.list")}
                         chips={[
                             "Mongoose"
                         ]}
@@ -116,15 +94,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-html"}
                 icon={<BigLogo component={HtmlIcon} />}
-                title="HTML"
-                body={
-                    <>
-                        While structuring a site, I use the semantic elements to the improve accessibility and SEO.
-                    </>
-                }
+                title={t("languages.html.title")}
+                body={t("languages.html.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="Highlighted tools:"
+                        title={t("languages.html.list")}
                         chips={[
                             "Lighthouse",
                             "Bing search console"
@@ -135,17 +109,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-css"}
                 icon={<BigLogo component={CssIcon} />}
-                title="CSS"
-                body={
-                    <>
-                        I can use animations, gradients, transitions, filters, SASS, variables, calculations,
-                        complex
-                        selectors and everything that I need to design my sites.
-                    </>
-                }
+                title={t("languages.css.title")}
+                body={t("languages.css.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="Highlighted libraries:"
+                        title={t("languages.css.list")}
                         chips={[
                             "Bootstrap",
                             "Sass"
@@ -156,15 +124,11 @@ export function LanguageEntries() {
             <LanguageEntry
                 id={"languages-js"}
                 icon={<BigLogo component={JsIcon} />}
-                title="Javascript"
-                body={
-                    <>
-                        I know all javascript syntaxes and shortings those I have ever seen. I can use regex, dom manipulation, data fetching, jquery and other javascript functions.
-                    </>
-                }
+                title={t("languages.js.title")}
+                body={t("languages.js.body")}
                 bottom={
                     <LanguageEntryChips
-                        title="Highlighted libraries:"
+                        title={t("languages.js.list")}
                         chips={[
                             "Jquery"
                         ]}

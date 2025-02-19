@@ -8,32 +8,34 @@ import Typography from "@mui/material/Typography";
 import { LightCard } from "../../decorations/blocks/LightsBlock";
 import { Title } from "../../decorations/texts/Title";
 import { createEmailUrl } from "../../functional/emailLinkGenerator";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+    const { t } = useTranslation()
     const onSubmit = e => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const formValues = Object.fromEntries(formData.entries());
-        const url = createEmailUrl({ title: "Response to your portfolio", body: formValues.text })
+        const url = createEmailUrl({ title: t("contact.email-title"), body: formValues.text })
         window.open(url, "_blank");
     }
     return (
         <Container maxWidth="sm" component="section" id="contact">
             <Title>
-                Contact
+                {t("contact.title")}
             </Title>
             <LightCard>
                 <CardContent>
                     <Typography variant="h5" component="h3" gutterBottom>
-                        Send me an email
+                        {t("contact.title2")}
                     </Typography>
                     <Card component="form" onSubmit={onSubmit}>
                         <CardContent>
-                            <TextField label="Email text" variant="standard" autoComplete="off" fullWidth name="text" />
+                            <TextField label={t("contact.placeholder")} variant="standard" autoComplete="off" fullWidth name="text" />
                         </CardContent>
                         <CardActions>
                             <Fab variant="extended" size="small" color="primary" type="submit">
-                                send
+                                {t("contact.send")}
                             </Fab>
                         </CardActions>
                     </Card>

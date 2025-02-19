@@ -8,6 +8,7 @@ import { SecondaryFab } from "../../decorations/buttons/SecondaryFab";
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
+import { useTranslation } from 'react-i18next';
 
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -16,6 +17,7 @@ export function ProjectButtons({ articleUrl, url, dialogBody }) {
     const [open, setOpen] = useState(false)
     const onClose = useCallback(() => { setOpen(false) }, [])
     const onOpen = useCallback(() => { setOpen(true) }, [])
+    const { t } = useTranslation();
     return (
         <>
             <Stack direction="row" gap={1}>
@@ -25,34 +27,34 @@ export function ProjectButtons({ articleUrl, url, dialogBody }) {
                     href={articleUrl}
                     target="_blank"
                 >
-                    Article
+                    {t("projects.buttons.article")}
                 </GradientFab>
                 <SecondaryFab
                     variant="extended"
                     size={"medium"}
                     onClick={onOpen}
                 >
-                    Visit
+                    {t("projects.buttons.visit")}
                 </SecondaryFab>
             </Stack>
             <Dialog onClose={onClose} open={open} onClick={onClose}>
                 <DialogTitle>
-                    Are you sure?
+                    {t("projects.visit-prompt.title")}
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        Do you want to visit "{url}"?
+                        {t("projects.visit-prompt.body",{url})}
                     </DialogContentText>
                     {dialogBody}
                 </DialogContent>
                 <DialogActions>
                     <SecondaryFab variant="extended" size={"small"}>
                         <CancelIcon sx={{ mr: 1 }} />
-                        Cancel
+                        {t("projects.visit-prompt.cancel")}
                     </SecondaryFab>
                     <Fab variant="extended" color="primary" size={"small"} autoFocus href={url} target="_blank">
                         <ExitToAppIcon sx={{ mr: 1 }} />
-                        Visit
+                        {t("projects.visit-prompt.visit")}
                     </Fab>
                 </DialogActions>
             </Dialog>

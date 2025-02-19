@@ -4,30 +4,32 @@ import { Project, ProjectListItem } from "./Project";
 import { ProjectButtons } from "./ProjectButtons";
 import { Title } from "../../decorations/texts/Title";
 import Box from "@mui/material/Box";
+import { useTranslation } from "react-i18next";
 
 export function Projects() {
+    const { t } = useTranslation()
     return (
         <Box component="section">
             <Title>
-                Projects
+                {t("projects.title")}
             </Title>
             <Stack gap={{ xs: 10, sm: 15, md: 20 }}>
                 <Project
                     title={"Textmine"}
-                    summary={"A journalist site."}
+                    summary={t("projects.textmine.summary")}
                     description={
                         <>
                             <ProjectListItem color={"primary.light"}>
-                                Fully implemented SEO.
+                                {t("projects.textmine.desc.1")}
                             </ProjectListItem>
                             <ProjectListItem color={"primary.light"}>
-                                Deltailed article editor.
+                                {t("projects.textmine.desc.2")}
                             </ProjectListItem>
                             <ProjectListItem color={"primary.light"}>
-                                Likes, comments, follows and notifications.
+                                {t("projects.textmine.desc.3")}
                             </ProjectListItem>
                             <ProjectListItem color={"primary.light"}>
-                                Dark and light mode.
+                                {t("projects.textmine.desc.4")}
                             </ProjectListItem>
                         </>
                     }
@@ -42,20 +44,20 @@ export function Projects() {
                 />
                 <Project
                     title={"My Chat"}
-                    summary={"A realtime chat site."}
+                    summary={t("projects.mychat.summary")}
                     description={
                         <>
                             <ProjectListItem >
-                                Can display nearly limitless messages.
+                                {t("projects.mychat.desc.1")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Multiple languages.
+                                {t("projects.mychat.desc.2")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Direct file uploading and optimized cloud.
+                                {t("projects.mychat.desc.3")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Multiple rooms and in-app notifications.
+                                {t("projects.mychat.desc.4")}
                             </ProjectListItem>
                         </>
                     }
@@ -66,27 +68,27 @@ export function Projects() {
                             url={"https://awake-rapid-tortoise.ngrok-free.app/"}
                             articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/my-chat-technical-highlights"}
                             dialogBody={<DialogContentText color="warning">
-                                This site is hosted locally and it's normally not online.
+                                {t("projects.mychat.visit-prompt")}
                             </DialogContentText>}
                         />
                     }
                 />
                 <Project
                     title={"Y Community"}
-                    summary={"A social media site inspired by X."}
+                    summary={t("projects.y.summary")}
                     description={
                         <>
                             <ProjectListItem >
-                                Working likes, reposts, hashtags, follow, block...
+                                {t("projects.y.desc.1")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Push, email and in-app notifications.
+                                {t("projects.y.desc.2")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Can display thousands of posts.
+                                {t("projects.y.desc.3")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Full registration session with rechapta.
+                                {t("projects.y.desc.4")}
                             </ProjectListItem>
                         </>
                     }
@@ -101,20 +103,20 @@ export function Projects() {
                 />
                 <Project
                     title={"Sample Shop"}
-                    summary={"A shopping site with real payment method."}
+                    summary={t("projects.shop.summary")}
                     description={
                         <>
                             <ProjectListItem >
-                                Deltailed filters and nested categories.
+                                {t("projects.shop.desc.1")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                The top discounts and products are displayed on the front page.
+                                {t("projects.shop.desc.2")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                The discounts have adjustable validity and repeating.
+                                {t("projects.shop.desc.3")}
                             </ProjectListItem>
                             <ProjectListItem >
-                                Admin UI for managing products, discounts and comments.
+                                {t("projects.shop.desc.4")}
                             </ProjectListItem>
                         </>
                     }
@@ -125,7 +127,7 @@ export function Projects() {
                             url={"https://sample-shop-48hl.onrender.com/"}
                             articleUrl={"https://textmine.the-projects-of-peter.fyi/articles/sample-shop-technical-highlights"}
                             dialogBody={<DialogContentText color="warning">
-                                This free server needs up to 50 seconds to start after inactivity.
+                                {t("projects.shop.visit-prompt")}
                             </DialogContentText>}
                         />
                     }

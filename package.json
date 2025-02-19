@@ -16,9 +16,13 @@
     "@mui/icons-material": "^6.4.3",
     "@mui/material": "^6.4.3",
     "framer-motion": "^12.4.3",
+    "i18next": "^24.2.2",
+    "i18next-browser-languagedetector": "^8.0.3",
+    "i18next-http-backend": "^3.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
+    "react-i18next": "^15.4.0",
     "swiper": "^11.2.3",
     "vite-plugin-svgr": "^4.3.0"
   },

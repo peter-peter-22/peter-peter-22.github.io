@@ -10,9 +10,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHub from "@mui/icons-material/GitHub";
 import XIcon from '@mui/icons-material/X';
 import { createEmailUrl } from "../../functional/emailLinkGenerator";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
     const theme = useTheme()
+    const { t } = useTranslation()
     return (
         <BlackBackground
             start={true}
@@ -29,7 +31,7 @@ export function Footer() {
                             <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
                                 <GitHub />
                             </IconButton>
-                            <IconButton target="_blank" size="small" href={createEmailUrl({ title:"Response to your portfolio" })}>
+                            <IconButton target="_blank" size="small" href={createEmailUrl({ title: t("contact.email-title") })}>
                                 <EmailIcon />
                             </IconButton>
                             <IconButton target="_blank" size="small" href="https://x.com/PeterNew2222">

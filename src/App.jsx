@@ -2,6 +2,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from './assets/theme.js'
 import { Layout } from './components/layout/Layout.jsx'
 import { Home } from './routes/Home.jsx'
+import './components/functional/i18n.js'
 
 import "/src/assets/css/body.css";
 import '@fontsource/roboto/300.css';

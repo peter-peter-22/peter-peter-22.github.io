@@ -8,11 +8,12 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { BulletedListItem } from "../../decorations/blocks/BulletedListItem";
 import { ProjectCarousel } from "./ProjectCarousel";
+import { useTranslation } from "react-i18next";
 
 export function Project({ title, summary, description, environments, images, buttons }) {
     const theme = useTheme()
     const vertical = useMediaQuery(theme.breakpoints.down("md"))
-
+    const { t } = useTranslation()
     return (
         <Container maxWidth={"lg"} id="projects">
             <Stack direction={"row"} justifyContent={"space-between"} gap={5}>
@@ -34,7 +35,7 @@ export function Project({ title, summary, description, environments, images, but
                         <List>
                             {description}
                         </List>
-                        <Tags title="Environments" tags={environments} />
+                        <Tags title={t("projects.environments")} tags={environments} />
                         {buttons}
                     </Stack>
                 </Box>
