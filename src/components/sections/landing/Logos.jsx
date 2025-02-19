@@ -17,8 +17,9 @@ import PostgresqlIcon from "/src/assets/svgs/logos/postgresql.svg?react";
 import ReactIcon from "/src/assets/svgs/logos/react.svg?react";
 import { MarqueFadeEdges } from "../../decorations/animations/FadeoutMarque";
 import { FadeIn } from "../../decorations/animations/FadeIn";
+import Tooltip from "@mui/material/Tooltip";
 
-export function Logos({delay}) {
+export function Logos({ delay }) {
     const theme = useTheme();
     const isMarquee = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -35,9 +36,11 @@ export function Logos({delay}) {
                 }}
             >
                 {logos.map(({ element, url, name }, i) => (
-                    <IconButton href={url} key={i} aria-label={name} sx={{ mr: 0.5 }}>
-                        {element}
-                    </IconButton>
+                    <Tooltip key={i} title={name}>
+                        <IconButton href={url} sx={{ mr: 0.5 }}>
+                            {element}
+                        </IconButton>
+                    </Tooltip>
                 ))}
             </MarqueFadeEdges>
         </FadeIn>
@@ -45,9 +48,11 @@ export function Logos({delay}) {
         <Stack direction="row" gap={1}>
             {logos.map(({ element, url, name }, i, arr) => (
                 <FadeIn delay={delay + i * 0.05} key={i}>
-                    <IconButton href={url} aria-label={name} edge={i == 0 ? "start" : i == arr.length - 1 ? "end" : undefined}>
-                        {element}
-                    </IconButton>
+                    <Tooltip key={i} title={name}>
+                        <IconButton href={url} aria-label={name} edge={i == 0 ? "start" : i == arr.length - 1 ? "end" : undefined}>
+                            {element}
+                        </IconButton>
+                    </Tooltip>
                 </FadeIn>
             ))}
         </Stack>
