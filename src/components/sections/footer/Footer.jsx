@@ -25,7 +25,7 @@ export function Footer() {
                 <Stack gap={2} py={5}>
                     <Stack direction={{ xs: "column", sm: "row" }} justifyContent={"space-between"} alignItems={"center"} gap={1}>
                         <Typography >
-                            Created by Peter in 2025
+                            Peter - 2025
                         </Typography>
                         <Stack direction={"row"} gap={1}>
                             <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
@@ -61,6 +61,9 @@ export function Footer() {
                             </FooterLink>
                             <FooterLink href="https://www.freepik.com/vectors">
                                 Freepik
+                            </FooterLink>
+                            <FooterLink href="https://www.i18next.com/">
+                                I18N
                             </FooterLink>
                         </Stack>
                     </Stack>

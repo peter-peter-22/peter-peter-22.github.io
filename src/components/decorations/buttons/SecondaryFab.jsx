@@ -1,4 +1,4 @@
-import { alpha } from "@mui/material";
+import { alpha } from "@mui/material/styles";
 import Fab from "@mui/material/Fab";
 import { useTheme } from '@mui/material/styles';
 

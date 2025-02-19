@@ -130,6 +130,11 @@ theme.components = {
             maxWidth: "md"
         }
     },
+    MuiDialog: {
+        defaultProps: {
+            disableScrollLock: true
+        }
+    }
 }
 
 //custom colors

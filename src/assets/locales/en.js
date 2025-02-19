@@ -145,6 +145,10 @@ const translation = {
     "placeholder": "Email text",
     "send": "send",
     "email-title": "Response to your portfolio"
+  },
+  "header": {
+    "change-language": "Change language",
+    "done":"Done"
   }
 }
 export default translation;
