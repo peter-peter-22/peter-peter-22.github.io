@@ -25,7 +25,7 @@ export function Footer() {
                 <Stack gap={2} py={5}>
                     <Stack direction={{ xs: "column", sm: "row" }} justifyContent={"space-between"} alignItems={"center"} gap={1}>
                         <Typography >
-                            Peter - 2025
+                            {t("footer.name")} - 2025
                         </Typography>
                         <Stack direction={"row"} gap={1}>
                             <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
@@ -41,7 +41,7 @@ export function Footer() {
                     </Stack>
                     <Stack gap={1} alignItems={{ xs: "center", sm: "start" }}>
                         <Typography color="textSecondary" variant="body1"  >
-                            Credits
+                            {t("footer.credits")}
                         </Typography>
                         < Stack direction={"row"} gap={2} rowGap={0.5} flexWrap={"wrap"} justifyContent={{ xs: "center", sm: "start" }}>
                             <FooterLink href="https://icons8.com">

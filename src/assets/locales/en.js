@@ -11,9 +11,9 @@ const translation = {
   "about-me": {
     "title": "About me",
     "1-title": "Introduction",
-    "1-body": "My name is Peter, I was born in Hungary and I live in Borsod County.",
+    "1-body": "My name is Peter, I was born in Hungary and I live in Borsod-Abaúj-Zemplén county.",
     "2-title": "Education",
-    "2-body": "I learned what I know from an Udemy full-stack web-developer course and several smaller tutorials. I am learning to code for more than a year.",
+    "2-body": "I learned to code from a Udemy full-stack web-developer course and several smaller tutorials. I am learning to code for more than a year.",
     "3-title": "Degrees",
     "3-body": "I have electrician and PLC programmer degrees."
   },
@@ -51,12 +51,12 @@ const translation = {
     },
     "css": {
       "title": "CSS",
-      "body": "I can use animations, gradients, transitions, filters, SASS, variables, calculations, complex selectors and everything that I need to design my sites.",
+      "body": "I can use animations, gradients, transitions, filters, SASS, variables, calculations and other effects.",
       "list": "Highlighted libraries"
     },
     "js": {
       "title": "Javascript",
-      "body": "I know all javascript syntaxes and shortings those I have ever seen. I can use regex, dom manipulation, data fetching, jquery and other javascript functions.",
+      "body": "I know all javascript syntaxes and shortings those I have ever seen. I can use regex, DOM manipulation, data fetching, jquery and other javascript functions.",
       "list": "Highlighted libraries"
     }
   },
@@ -64,7 +64,7 @@ const translation = {
     "title": "What can I do?",
     "frontend": {
       title: "Front-end",
-      body: "I can design comfortable and optimized frontends with hotkeys, darkmode, translation and interactive forms."
+      body: "I can design comfortable and optimized frontends with darkmode, translation, interactive forms and hotkeys."
     },
     "backend": {
       title: "Back-end",
@@ -84,7 +84,7 @@ const translation = {
     },
     "misc": {
       title: "Miscellaneous",
-      body: "I use Git and Github for version control. I can use Google and Github authentication, Google rechapta, Google search console, Cloudinary and Stripe."
+      body: "I use Git and Github for version control. I can use Stripe, Google rechapta, Google search console, Cloudinary and Stripe."
     }
   },
   "projects": {
@@ -106,7 +106,7 @@ const translation = {
         "1": "Fully implemented SEO.",
         "2": "Deltailed article editor.",
         "3": "Likes, comments, follows and notifications.",
-        "4": "Dark and light mode.",
+        "4": "Dark and light modes.",
       },
     },
     "mychat": {
@@ -115,7 +115,7 @@ const translation = {
         "1": "Can display nearly limitless messages.",
         "2": "Multiple languages.",
         "3": "Direct file uploading and optimized cloud.",
-        "4": "Multiple rooms and in-app notifications.",
+        "4": "Rooms and in-app notifications.",
       },
       "visit-prompt": "This site is hosted locally and it's normally not online."
     },
@@ -124,7 +124,7 @@ const translation = {
       "desc": {
         "1": "Working likes, reposts, hashtags, follow, block...",
         "2": "Push, email and in-app notifications.",
-        "3": "Can display thousands of posts.",
+        "3": "Can display nearly limitless posts.",
         "4": "Full registration session with rechapta.",
       },
     },
@@ -132,7 +132,7 @@ const translation = {
       "summary": "A shopping site with real payment method.",
       "desc": {
         "1": "Deltailed filters and nested categories.",
-        "2": "The top discounts and products are displayed on the front page.",
+        "2": "The top discounts and products are displayed on the landing page.",
         "3": "The discounts have adjustable validity and repeating.",
         "4": "Admin UI for managing products, discounts and comments.",
       },
@@ -148,7 +148,11 @@ const translation = {
   },
   "header": {
     "change-language": "Change language",
-    "done":"Done"
+    "done": "Done"
+  },
+  "footer": {
+    "name": "Peter",
+    "credits": "Used services"
   }
 }
 export default translation;
