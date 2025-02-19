@@ -14,7 +14,7 @@ export function FloatIn({ delay = 0, duration = 0.5, children }) {
                         transform: "none"
                     }
                 },
-                opacity: 0,
+                opacity: 0.01,
                 transform: "translateY(20px)",
                 animation: `float-in ${duration}s ease-out forwards`,
             }}
