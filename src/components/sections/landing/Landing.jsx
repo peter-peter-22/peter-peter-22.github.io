@@ -13,14 +13,14 @@ export function Landing() {
         <Box sx={{ position: "sticky", top: 0 }}>
             <Container ref={containerRef} sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }} component="section">
                 <Stack gap={5} sx={{ maxWidth: "100%", width: "100%" }}>
-                    <FloatIn delay={0.5}>
+                    <FloatIn delay={1}>
                         <LandingTitle />
                     </FloatIn>
-                    <FloatIn delay={1}>
+                    <FloatIn delay={1.5}>
                         <Description />
                     </FloatIn>
-                    <Logos delay={1.5} />
-                    <FloatIn delay={2.5}>
+                    <Logos delay={2} />
+                    <FloatIn delay={3}>
                         <TitleButtons />
                     </FloatIn>
                 </Stack>

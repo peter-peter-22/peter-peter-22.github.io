@@ -153,6 +153,9 @@ const translation = {
   "footer": {
     "name": "Peter",
     "credits": "Used services"
+  },
+  "loading": {
+    "title": "Loading"
   }
 }
 export default translation;

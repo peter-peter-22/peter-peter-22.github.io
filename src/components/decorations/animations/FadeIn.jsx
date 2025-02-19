@@ -1,6 +1,8 @@
 import Box from "@mui/material/Box";
+import { useLoading } from "../../layout/Loading";
 
 export function FloatIn({ delay = 0, duration = 0.5, children }) {
+    const loading = useLoading()
     return (
         <Box
             sx={{
@@ -14,9 +16,9 @@ export function FloatIn({ delay = 0, duration = 0.5, children }) {
                         transform: "none"
                     }
                 },
-                opacity: 0.01,
+                opacity: 0.001,
                 transform: "translateY(20px)",
-                animation: `float-in ${duration}s ease-out forwards`,
+                animation: !loading && `float-in ${duration}s ease-out forwards`,
             }}
             style={{
                 animationDelay: `${delay}s`,
@@ -28,6 +30,7 @@ export function FloatIn({ delay = 0, duration = 0.5, children }) {
 }
 
 export function FadeIn({ delay = 0, duration = 0.5, children }) {
+    const loading = useLoading()
     return (
         <Box
             sx={{
@@ -40,7 +43,7 @@ export function FadeIn({ delay = 0, duration = 0.5, children }) {
                     }
                 },
                 opacity: 0,
-                animation: `fade-in ${duration}s ease-in-out forwards`,
+                animation: !loading && `fade-in ${duration}s ease-in-out forwards`,
             }}
             style={{
                 animationDelay: `${delay}s`,

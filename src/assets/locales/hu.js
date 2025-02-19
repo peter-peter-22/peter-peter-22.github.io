@@ -153,6 +153,9 @@ const translation = {
   "footer": {
     "name":"Péter",
     "credits": "Használt szolgáltatások"
+  },
+  "loading": {
+    "title": "Betöltés"
   }
 }
 export default translation;
