@@ -5,7 +5,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { useTranslation } from 'react-i18next';
 import { useState, useCallback } from 'react';
 import { ChangeLanguageDialog } from './ChangeLanguageDialog';
-
+import Box from '@mui/material/Box';
 
 export function Header() {
     const { t, } = useTranslation();
@@ -14,15 +14,16 @@ export function Header() {
     const onOpen = useCallback(() => { setOpen(true) }, [])
     return (
         <>
-            <Tooltip title={t("header.change-language")} placement="left">
-                <IconButton
-                    sx={theme => ({ position: "fixed", top: 0, right: 0, zIndex: theme.zIndex.appBar, m: 1, bgcolor: alpha(theme.palette.common.black, 0.5) })}
-                    component="nav"
-                    onClick={onOpen}
-                >
-                    <TranslateIcon />
-                </IconButton>
-            </Tooltip>
+            <Box component="header">
+                <Tooltip title={t("header.change-language")} placement="left">
+                    <IconButton
+                        sx={theme => ({ position: "fixed", top: 0, right: 0, zIndex: theme.zIndex.appBar, m: 1, bgcolor: alpha(theme.palette.common.black, 0.5) })}
+                        onClick={onOpen}
+                    >
+                        <TranslateIcon />
+                    </IconButton>
+                </Tooltip>
+            </Box>
             <ChangeLanguageDialog open={open} onClose={onClose} />
         </>
     )

@@ -12,7 +12,7 @@ export function LightBackground({ background: { blur, url } }) {
     return (
         <BlurContainer>
             <BlurOverlay blur={blur} />
-            <BlurImage src={url} draggable={false} />
+            <BlurImage src={url} draggable={false} role="presentation"/>
         </BlurContainer>
     )
 }

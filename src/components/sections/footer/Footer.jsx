@@ -11,6 +11,7 @@ import GitHub from "@mui/icons-material/GitHub";
 import XIcon from '@mui/icons-material/X';
 import { createEmailUrl } from "../../functional/emailLinkGenerator";
 import { useTranslation } from "react-i18next";
+import Tooltip from "@mui/material/Tooltip";
 
 export function Footer() {
     const theme = useTheme()
@@ -28,15 +29,21 @@ export function Footer() {
                             {t("footer.name")} - 2025
                         </Typography>
                         <Stack direction={"row"} gap={1}>
-                            <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
-                                <GitHub />
-                            </IconButton>
-                            <IconButton target="_blank" size="small" href={createEmailUrl({ title: t("contact.email-title") })}>
-                                <EmailIcon />
-                            </IconButton>
-                            <IconButton target="_blank" size="small" href="https://x.com/PeterNew2222">
-                                <XIcon />
-                            </IconButton>
+                            <Tooltip title="My Github profile">
+                                <IconButton target="_blank" size="small" href="https://github.com/peter-peter-22">
+                                    <GitHub />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="My email address">
+                                <IconButton target="_blank" size="small" href={createEmailUrl({ title: t("contact.email-title") })}>
+                                    <EmailIcon />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="My X profile">
+                                <IconButton target="_blank" size="small" href="https://x.com/PeterNew2222">
+                                    <XIcon />
+                                </IconButton>
+                            </Tooltip>
                         </Stack>
                     </Stack>
                     <Stack gap={1} alignItems={{ xs: "center", sm: "start" }}>

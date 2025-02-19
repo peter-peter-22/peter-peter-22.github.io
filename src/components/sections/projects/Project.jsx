@@ -32,9 +32,11 @@ export function Project({ title, summary, description, environments, images, but
                                 urls={images}
                             />
                         }
-                        <List>
-                            {description}
-                        </List>
+                        <Typography variant="h5" component="div" fontWeight={"normal"}>
+                            <List>
+                                {description}
+                            </List>
+                        </Typography>
                         <Tags title={t("projects.environments")} tags={environments} />
                         {buttons}
                     </Stack>
@@ -65,10 +67,8 @@ function Tags({ title, tags = [] }) {
 
 export function ProjectListItem({ children, ...props }) {
     return (
-        <Typography variant="h5" component="div" fontWeight={"normal"}>
-            <BulletedListItem color={"primary.light"} {...props}>
-                {children}
-            </BulletedListItem>
-        </Typography>
+        <BulletedListItem color={"primary.light"} {...props}>
+            {children}
+        </BulletedListItem>
     )
 }

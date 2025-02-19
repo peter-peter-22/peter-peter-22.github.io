@@ -21,7 +21,7 @@ export function ImageCarousel({ urls = [] }) {
         >
             {urls.map((url, i) => (
                 <SwiperSlide key={i}>
-                    <img src={url} />
+                    <img src={url} alt={`project slide ${i}`}/>
                 </SwiperSlide>
             ))}
         </Swiper>
