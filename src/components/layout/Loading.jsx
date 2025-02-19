@@ -19,18 +19,25 @@ export function LoadingSceen({ children }) {
     return (
         <LoadingContext.Provider value={visible}>
             <Fade in={visible} appear={false} timeout={500}>
-                <Box sx={theme => ({
-                    bgcolor: "common.black",
-                    position: "fixed",
-                    width: "100%",
-                    height: "100%",
-                    zIndex: theme.zIndex.drawer,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: theme.spacing()
-                })}>
+                <Box
+                    sx={theme => ({
+                        bgcolor: "common.black",
+                        position: "fixed",
+                        width: "100%",
+                        height: "100%",
+                        zIndex: theme.zIndex.drawer,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: theme.spacing()
+                    })}
+                    role="alert"
+                    aria-live="polite"
+                    aria-busy="true"
+                    aria-label={t("loading.title")}
+                    aria-hidden={!visible}
+                >
                     <GradientCircularProgress />
                     <Typography variant="h5" fontWeight={"normal"} component="h1">
                         {t("loading.title")}
