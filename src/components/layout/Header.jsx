@@ -17,10 +17,17 @@ export function Header() {
             <Box component="header">
                 <Tooltip title={t("header.change-language")} placement="left">
                     <IconButton
-                        sx={theme => ({ position: "fixed", top: 0, right: 0, zIndex: theme.zIndex.appBar, m: 1, bgcolor: alpha(theme.palette.common.black, 0.5) })}
+                        sx={theme => ({
+                            position: "fixed",
+                            top: 0,
+                            right: 0,
+                            zIndex: theme.zIndex.appBar,
+                            m: 1,
+                            bgcolor: alpha(theme.palette.common.black, 0.5),
+                        })}
                         onClick={onOpen}
                     >
-                        <TranslateIcon />
+                        <TranslateIcon fontSize={"large"}/>
                     </IconButton>
                 </Tooltip>
             </Box>
