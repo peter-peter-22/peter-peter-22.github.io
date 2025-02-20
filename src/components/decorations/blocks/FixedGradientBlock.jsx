@@ -23,3 +23,21 @@ export function FixedGradientPaperOutline({ children, ...props }) {
         </FixedGradientPaper>
     )
 }
+
+export function GradientPaperOutline({ children, sx, ...props }) {
+    return (
+        <FixedGradientPaper sx={{ backgroundAttachment: "unset", ...sx }} {...props}>
+            <Paper
+                sx={{
+                    backgroundClip: "padding-box",
+                    borderWidth: 2,
+                    borderStyle: "solid",
+                    borderColor: "transparent",
+                    height: "100%",
+                }}
+            >
+                {children}
+            </Paper>
+        </FixedGradientPaper>
+    )
+}

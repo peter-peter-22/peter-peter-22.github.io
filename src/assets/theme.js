@@ -1,4 +1,5 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { alpha, createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { GradientPaperOutline } from "../components/decorations/blocks/FixedGradientBlock";
 
 let theme = createTheme({
 
@@ -132,12 +133,14 @@ theme.components = {
     },
     MuiDialog: {
         defaultProps: {
-            disableScrollLock: true
+            disableScrollLock: true,
+            PaperComponent: GradientPaperOutline
         },
         styleOverrides: {
             root: {
                 '& .MuiBackdrop-root': {
                     backdropFilter: 'blur(5px)',
+                    backgroundColor: alpha(theme.palette.common.black, 0.7),
                 },
             },
         },
