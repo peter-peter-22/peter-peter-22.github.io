@@ -1,10 +1,10 @@
 import Chip from "@mui/material/Chip";
 import Grid from '@mui/material/Grid2';
+import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { FixedGradientPaperOutline } from "../../decorations/blocks/FixedGradientBlock";
 
-export function LanguageEntry({ icon, title, body, bottom,...props }) {
+export function LanguageEntry({ icon, title, body, bottom, ...props }) {
     return (
         <Grid size={1} sx={{ "&:nth-of-type(even) > .MuiStack-root": { flexDirection: "row-reverse" } }} {...props}>
             <Stack
@@ -19,24 +19,22 @@ export function LanguageEntry({ icon, title, body, bottom,...props }) {
                 })}
             >
                 {icon}
-                <FixedGradientPaperOutline sx={{
-                    flexGrow: 1,
-                    minHeight: 200,
-                    height: "100%",
-                    "& .MuiPaper-root": {
+                <Paper
+                    sx={{
+                        flexGrow: 1,
+                        minHeight: 200,
+                        height: "100%",
                         p: 1,
                         display: "flex",
-                        bgcolor:"background.foreground"
-                    }
-                }}>
+                    }}>
                     <Stack spacing={1} justifyContent={"space-between"} >
                         <Typography component="h3" variant="h5">{title}</Typography>
                         <Typography textAlign={"justify"} color="textSecondary">{body}</Typography>
                         {bottom}
                     </Stack>
-                </FixedGradientPaperOutline>
+                </Paper>
             </Stack>
-        </Grid>
+        </Grid >
     )
 }
 
