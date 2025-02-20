@@ -133,8 +133,15 @@ theme.components = {
     MuiDialog: {
         defaultProps: {
             disableScrollLock: true
-        }
-    }
+        },
+        styleOverrides: {
+            root: {
+                '& .MuiBackdrop-root': {
+                    backdropFilter: 'blur(5px)',
+                },
+            },
+        },
+    },
 }
 
 //custom colors
