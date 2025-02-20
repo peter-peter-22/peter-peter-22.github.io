@@ -122,7 +122,8 @@ theme.components = {
         },
         styleOverrides: {
             root: {
-                borderWidth: 2
+                borderWidth: 2,
+                backgroundColor: theme.palette.background.foreground
             }
         }
     },

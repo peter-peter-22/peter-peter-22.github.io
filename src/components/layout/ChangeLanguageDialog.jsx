@@ -6,7 +6,6 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { useTranslation } from 'react-i18next';
-import { GradientFab } from '../decorations/buttons/GradientFab';
 import { SecondaryFab } from '../decorations/buttons/SecondaryFab';
 
 const languages = [

@@ -38,7 +38,7 @@ export function WhatCanIDo() {
 function Entry({ title, icon, body }) {
     return (
         <Grid size={1} >
-            <Paper sx={{ bgcolor: "background.foreground", p: 2, height: 1 / 1 }}>
+            <Paper sx={{ p: 2, height: 1 / 1 }}>
                 <Icon component={icon} fontSize="large" />
                 <Typography variant="h5" component="h3">
                     {title}

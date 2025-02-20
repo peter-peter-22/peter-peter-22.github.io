@@ -60,7 +60,7 @@ function Entry({ title, body, dotColor = "inherit" }) {
 
 function EntryContainer({ children }) {
     return (
-        <Card variant="outlined" sx={{ bgcolor: "background.foreground" }}>
+        <Card variant="outlined" >
             <CardContent>
                 <Stack gap={3}>
                     {children}
