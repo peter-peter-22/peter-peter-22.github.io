@@ -30,6 +30,7 @@ export function Logos({ delay }) {
                 gap={0.5}
                 autoFill
                 pauseOnHover
+                speed={20}
                 style={{
                     margin: "-20px 0",
                     padding: "20px 0"
