@@ -1,18 +1,13 @@
-import TranslateIcon from '@mui/icons-material/Translate';
-import IconButton from '@mui/material/IconButton';
-import { alpha } from "@mui/material/styles";
 import Dialog from '@mui/material/Dialog';
 import DialogActions from "@mui/material/DialogActions";
-import Fab from "@mui/material/Fab";
-import Stack from "@mui/material/Stack";
-import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import { useTranslation } from 'react-i18next';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
+import DialogTitle from '@mui/material/DialogTitle';
 import FormControl from '@mui/material/FormControl';
+import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import { useTranslation } from 'react-i18next';
+import { GradientFab } from '../decorations/buttons/GradientFab';
+import { SecondaryFab } from '../decorations/buttons/SecondaryFab';
 
 const languages = [
     { code: 'en', name: 'English' },
@@ -48,9 +43,9 @@ export function ChangeLanguageDialog({ open, onClose }) {
                 </FormControl>
             </DialogContent>
             <DialogActions>
-                <Fab size="small" variant="extended" color="primary" onClick={onClose}>
+                <SecondaryFab size="small" variant="extended" onClick={onClose}>
                     {t("header.done")}
-                </Fab>
+                </SecondaryFab>
             </DialogActions>
         </Dialog>
     )

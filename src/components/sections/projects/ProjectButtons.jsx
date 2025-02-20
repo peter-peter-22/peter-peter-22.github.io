@@ -1,17 +1,16 @@
 import Dialog from '@mui/material/Dialog';
 import DialogActions from "@mui/material/DialogActions";
-import Fab from "@mui/material/Fab";
-import Stack from "@mui/material/Stack";
-import { useCallback, useState } from "react";
-import { GradientFab } from "../../decorations/buttons/GradientFab";
-import { SecondaryFab } from "../../decorations/buttons/SecondaryFab";
-import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Stack from "@mui/material/Stack";
+import { useCallback, useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { GradientFab } from "../../decorations/buttons/GradientFab";
+import { SecondaryFab } from "../../decorations/buttons/SecondaryFab";
 
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import CancelIcon from '@mui/icons-material/Cancel';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 export function ProjectButtons({ articleUrl, url, dialogBody }) {
     const [open, setOpen] = useState(false)
@@ -43,7 +42,7 @@ export function ProjectButtons({ articleUrl, url, dialogBody }) {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        {t("projects.visit-prompt.body",{url})}
+                        {t("projects.visit-prompt.body", { url })}
                     </DialogContentText>
                     {dialogBody}
                 </DialogContent>
@@ -52,10 +51,10 @@ export function ProjectButtons({ articleUrl, url, dialogBody }) {
                         <CancelIcon sx={{ mr: 1 }} />
                         {t("projects.visit-prompt.cancel")}
                     </SecondaryFab>
-                    <Fab variant="extended" color="primary" size={"small"} autoFocus href={url} target="_blank">
+                    <GradientFab variant="extended" size={"small"} autoFocus href={url} target="_blank">
                         <ExitToAppIcon sx={{ mr: 1 }} />
                         {t("projects.visit-prompt.visit")}
-                    </Fab>
+                    </GradientFab>
                 </DialogActions>
             </Dialog>
         </>
