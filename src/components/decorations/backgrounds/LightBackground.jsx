@@ -35,10 +35,9 @@ function BlurContainer({ children, ...props }) {
     )
 }
 
-function BlurOverlay({ blur }) {
+function BlurOverlay() {
     return (
         <Box sx={{
-            backdropFilter: blur && `blur(${blur})`,
             position: "absolute",
             width: "100%",
             height: "100%",

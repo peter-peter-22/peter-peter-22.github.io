@@ -1,5 +1,4 @@
 export const lightBackgrounds = {
-    medium: { url: "/backgrounds/lights-background.webp", blur: "30px" },
+    medium: { url: "/backgrounds/lights-background.webp" },
     landing: { url: "/backgrounds/lights-background-landing.webp" },
-    middle: { url: "/backgrounds/lights-background-middle.webp", blur: "5px" }
 }
