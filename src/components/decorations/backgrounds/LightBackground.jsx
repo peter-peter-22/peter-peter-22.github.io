@@ -12,7 +12,7 @@ export function LightBackground({ background: { blur, url } }) {
     return (
         <BlurContainer>
             <BlurOverlay blur={blur} />
-            <BlurImage src={url} draggable={false} role="presentation"/>
+            <BlurImage src={url} draggable={false} role="presentation" />
         </BlurContainer>
     )
 }
@@ -35,10 +35,10 @@ function BlurContainer({ children, ...props }) {
     )
 }
 
-function BlurOverlay({ blur = "40px" }) {
+function BlurOverlay({ blur }) {
     return (
         <Box sx={{
-            backdropFilter: `blur(${blur})`,
+            backdropFilter: blur && `blur(${blur})`,
             position: "absolute",
             width: "100%",
             height: "100%",

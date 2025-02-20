@@ -34,7 +34,7 @@ export function Home() {
 
 function Background() {
     return (
-        <Box sx={{ position: "fixed", height: "100%", width: "100%", zIndex: -1 }}>
+        <Box sx={{ position: "fixed", height: "100vh", width: "100%", zIndex: -1, bgcolor: "common.black" }}>
             <LightBackground background={lightBackgrounds.landing} />
         </Box>
     )
