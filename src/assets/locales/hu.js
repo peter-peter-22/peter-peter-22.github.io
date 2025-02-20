@@ -37,12 +37,12 @@ const translation = {
     "psql": {
       "title": "PostgreSQL",
       "body": "Tudom használni az indexeket, funkciókat, triggereket, constraintokat, szöveg keresés vektorokat, és jsonokat.",
-      "list": "ORMs"
+      "list": "ORMek"
     },
     "mongo": {
       "title": "MongoDB",
       "body": "Ismerem a kompozit indexeket, komplex összesítéseket, mongoose contraintokat, és az általános funkciókat.",
-      "list": "ODMs"
+      "list": "ODMek"
     },
     "html": {
       "title": "HTML",
