@@ -101,6 +101,7 @@ theme.components = {
                 transition: theme.transitions.create("all", {
                     duration: theme.transitions.duration.standard,
                 }),
+                lineHeight:"normal"
             },
         },
     },
