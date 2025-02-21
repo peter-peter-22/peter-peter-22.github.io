@@ -13,7 +13,7 @@ export function LanguageEntry({ icon, title, body, bottom, ...props }) {
                     gap: 2,
                     alignItems: "center",
                     height: "100%",
-                    [theme.breakpoints.down("sm")]: {
+                    [theme.breakpoints.down("md")]: {
                         flexDirection: "column !important"
                     }
                 })}
@@ -29,7 +29,7 @@ export function LanguageEntry({ icon, title, body, bottom, ...props }) {
                     }}>
                     <Stack spacing={1} justifyContent={"space-between"} >
                         <Typography component="h3" variant="h5">{title}</Typography>
-                        <Typography textAlign={"justify"} color="textSecondary">{body}</Typography>
+                        <Typography  color="textSecondary">{body}</Typography>
                         {bottom}
                     </Stack>
                 </Paper>
