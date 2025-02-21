@@ -24,6 +24,7 @@ export function Header() {
                             zIndex: theme.zIndex.appBar,
                             m: 1,
                             bgcolor: alpha(theme.palette.common.black, 0.5),
+                            backdropFilter:"blur(5px)"
                         })}
                         onClick={onOpen}
                     >
