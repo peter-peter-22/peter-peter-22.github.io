@@ -43,7 +43,7 @@ function Entry({ title, icon, body }) {
                 <Typography variant="h5" component="h3">
                     {title}
                 </Typography>
-                <Typography color="textSecondary" textAlign={"justify"}>
+                <Typography color="textSecondary" >
                     {body}
                 </Typography>
             </Paper>
